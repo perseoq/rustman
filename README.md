@@ -7,7 +7,7 @@
 [![Words](https://img.shields.io/badge/manual-103k%20words-blueviolet.svg)](index.md)
 [![Projects](https://img.shields.io/badge/proyectos-18-success.svg)](proyectos_capitulo/)
 [![API](https://img.shields.io/badge/API%20endpoints-18-orange.svg)](proyecto_api/)
-[![ToC](https://img.shields.io/badge/enlaces%20internos-276-yellow.svg)](index.md)
+[![ToC](https://img.shields.io/badge/enlaces%20internos-275-yellow.svg)](index.md)
 
 > **Un viaje desde cero absoluto hasta una API REST de nivel producción para un sistema ERP/CRM mexicano (RFC, CFDI 4.0, IVA, IEPS, inventarios, facturación y más).**
 
@@ -25,7 +25,7 @@ El manual está diseñado para **personas sin experiencia previa en Rust**, con 
 - 🏗️ **18 proyectos Rust ejecutables** (todos compilan y pasan tests)
 - 🌐 **1 API REST funcional con 18 endpoints**, autenticación JWT, transacciones
 - 🗄️ **Esquema SQL completo** del ERP con 7 tablas (clientes, productos, pedidos, líneas, categorías, proveedores, usuarios)
-- 🔗 **276 enlaces internos** en la tabla de contenidos para navegación instantánea
+- 🔗 **275 enlaces internos** en la tabla de contenidos para navegación instantánea
 - 📊 **17 diagramas Mermaid** (ER, sequence, flowchart, gantt)
 - 💻 **343 bloques de código Rust** comentados en español
 - 🎯 **80+ ejercicios prácticos** con soluciones detalladas
@@ -45,7 +45,7 @@ El manual está diseñado para **personas sin experiencia previa en Rust**, con 
 | Secciones H4 | 53 |
 | Bloques de código Rust | 343 |
 | Diagramas Mermaid | 17 |
-| Enlaces internos en ToC            **276**
+| Enlaces internos en ToC            **275**
 | Proyectos que compilan | **18/18** ✅ |
 | Endpoints API | **18** |
 | Ejercicios | 80+ |
