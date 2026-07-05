@@ -6,7 +6,7 @@
 
 ## Tabla de contenidos
 
-> **Manual de Rust + MySQL + Actix Web para ERP/CRM** · 102 056 palabras · 1 614 secciones · 18 proyectos ejecutables · 1 API REST con 18 endpoints.
+> **Manual de Rust + MySQL + Actix Web para ERP/CRM** · 103 361 palabras · 212 apéndices · 18 proyectos ejecutables · 1 API REST con 18 endpoints.
 
 ---
 
@@ -35,7 +35,7 @@
 | [1.17 Closures e iteradores](#117-closures-e-iteradores) | `Fn`, adaptadores, consumidores |
 | [1.18 Módulos y sistema de archivos](#118-modulos-y-sistema-de-archivos) | `mod`, `pub`, `use` |
 | [1.19 Pruebas](#119-pruebas-unitarias-y-de-integracion) | unit, integration, doc tests |
-| [1.20 Ejercicios acumulativos](#120-ejercicios-acumulativos-parte-1-20-ejercicios) | ejercicios prácticos |
+| [1.20 Ejercicios acumulativos](#120-ejercicios-acumulativos-parte-1--20-ejercicios) | ejercicios prácticos |
 | [1.21 Soluciones detalladas](#121-soluciones-de-los-ejercicios-de-la-parte-1) | soluciones completas |
 
 **Proyectos de la Parte 1** (8 mini-proyectos):
@@ -57,12 +57,12 @@
 | [2.3 Consultas `SELECT`](#23-consultas-select) | `query`, `exec`, `fetch_*` |
 | [2.4 Parámetros preparados y seguridad](#24-parametros-preparados-y-seguridad) | inyección SQL, `?`, `:nombre` |
 | [2.5 `INSERT`, `UPDATE`, `DELETE`](#25-insert-update-y-delete) | mutaciones, `last_insert_id` |
-| [2.6 Pool de conexiones con `r2d2_mysql`](#26-pool-de-conexiones-con-r2d2_mysql) | pool, préstamo, AppState |
+| [2.6 Pool de conexiones con `r2d2_mysql`](#26-pool-de-conexiones-con-r2d2mysql) | pool, préstamo, AppState |
 | [2.7 Transacciones](#27-transacciones) | `BEGIN`, `COMMIT`, `ROLLBACK`, `Drop` |
 | [2.8 Errores típicos con BD](#28-errores-tipicos-con-bases-de-datos) | conexión, tipos, restricciones, deadlocks |
 | [2.9 Ejemplo completo: ERP/CRM CLI](#29-ejemplo-completo-erpcrm-cli-de-gestion) | gestor de tareas en consola |
 | [2.10 Buenas prácticas](#210-buenas-practicas) | migraciones, logging, capas |
-| [2.11 Ejercicios acumulativos](#211-ejercicios-acumulativos-parte-2-20-ejercicios) | ejercicios prácticos |
+| [2.11 Ejercicios acumulativos](#211-ejercicios-acumulativos-parte-2--20-ejercicios) | ejercicios prácticos |
 | [2.12 Soluciones detalladas](#212-soluciones-detalladas-parte-2) | soluciones completas |
 
 **Proyectos de la Parte 2** (4 mini-proyectos):
@@ -90,7 +90,7 @@
 | [3.13 Pruebas](#313-pruebas) | curl, `actix-web::test`, mocks, cobertura |
 | [3.14 Ejemplo completo: API REST del ERP/CRM](#314-ejemplo-completo-api-rest-del-erpcrm) | 8 subsecciones con endpoints |
 | [3.15 Despliegue](#315-despliegue) | release, Docker, docker-compose, VPS, PaaS |
-| [3.16 Ejercicios acumulativos](#316-ejercicios-acumulativos-parte-3-30-ejercicios) | ejercicios prácticos |
+| [3.16 Ejercicios acumulativos](#316-ejercicios-acumulativos-parte-3--30-ejercicios) | ejercicios prácticos |
 | [3.17 Soluciones detalladas](#317-soluciones-detalladas-parte-3) | soluciones completas |
 
 **Proyectos de la Parte 3** (5 mini-proyectos + 1 final):
@@ -103,11 +103,10 @@
 
 ### [Anexos](#anexos)
 
-- [A.1 Glosario de términos (Rust + ERP/CRM)](#a1-glosario-de-terminos-rust-erpcrm)
+- [A.1 Glosario de terminos (Rust + ERP/CRM)](#a1-glosario-de-terminos-rust--erpcrm)
 - [A.2 Soluciones de los ejercicios](#a2-soluciones-de-los-ejercicios)
 - [A.3 Recursos y lecturas adicionales](#a3-recursos-y-lecturas-adicionales)
-- [A.4 Índice alfabético](#a4-indice-alfabetico)
-- [Soluciones Parte 1 (Ejercicios 1.20.1 a 1.20.20)](#soluciones-parte-1-ejercicios-1201-a-12020)
+- [A.4 Indice alfabetico](#a4-indice-alfabetico)
 
 ### [Soluciones Detalladas de los Ejercicios](#soluciones-detalladas-de-los-ejercicios)
 
@@ -115,490 +114,332 @@
 - [Soluciones Parte 2 (Ejercicios 2.11.1 a 2.11.20)](#soluciones-parte-2-ejercicios-2111-a-21120)
 - [Soluciones Parte 3 (Ejercicios 3.16.1 a 3.16.30)](#soluciones-parte-3-ejercicios-3161-a-31630)
 
-### Apendices tematicos (160+ apendices)
+### Apendices temáticos (212 apéndices)
 
-#### A — Codigo fuente completo de los mini-proyectos
-- [Apéndice A1: Manual de usuario final del ERP/CRM](#apendice-a1-manual-de-usuario-final-del-erpcrm)
-- [Apéndice A2: Glosario de términos de facturación](#apendice-a2-glosario-de-terminos-de-facturacion)
-- [Apéndice A3: Tips de productividad](#apendice-a3-tips-de-productividad)
-- [Apéndice A4: Glosario matemático](#apendice-a4-glosario-matematico)
-- [Apéndice A5: Errores más comunes en la API](#apendice-a5-errores-mas-comunes-en-la-api)
-- [Apéndice A6: Tabla de comparación de velocidades](#apendice-a6-tabla-de-comparacion-de-velocidades)
-- [Apéndice A7: Abreviaciones comunes](#apendice-a7-abreviaciones-comunes)
-- [Apéndice A8: Hoja de ruta de aprendizaje recomendada](#apendice-a8-hoja-de-ruta-de-aprendizaje-recomendada)
-- [Apéndice A9: Mensaje al programador junior](#apendice-a9-mensaje-al-programador-junior)
-- [Apéndice A10: Cierre absoluto](#apendice-a10-cierre-absoluto)
-- [Apéndice A11: El proyecto paso a paso - construyendo el ERP desde cero](#apendice-a11-el-proyecto-paso-a-paso-construyendo-el-erp-desde-cero)
-- [Apéndice A12: Glosario de términos de marketing y CRM](#apendice-a12-glosario-de-terminos-de-marketing-y-crm)
-- [Apéndice A13: Plan de estudios de Rust por nivel](#apendice-a13-plan-de-estudios-de-rust-por-nivel)
-- [Apéndice A14: Errores más comunes en la compilación de la API](#apendice-a14-errores-mas-comunes-en-la-compilacion-de-la-api)
-- [Apéndice A15: Hoja de cálculo mental](#apendice-a15-hoja-de-calculo-mental)
-- [Apéndice A16: Notas finales](#apendice-a16-notas-finales)
-- [Apéndice A17: Análisis económico del ERP/CRM](#apendice-a17-analisis-economico-del-erpcrm)
-- [Apéndice A18: Roadmap del proyecto](#apendice-a18-roadmap-del-proyecto)
-- [Apéndice A19: Casos de éxito de ERPs en Rust](#apendice-a19-casos-de-exito-de-erps-en-rust)
-- [Apéndice A20: Tips avanzados de Rust](#apendice-a20-tips-avanzados-de-rust)
-- [Apéndice A21: Glosario final de apéndices](#apendice-a21-glosario-final-de-apendices)
-- [Apéndice A22: Resumen ejecutivo final](#apendice-a22-resumen-ejecutivo-final)
-- [Apéndice A23: Reflexión sobre el proceso](#apendice-a23-reflexion-sobre-el-proceso)
-- [Apéndice A24: Mensaje personal](#apendice-a24-mensaje-personal)
-- [Apéndice A25: Manual de deployment a producción](#apendice-a25-manual-de-deployment-a-produccion)
-- [Apéndice A26: Conversión de otros ERPs a Rust](#apendice-a26-conversion-de-otros-erps-a-rust)
-- [Apéndice A27: Glosario de términos del manual](#apendice-a27-glosario-de-terminos-del-manual)
-- [Apéndice A28: Manual de uso de rust-analyzer](#apendice-a28-manual-de-uso-de-rust-analyzer)
-- [Apéndice A29: Glosario de términos fiscales mexicanos](#apendice-a29-glosario-de-terminos-fiscales-mexicanos)
-- [Apéndice A30: El verdadero cierre](#apendice-a30-el-verdadero-cierre)
-- [Apéndice A31: Comparativa con otras soluciones](#apendice-a31-comparativa-con-otras-soluciones)
-- [Apéndice A32: Recursos por idioma](#apendice-a32-recursos-por-idioma)
-- [Apéndice A33: El test del compilador](#apendice-a33-el-test-del-compilador)
-- [Apéndice A34: Cómo contribuir](#apendice-a34-como-contribuir)
-- [Apéndice A35: La historia del ERP](#apendice-a35-la-historia-del-erp)
-- [Apéndice A36: Glosario de argot de programadores](#apendice-a36-glosario-de-argot-de-programadores)
-- [Apéndice A37: Final final final](#apendice-a37-final-final-final)
-- [Apéndice A38: Manual de supervivencia del desarrollador de ERPs](#apendice-a38-manual-de-supervivencia-del-desarrollador-de-erps)
-- [Apéndice A39: El test del junior](#apendice-a39-el-test-del-junior)
-- [Apéndice A40: El test del senior](#apendice-a40-el-test-del-senior)
-- [Apéndice A41: El test del arquitecto](#apendice-a41-el-test-del-arquitecto)
-- [Apéndice A42: El test del CFDI](#apendice-a42-el-test-del-cfdi)
-- [Apéndice A43: El test del deployment](#apendice-a43-el-test-del-deployment)
-- [Apéndice A44: La frase célebre de Rust](#apendice-a44-la-frase-celebre-de-rust)
-- [Apéndice A45: Manual de estilo del manual](#apendice-a45-manual-de-estilo-del-manual)
-- [Apéndice A46: Hoja de ruta del manual (futuro)](#apendice-a46-hoja-de-ruta-del-manual-futuro)
-- [Apéndice A47: Reconocimientos](#apendice-a47-reconocimientos)
-- [Apéndice A48: El último párrafo](#apendice-a48-el-ultimo-parrafo)
-- [Apéndice A49: Las preguntas más frecuentes (FAQ)](#apendice-a49-las-preguntas-mas-frecuentes-faq)
-- [Apéndice A50: Decisiones de diseño del manual](#apendice-a50-decisiones-de-diseno-del-manual)
-- [Apéndice A51: Glosario de términos avanzados de Rust](#apendice-a51-glosario-de-terminos-avanzados-de-rust)
-- [Apéndice A52: Performance tuning avanzado](#apendice-a52-performance-tuning-avanzado)
-- [Apéndice A53: Seguridad avanzada](#apendice-a53-seguridad-avanzada)
-- [Apéndice A54: Patrones avanzados de concurrencia](#apendice-a54-patrones-avanzados-de-concurrencia)
-- [Apéndice A55: Integración con otros sistemas](#apendice-a55-integracion-con-otros-sistemas)
-- [Apéndice A56: Recursos para DevOps](#apendice-a56-recursos-para-devops)
-- [Apéndice A57: Mensaje final a la comunidad](#apendice-a57-mensaje-final-a-la-comunidad)
-- [Apéndice A58: La biblia del ERP - Conceptos fundamentales](#apendice-a58-la-biblia-del-erp-conceptos-fundamentales)
-- [Apéndice A59: Implementación de referencia completa](#apendice-a59-implementacion-de-referencia-completa)
-- [Apéndice A60: El fin del manual](#apendice-a60-el-fin-del-manual)
-- [Apéndice A61: El código fuente completo de un ERP mínimo viable](#apendice-a61-el-codigo-fuente-completo-de-un-erp-minimo-viable)
-- [Apéndice A62: El RFC desde cero](#apendice-a62-el-rfc-desde-cero)
-- [Apéndice A63: El IVA desde cero](#apendice-a63-el-iva-desde-cero)
-- [Apéndice A64: El IEPS desde cero](#apendice-a64-el-ieps-desde-cero)
-- [Apéndice A65: La factura electrónica paso a paso](#apendice-a65-la-factura-electronica-paso-a-paso)
-- [Apéndice A66: El ERP en cifras](#apendice-a66-el-erp-en-cifras)
-- [Apéndice A67: Conclusión absoluta](#apendice-a67-conclusion-absoluta)
-- [Apéndice A68: La arquitectura hexagonal aplicada al ERP](#apendice-a68-la-arquitectura-hexagonal-aplicada-al-erp)
-- [Apéndice A69: Domain-Driven Design (DDD) aplicado al ERP](#apendice-a69-domain-driven-design-ddd-aplicado-al-erp)
-- [Apéndice A70: La revolución silenciosa de Rust en 2026](#apendice-a70-la-revolucion-silenciosa-de-rust-en-2026)
-- [Apéndice A71: El código que cambia el mundo](#apendice-a71-el-codigo-que-cambia-el-mundo)
-- [Apéndice A72: La biblia del programador](#apendice-a72-la-biblia-del-programador)
-- [Apéndice A73: El último mensaje](#apendice-a73-el-ultimo-mensaje)
-- [Apéndice A74: El manual del arquitecto de software](#apendice-a74-el-manual-del-arquitecto-de-software)
-- [Apéndice A75: El estado del arte en 2026](#apendice-a75-el-estado-del-arte-en-2026)
-- [Apéndice A76: El día a día del programador Rust](#apendice-a76-el-dia-a-dia-del-programador-rust)
-- [Apéndice A77: La comunidad de Rust en México](#apendice-a77-la-comunidad-de-rust-en-mexico)
-- [Apéndice A78: Hoja de ruta del ERP](#apendice-a78-hoja-de-ruta-del-erp)
-- [Apéndice A79: Los mandamientos del ERP](#apendice-a79-los-mandamientos-del-erp)
-- [Apéndice A80: La bitácora del manual](#apendice-a80-la-bitacora-del-manual)
-- [Apéndice A81: El código fuente de los mini-proyectos](#apendice-a81-el-codigo-fuente-de-los-mini-proyectos)
-- [Apéndice A82: El proyecto final explicado](#apendice-a82-el-proyecto-final-explicado)
-- [Apéndice A83: El test final del manual](#apendice-a83-el-test-final-del-manual)
-- [Apéndice A84: Las mil palabras finales](#apendice-a84-las-mil-palabras-finales)
-- [Apéndice A85: La ética del programador de ERPs](#apendice-a85-la-etica-del-programador-de-erps)
-- [Apéndice A86: La matemática detrás del ERP](#apendice-a86-la-matematica-detras-del-erp)
-- [Apéndice A87: El sistema de salud del ERP](#apendice-a87-el-sistema-de-salud-del-erp)
-- [Apéndice A88: El test del conocimiento](#apendice-a88-el-test-del-conocimiento)
-- [Apéndice A89: El poder de la documentación](#apendice-a89-el-poder-de-la-documentacion)
-- [Apéndice A90: El test de fuego](#apendice-a90-el-test-de-fuego)
-- [Apéndice A91: El manual del mentor](#apendice-a91-el-manual-del-mentor)
-- [Apéndice A92: El test del ERP completo](#apendice-a92-el-test-del-erp-completo)
-- [Apéndice A93: El final del viaje](#apendice-a93-el-final-del-viaje)
-- [Apéndice A94: La biblia de las herramientas de Rust](#apendice-a94-la-biblia-de-las-herramientas-de-rust)
-- [Apéndice A95: El código de la excelencia](#apendice-a95-el-codigo-de-la-excelencia)
-- [Apéndice A96: El test del tiempo](#apendice-a96-el-test-del-tiempo)
-- [Apéndice A97: Los números del manual](#apendice-a97-los-numeros-del-manual)
-- [Apéndice A98: Los proyectos de muestra](#apendice-a98-los-proyectos-de-muestra)
-- [Apéndice A99: La despedida](#apendice-a99-la-despedida)
-- [Apéndice A100: El manual de instalación paso a paso](#apendice-a100-el-manual-de-instalacion-paso-a-paso)
-- [Apéndice A101: La línea del tiempo del manual](#apendice-a101-la-linea-del-tiempo-del-manual)
-- [Apéndice A102: El test del primer día](#apendice-a102-el-test-del-primer-dia)
-- [Apéndice A103: El test del año](#apendice-a103-el-test-del-ano)
-- [Apéndice A104: El test de la vida](#apendice-a104-el-test-de-la-vida)
-- [Apéndice A105: El manual de uso final](#apendice-a105-el-manual-de-uso-final)
-- [Apéndice A106: Las palabras de cierre](#apendice-a106-las-palabras-de-cierre)
-- [Apéndice A107: El test del programador completo](#apendice-a107-el-test-del-programador-completo)
-- [Apéndice A108: La biblia de los errores del programador](#apendice-a108-la-biblia-de-los-errores-del-programador)
-- [Apéndice A109: El test de la motivación](#apendice-a109-el-test-de-la-motivacion)
-- [Apéndice A110: La despedida final](#apendice-a110-la-despedida-final)
-- [Apéndice A111: La biblia de las preguntas](#apendice-a111-la-biblia-de-las-preguntas)
-- [Apéndice A112: La biblia de los recursos](#apendice-a112-la-biblia-de-los-recursos)
-- [Apéndice A113: El test del ERP en producción](#apendice-a113-el-test-del-erp-en-produccion)
-- [Apéndice A114: La biblia de los mandamientos del programador ético](#apendice-a114-la-biblia-de-los-mandamientos-del-programador-etico)
-- [Apéndice A115: El test del programador de Rust](#apendice-a115-el-test-del-programador-de-rust)
-- [Apéndice A116: La despedida](#apendice-a116-la-despedida)
-- [Apéndice A117: El manual de la arquitectura empresarial](#apendice-a117-el-manual-de-la-arquitectura-empresarial)
-- [Apéndice A118: La biblia de la seguridad](#apendice-a118-la-biblia-de-la-seguridad)
-- [Apéndice A119: El test del programador de software](#apendice-a119-el-test-del-programador-de-software)
-- [Apéndice A120: La despedida final final](#apendice-a120-la-despedida-final-final)
-- [Apéndice A121: La biblia de la comunicación](#apendice-a121-la-biblia-de-la-comunicacion)
-- [Apéndice A122: El test del líder técnico](#apendice-a122-el-test-del-lider-tecnico)
-- [Apéndice A123: La biblia del ERP/CRM](#apendice-a123-la-biblia-del-erpcrm)
-- [Apéndice A124: El manual del producto](#apendice-a124-el-manual-del-producto)
-- [Apéndice A125: La despedida absoluta](#apendice-a125-la-despedida-absoluta)
-- [Apéndice A126: El test del programador resiliente](#apendice-a126-el-test-del-programador-resiliente)
-- [Apéndice A127: La biblia del liderazgo técnico](#apendice-a127-la-biblia-del-liderazgo-tecnico)
-- [Apéndice A128: La biblia del código limpio](#apendice-a128-la-biblia-del-codigo-limpio)
-- [Apéndice A129: La despedida](#apendice-a129-la-despedida)
-- [Apéndice A130: La biblia de la productividad](#apendice-a130-la-biblia-de-la-productividad)
-- [Apéndice A131: La biblia de la gestión del tiempo](#apendice-a131-la-biblia-de-la-gestion-del-tiempo)
-- [Apéndice A132: La biblia de la documentación](#apendice-a132-la-biblia-de-la-documentacion)
-- [Apéndice A133: La biblia de las reuniones](#apendice-a133-la-biblia-de-las-reuniones)
-- [Apéndice A134: La biblia de la comunicación escrita](#apendice-a134-la-biblia-de-la-comunicacion-escrita)
-- [Apéndice A135: La biblia de la revisión de código](#apendice-a135-la-biblia-de-la-revision-de-codigo)
-- [Apéndice A136: La despedida del manual](#apendice-a136-la-despedida-del-manual)
-- [Apéndice A137: La biblia de la resiliencia personal](#apendice-a137-la-biblia-de-la-resiliencia-personal)
-- [Apéndice A138: La biblia de la creatividad](#apendice-a138-la-biblia-de-la-creatividad)
-- [Apéndice A139: La biblia de la gestión de proyectos](#apendice-a139-la-biblia-de-la-gestion-de-proyectos)
-- [Apéndice A140: La biblia de la calidad del software](#apendice-a140-la-biblia-de-la-calidad-del-software)
-- [Apéndice A141: La biblia de la entrega continua](#apendice-a141-la-biblia-de-la-entrega-continua)
-- [Apéndice A142: La biblia del software libre](#apendice-a142-la-biblia-del-software-libre)
-- [Apéndice A143: La biblia de la tecnología](#apendice-a143-la-biblia-de-la-tecnologia)
-- [Apéndice A144: La despedida final del manual](#apendice-a144-la-despedida-final-del-manual)
-- [Apéndice A145: La biblia de la carrera profesional](#apendice-a145-la-biblia-de-la-carrera-profesional)
-- [Apéndice A146: La biblia del software empresarial](#apendice-a146-la-biblia-del-software-empresarial)
-- [Apéndice A147: La biblia del ERP/CRM en México](#apendice-a147-la-biblia-del-erpcrm-en-mexico)
-- [Apéndice A148: La biblia del Rust empresarial](#apendice-a148-la-biblia-del-rust-empresarial)
-- [Apéndice A149: La despedida absoluta final](#apendice-a149-la-despedida-absoluta-final)
-- [Apéndice A150: La biblia del aprendizaje](#apendice-a150-la-biblia-del-aprendizaje)
-- [Apéndice A151: La biblia de la enseñanza](#apendice-a151-la-biblia-de-la-ensenanza)
-- [Apéndice A152: La biblia del software](#apendice-a152-la-biblia-del-software)
-- [Apéndice A153: La biblia del programador](#apendice-a153-la-biblia-del-programador)
-- [Apéndice A154: La despedida final final final](#apendice-a154-la-despedida-final-final-final)
-- [Apéndice A155: La biblia del cierre](#apendice-a155-la-biblia-del-cierre)
-- [Apéndice A156: La biblia del todo](#apendice-a156-la-biblia-del-todo)
-- [Apéndice A157: La biblia del final](#apendice-a157-la-biblia-del-final)
-- [Apéndice A158: El cierre](#apendice-a158-el-cierre)
-- [Apéndice A159: Las últimas palabras](#apendice-a159-las-ultimas-palabras)
-- [Apéndice A160: ¡Ya casi llegamos!](#apendice-a160-ya-casi-llegamos)
+#### Apendices numerados (A1–A160)
 
-#### AA — Codigo fuente completo de los mini-proyectos
-- [Apéndice AA: Código fuente completo de los mini-proyectos](#apendice-aa-codigo-fuente-completo-de-los-mini-proyectos)
+- [Apendice A1: Manual de usuario final del ERP/CRM](#apendice-a1-manual-de-usuario-final-del-erpcrm)
+- [Apendice A2: Glosario de terminos de facturacion](#apendice-a2-glosario-de-terminos-de-facturacion)
+- [Apendice A3: Tips de productividad](#apendice-a3-tips-de-productividad)
+- [Apendice A4: Glosario matematico](#apendice-a4-glosario-matematico)
+- [Apendice A5: Errores mas comunes en la API](#apendice-a5-errores-mas-comunes-en-la-api)
+- [Apendice A6: Tabla de comparacion de velocidades](#apendice-a6-tabla-de-comparacion-de-velocidades)
+- [Apendice A7: Abreviaciones comunes](#apendice-a7-abreviaciones-comunes)
+- [Apendice A8: Hoja de ruta de aprendizaje recomendada](#apendice-a8-hoja-de-ruta-de-aprendizaje-recomendada)
+- [Apendice A9: Mensaje al programador junior](#apendice-a9-mensaje-al-programador-junior)
+- [Apendice A10: Cierre absoluto](#apendice-a10-cierre-absoluto)
+- [Apendice A11: El proyecto paso a paso - construyendo el ERP desde cero](#apendice-a11-el-proyecto-paso-a-paso---construyendo-el-erp-desde-cero)
+- [Apendice A12: Glosario de terminos de marketing y CRM](#apendice-a12-glosario-de-terminos-de-marketing-y-crm)
+- [Apendice A13: Plan de estudios de Rust por nivel](#apendice-a13-plan-de-estudios-de-rust-por-nivel)
+- [Apendice A14: Errores mas comunes en la compilacion de la API](#apendice-a14-errores-mas-comunes-en-la-compilacion-de-la-api)
+- [Apendice A15: Hoja de calculo mental](#apendice-a15-hoja-de-calculo-mental)
+- [Apendice A16: Notas finales](#apendice-a16-notas-finales)
+- [Apendice A17: Analisis economico del ERP/CRM](#apendice-a17-analisis-economico-del-erpcrm)
+- [Apendice A18: Roadmap del proyecto](#apendice-a18-roadmap-del-proyecto)
+- [Apendice A19: Casos de exito de ERPs en Rust](#apendice-a19-casos-de-exito-de-erps-en-rust)
+- [Apendice A20: Tips avanzados de Rust](#apendice-a20-tips-avanzados-de-rust)
+- [Apendice A21: Glosario final de apendices](#apendice-a21-glosario-final-de-apendices)
+- [Apendice A22: Resumen ejecutivo final](#apendice-a22-resumen-ejecutivo-final)
+- [Apendice A23: Reflexion sobre el proceso](#apendice-a23-reflexion-sobre-el-proceso)
+- [Apendice A24: Mensaje personal](#apendice-a24-mensaje-personal)
+- [Apendice A25: Manual de deployment a produccion](#apendice-a25-manual-de-deployment-a-produccion)
+- [Apendice A26: Conversion de otros ERPs a Rust](#apendice-a26-conversion-de-otros-erps-a-rust)
+- [Apendice A27: Glosario de terminos del manual](#apendice-a27-glosario-de-terminos-del-manual)
+- [Apendice A28: Manual de uso de rust-analyzer](#apendice-a28-manual-de-uso-de-rust-analyzer)
+- [Apendice A29: Glosario de terminos fiscales mexicanos](#apendice-a29-glosario-de-terminos-fiscales-mexicanos)
+- [Apendice A30: El verdadero cierre](#apendice-a30-el-verdadero-cierre)
+- [Apendice A31: Comparativa con otras soluciones](#apendice-a31-comparativa-con-otras-soluciones)
+- [Apendice A32: Recursos por idioma](#apendice-a32-recursos-por-idioma)
+- [Apendice A33: El test del compilador](#apendice-a33-el-test-del-compilador)
+- [Apendice A34: Como contribuir](#apendice-a34-como-contribuir)
+- [Apendice A35: La historia del ERP](#apendice-a35-la-historia-del-erp)
+- [Apendice A36: Glosario de argot de programadores](#apendice-a36-glosario-de-argot-de-programadores)
+- [Apendice A37: Final final final](#apendice-a37-final-final-final)
+- [Apendice A38: Manual de supervivencia del desarrollador de ERPs](#apendice-a38-manual-de-supervivencia-del-desarrollador-de-erps)
+- [Apendice A39: El test del junior](#apendice-a39-el-test-del-junior)
+- [Apendice A40: El test del senior](#apendice-a40-el-test-del-senior)
+- [Apendice A41: El test del arquitecto](#apendice-a41-el-test-del-arquitecto)
+- [Apendice A42: El test del CFDI](#apendice-a42-el-test-del-cfdi)
+- [Apendice A43: El test del deployment](#apendice-a43-el-test-del-deployment)
+- [Apendice A44: La frase celebre de Rust](#apendice-a44-la-frase-celebre-de-rust)
+- [Apendice A45: Manual de estilo del manual](#apendice-a45-manual-de-estilo-del-manual)
+- [Apendice A46: Hoja de ruta del manual (futuro)](#apendice-a46-hoja-de-ruta-del-manual-futuro)
+- [Apendice A47: Reconocimientos](#apendice-a47-reconocimientos)
+- [Apendice A48: El ultimo parrafo](#apendice-a48-el-ultimo-parrafo)
+- [Apendice A49: Las preguntas mas frecuentes (FAQ)](#apendice-a49-las-preguntas-mas-frecuentes-faq)
+- [Apendice A50: Decisiones de diseno del manual](#apendice-a50-decisiones-de-diseno-del-manual)
+- [Apendice A51: Glosario de terminos avanzados de Rust](#apendice-a51-glosario-de-terminos-avanzados-de-rust)
+- [Apendice A52: Performance tuning avanzado](#apendice-a52-performance-tuning-avanzado)
+- [Apendice A53: Seguridad avanzada](#apendice-a53-seguridad-avanzada)
+- [Apendice A54: Patrones avanzados de concurrencia](#apendice-a54-patrones-avanzados-de-concurrencia)
+- [Apendice A55: Integracion con otros sistemas](#apendice-a55-integracion-con-otros-sistemas)
+- [Apendice A56: Recursos para DevOps](#apendice-a56-recursos-para-devops)
+- [Apendice A57: Mensaje final a la comunidad](#apendice-a57-mensaje-final-a-la-comunidad)
+- [Apendice A58: La biblia del ERP - Conceptos fundamentales](#apendice-a58-la-biblia-del-erp---conceptos-fundamentales)
+- [Apendice A59: Implementacion de referencia completa](#apendice-a59-implementacion-de-referencia-completa)
+- [Apendice A60: El fin del manual](#apendice-a60-el-fin-del-manual)
+- [Apendice A61: El codigo fuente completo de un ERP minimo viable](#apendice-a61-el-codigo-fuente-completo-de-un-erp-minimo-viable)
+- [Apendice A62: El RFC desde cero](#apendice-a62-el-rfc-desde-cero)
+- [Apendice A63: El IVA desde cero](#apendice-a63-el-iva-desde-cero)
+- [Apendice A64: El IEPS desde cero](#apendice-a64-el-ieps-desde-cero)
+- [Apendice A65: La factura electronica paso a paso](#apendice-a65-la-factura-electronica-paso-a-paso)
+- [Apendice A66: El ERP en cifras](#apendice-a66-el-erp-en-cifras)
+- [Apendice A67: Conclusion absoluta](#apendice-a67-conclusion-absoluta)
+- [Apendice A68: La arquitectura hexagonal aplicada al ERP](#apendice-a68-la-arquitectura-hexagonal-aplicada-al-erp)
+- [Apendice A69: Domain-Driven Design (DDD) aplicado al ERP](#apendice-a69-domain-driven-design-ddd-aplicado-al-erp)
+- [Apendice A70: La revolucion silenciosa de Rust en 2026](#apendice-a70-la-revolucion-silenciosa-de-rust-en-2026)
+- [Apendice A71: El codigo que cambia el mundo](#apendice-a71-el-codigo-que-cambia-el-mundo)
+- [Apendice A72: La biblia del programador](#apendice-a72-la-biblia-del-programador)
+- [Apendice A73: El ultimo mensaje](#apendice-a73-el-ultimo-mensaje)
+- [Apendice A74: El manual del arquitecto de software](#apendice-a74-el-manual-del-arquitecto-de-software)
+- [Apendice A75: El estado del arte en 2026](#apendice-a75-el-estado-del-arte-en-2026)
+- [Apendice A76: El dia a dia del programador Rust](#apendice-a76-el-dia-a-dia-del-programador-rust)
+- [Apendice A77: La comunidad de Rust en Mexico](#apendice-a77-la-comunidad-de-rust-en-mexico)
+- [Apendice A78: Hoja de ruta del ERP](#apendice-a78-hoja-de-ruta-del-erp)
+- [Apendice A79: Los mandamientos del ERP](#apendice-a79-los-mandamientos-del-erp)
+- [Apendice A80: La bitacora del manual](#apendice-a80-la-bitacora-del-manual)
+- [Apendice A81: El codigo fuente de los mini-proyectos](#apendice-a81-el-codigo-fuente-de-los-mini-proyectos)
+- [Apendice A82: El proyecto final explicado](#apendice-a82-el-proyecto-final-explicado)
+- [Apendice A83: El test final del manual](#apendice-a83-el-test-final-del-manual)
+- [Apendice A84: Las mil palabras finales](#apendice-a84-las-mil-palabras-finales)
+- [Apendice A85: La etica del programador de ERPs](#apendice-a85-la-etica-del-programador-de-erps)
+- [Apendice A86: La matematica detras del ERP](#apendice-a86-la-matematica-detras-del-erp)
+- [Apendice A87: El sistema de salud del ERP](#apendice-a87-el-sistema-de-salud-del-erp)
+- [Apendice A88: El test del conocimiento](#apendice-a88-el-test-del-conocimiento)
+- [Apendice A89: El poder de la documentacion](#apendice-a89-el-poder-de-la-documentacion)
+- [Apendice A90: El test de fuego](#apendice-a90-el-test-de-fuego)
+- [Apendice A91: El manual del mentor](#apendice-a91-el-manual-del-mentor)
+- [Apendice A92: El test del ERP completo](#apendice-a92-el-test-del-erp-completo)
+- [Apendice A93: El final del viaje](#apendice-a93-el-final-del-viaje)
+- [Apendice A94: La biblia de las herramientas de Rust](#apendice-a94-la-biblia-de-las-herramientas-de-rust)
+- [Apendice A95: El codigo de la excelencia](#apendice-a95-el-codigo-de-la-excelencia)
+- [Apendice A96: El test del tiempo](#apendice-a96-el-test-del-tiempo)
+- [Apendice A97: Los numeros del manual](#apendice-a97-los-numeros-del-manual)
+- [Apendice A98: Los proyectos de muestra](#apendice-a98-los-proyectos-de-muestra)
+- [Apendice A99: La despedida](#apendice-a99-la-despedida)
+- [Apendice A100: El manual de instalacion paso a paso](#apendice-a100-el-manual-de-instalacion-paso-a-paso)
+- [Apendice A101: La linea del tiempo del manual](#apendice-a101-la-linea-del-tiempo-del-manual)
+- [Apendice A102: El test del primer dia](#apendice-a102-el-test-del-primer-dia)
+- [Apendice A103: El test del ano](#apendice-a103-el-test-del-ano)
+- [Apendice A104: El test de la vida](#apendice-a104-el-test-de-la-vida)
+- [Apendice A105: El manual de uso final](#apendice-a105-el-manual-de-uso-final)
+- [Apendice A106: Las palabras de cierre](#apendice-a106-las-palabras-de-cierre)
+- [Apendice A107: El test del programador completo](#apendice-a107-el-test-del-programador-completo)
+- [Apendice A108: La biblia de los errores del programador](#apendice-a108-la-biblia-de-los-errores-del-programador)
+- [Apendice A109: El test de la motivacion](#apendice-a109-el-test-de-la-motivacion)
+- [Apendice A110: La despedida final](#apendice-a110-la-despedida-final)
+- [Apendice A111: La biblia de las preguntas](#apendice-a111-la-biblia-de-las-preguntas)
+- [Apendice A112: La biblia de los recursos](#apendice-a112-la-biblia-de-los-recursos)
+- [Apendice A113: El test del ERP en produccion](#apendice-a113-el-test-del-erp-en-produccion)
+- [Apendice A114: La biblia de los mandamientos del programador etico](#apendice-a114-la-biblia-de-los-mandamientos-del-programador-etico)
+- [Apendice A115: El test del programador de Rust](#apendice-a115-el-test-del-programador-de-rust)
+- [Apendice A116: La despedida](#apendice-a116-la-despedida)
+- [Apendice A117: El manual de la arquitectura empresarial](#apendice-a117-el-manual-de-la-arquitectura-empresarial)
+- [Apendice A118: La biblia de la seguridad](#apendice-a118-la-biblia-de-la-seguridad)
+- [Apendice A119: El test del programador de software](#apendice-a119-el-test-del-programador-de-software)
+- [Apendice A120: La despedida final final](#apendice-a120-la-despedida-final-final)
+- [Apendice A121: La biblia de la comunicacion](#apendice-a121-la-biblia-de-la-comunicacion)
+- [Apendice A122: El test del lider tecnico](#apendice-a122-el-test-del-lider-tecnico)
+- [Apendice A123: La biblia del ERP/CRM](#apendice-a123-la-biblia-del-erpcrm)
+- [Apendice A124: El manual del producto](#apendice-a124-el-manual-del-producto)
+- [Apendice A125: La despedida absoluta](#apendice-a125-la-despedida-absoluta)
+- [Apendice A126: El test del programador resiliente](#apendice-a126-el-test-del-programador-resiliente)
+- [Apendice A127: La biblia del liderazgo tecnico](#apendice-a127-la-biblia-del-liderazgo-tecnico)
+- [Apendice A128: La biblia del codigo limpio](#apendice-a128-la-biblia-del-codigo-limpio)
+- [Apendice A129: La despedida](#apendice-a129-la-despedida)
+- [Apendice A130: La biblia de la productividad](#apendice-a130-la-biblia-de-la-productividad)
+- [Apendice A131: La biblia de la gestion del tiempo](#apendice-a131-la-biblia-de-la-gestion-del-tiempo)
+- [Apendice A132: La biblia de la documentacion](#apendice-a132-la-biblia-de-la-documentacion)
+- [Apendice A133: La biblia de las reuniones](#apendice-a133-la-biblia-de-las-reuniones)
+- [Apendice A134: La biblia de la comunicacion escrita](#apendice-a134-la-biblia-de-la-comunicacion-escrita)
+- [Apendice A135: La biblia de la revision de codigo](#apendice-a135-la-biblia-de-la-revision-de-codigo)
+- [Apendice A136: La despedida del manual](#apendice-a136-la-despedida-del-manual)
+- [Apendice A137: La biblia de la resiliencia personal](#apendice-a137-la-biblia-de-la-resiliencia-personal)
+- [Apendice A138: La biblia de la creatividad](#apendice-a138-la-biblia-de-la-creatividad)
+- [Apendice A139: La biblia de la gestion de proyectos](#apendice-a139-la-biblia-de-la-gestion-de-proyectos)
+- [Apendice A140: La biblia de la calidad del software](#apendice-a140-la-biblia-de-la-calidad-del-software)
+- [Apendice A141: La biblia de la entrega continua](#apendice-a141-la-biblia-de-la-entrega-continua)
+- [Apendice A142: La biblia del software libre](#apendice-a142-la-biblia-del-software-libre)
+- [Apendice A143: La biblia de la tecnologia](#apendice-a143-la-biblia-de-la-tecnologia)
+- [Apendice A144: La despedida final del manual](#apendice-a144-la-despedida-final-del-manual)
+- [Apendice A145: La biblia de la carrera profesional](#apendice-a145-la-biblia-de-la-carrera-profesional)
+- [Apendice A146: La biblia del software empresarial](#apendice-a146-la-biblia-del-software-empresarial)
+- [Apendice A147: La biblia del ERP/CRM en Mexico](#apendice-a147-la-biblia-del-erpcrm-en-mexico)
+- [Apendice A148: La biblia del Rust empresarial](#apendice-a148-la-biblia-del-rust-empresarial)
+- [Apendice A149: La despedida absoluta final](#apendice-a149-la-despedida-absoluta-final)
+- [Apendice A150: La biblia del aprendizaje](#apendice-a150-la-biblia-del-aprendizaje)
+- [Apendice A151: La biblia de la ensenanza](#apendice-a151-la-biblia-de-la-ensenanza)
+- [Apendice A152: La biblia del software](#apendice-a152-la-biblia-del-software)
+- [Apendice A153: La biblia del programador](#apendice-a153-la-biblia-del-programador)
+- [Apendice A154: La despedida final final final](#apendice-a154-la-despedida-final-final-final)
+- [Apendice A155: La biblia del cierre](#apendice-a155-la-biblia-del-cierre)
+- [Apendice A156: La biblia del todo](#apendice-a156-la-biblia-del-todo)
+- [Apendice A157: La biblia del final](#apendice-a157-la-biblia-del-final)
+- [Apendice A158: El cierre](#apendice-a158-el-cierre)
+- [Apendice A159: Las ultimas palabras](#apendice-a159-las-ultimas-palabras)
+- [Apendice A160: ¡Ya casi llegamos!](#apendice-a160-ya-casi-llegamos)
 
-#### BB — Lista de verificacion del proyecto final
-- [Apéndice BB: Lista de verificación del proyecto final](#apendice-bb-lista-de-verificacion-del-proyecto-final)
+#### Apendices con letra (A, B–Z, AA–ZZ)
 
-#### C — Casos de estudio completos
-- [Apéndice C: Casos de estudio completos](#apendice-c-casos-de-estudio-completos)
+##### A — Apendice: Temas avanzados (B.1–B.13)
+- [Apendice: Temas avanzados](#apendice-temas-avanzados)
 
-#### CC — Mapa de crates mencionados
-- [Apéndice CC: Mapa de crates mencionados](#apendice-cc-mapa-de-crates-mencionados)
+##### AA — Código fuente completo de los mini-proyectos
+- [Apendice AA: Codigo fuente completo de los mini-proyectos](#apendice-aa-codigo-fuente-completo-de-los-mini-proyectos)
 
-#### D — Patrones de diseno en Rust
-- [Apéndice D: Patrones de diseño en Rust](#apendice-d-patrones-de-diseno-en-rust)
+##### BB — Lista de verificación del proyecto final
+- [Apendice BB: Lista de verificacion del proyecto final](#apendice-bb-lista-de-verificacion-del-proyecto-final)
 
-#### DD — Diagrama de Gantt del proyecto
-- [Apéndice DD: Diagrama de Gantt del proyecto ERP (6 meses)](#apendice-dd-diagrama-de-gantt-del-proyecto-erp-6-meses)
+##### C — Casos de estudio completos
+- [Apendice C: Casos de estudio completos](#apendice-c-casos-de-estudio-completos)
 
-#### E — Conversiones de datos con serde
-- [Apéndice E: Conversiones de datos con `serde`](#apendice-e-conversiones-de-datos-con-serde)
+##### CC — Mapa de crates mencionados
+- [Apendice CC: Mapa de crates mencionados](#apendice-cc-mapa-de-crates-mencionados)
 
-#### EE — Glosario ingles-espanol para programadores
-- [Apéndice EE: Glosario inglés-español para programadores](#apendice-ee-glosario-ingles-espanol-para-programadores)
+##### D — Patrones de diseño en Rust
+- [Apendice D: Patrones de diseno en Rust](#apendice-d-patrones-de-diseno-en-rust)
 
-#### F — Glosario adicional
-- [Apéndice F: Glosario adicional (continuación)](#apendice-f-glosario-adicional-continuacion)
+##### DD — Diagrama de Gantt del proyecto
+- [Apendice DD: Diagrama de Gantt del proyecto ERP (6 meses)](#apendice-dd-diagrama-de-gantt-del-proyecto-erp-6-meses)
 
-#### FF — El rincon del humor
-- [Apéndice FF: El rincón del humor](#apendice-ff-el-rincon-del-humor)
+##### E — Conversiones de datos con serde
+- [Apendice E: Conversiones de datos con `serde`](#apendice-e-conversiones-de-datos-con-serde)
 
-#### FINAL — Apendices FINAL
-- [Apéndice FINAL: ¡Lo logramos!](#apendice-final-lo-logramos)
+##### EE — Glosario inglés-español para programadores
+- [Apendice EE: Glosario ingles-espanol para programadores](#apendice-ee-glosario-ingles-espanol-para-programadores)
 
-#### G — Guia de referencia rapida del lenguaje Rust
-- [Apéndice G: Guía de referencia rápida del lenguaje Rust](#apendice-g-guia-de-referencia-rapida-del-lenguaje-rust)
+##### F — Glosario adicional
+- [Apendice F: Glosario adicional (continuacion)](#apendice-f-glosario-adicional-continuacion)
 
-#### GG — Manual de uso de la API REST
-- [Apéndice GG: Manual de uso de la API REST del ERP/CRM](#apendice-gg-manual-de-uso-de-la-api-rest-del-erpcrm)
+##### FF — El rincón del humor
+- [Apendice FF: El rincon del humor](#apendice-ff-el-rincon-del-humor)
 
-#### H — Cheat sheet de Actix Web
-- [Apéndice H: Cheat sheet de Actix Web](#apendice-h-cheat-sheet-de-actix-web)
+##### FINAL — Apendice FINAL: ¡Lo logramos!
+- [Apendice FINAL: ¡Lo logramos!](#apendice-final-lo-logramos)
 
-#### HH — Comparativa Diesel vs SeaORM
-- [Apéndice HH: Comparativa detallada Diesel vs SeaORM](#apendice-hh-comparativa-detallada-diesel-vs-seaorm)
+##### G — Guía de referencia rápida del lenguaje Rust
+- [Apendice G: Guia de referencia rapida del lenguaje Rust](#apendice-g-guia-de-referencia-rapida-del-lenguaje-rust)
 
-#### I — Cheat sheet de SQL
-- [Apéndice I: Cheat sheet de SQL para el ERP/CRM](#apendice-i-cheat-sheet-de-sql-para-el-erpcrm)
+##### GG — Manual de uso de la API REST
+- [Apendice GG: Manual de uso de la API REST del ERP/CRM](#apendice-gg-manual-de-uso-de-la-api-rest-del-erpcrm)
 
-#### II — Tutorial de diesel_cli
-- [Apéndice II: Tutorial de `diesel_cli`](#apendice-ii-tutorial-de-diesel_cli)
+##### H — Cheat sheet de Actix Web
+- [Apendice H: Cheat sheet de Actix Web](#apendice-h-cheat-sheet-de-actix-web)
 
-#### J — Recursos y bibliografia
-- [Apéndice J: Recursos y bibliografía completa](#apendice-j-recursos-y-bibliografia-completa)
+##### HH — Comparativa Diesel vs SeaORM
+- [Apendice HH: Comparativa detallada Diesel vs SeaORM](#apendice-hh-comparativa-detallada-diesel-vs-seaorm)
 
-#### JJ — Tutorial de sea-orm-cli
-- [Apéndice JJ: Tutorial de `sea-orm-cli`](#apendice-jj-tutorial-de-sea-orm-cli)
+##### I — Cheat sheet de SQL
+- [Apendice I: Cheat sheet de SQL para el ERP/CRM](#apendice-i-cheat-sheet-de-sql-para-el-erpcrm)
 
-#### K — Profundizacion en temas especificos
-- [Apéndice K: Profundización en temas específicos](#apendice-k-profundizacion-en-temas-especificos)
+##### II — Tutorial de diesel_cli
+- [Apendice II: Tutorial de `diesel_cli`](#apendice-ii-tutorial-de-dieselcli)
 
-#### KK — Tipos de tests
-- [Apéndice KK: Tipos de tests y cuándo usar cada uno](#apendice-kk-tipos-de-tests-y-cuando-usar-cada-uno)
+##### J — Recursos y bibliografía
+- [Apendice J: Recursos y bibliografia completa](#apendice-j-recursos-y-bibliografia-completa)
 
-#### L — Ensayos pedagogicos
-- [Apéndice L: Ensayos pedagógicos sobre Rust y el desarrollo profesional](#apendice-l-ensayos-pedagogicos-sobre-rust-y-el-desarrollo-profesional)
+##### JJ — Tutorial de sea-orm-cli
+- [Apendice JJ: Tutorial de `sea-orm-cli`](#apendice-jj-tutorial-de-sea-orm-cli)
 
-#### LL — Lista de verificacion de calidad
-- [Apéndice LL: Lista de verificación de calidad de código](#apendice-ll-lista-de-verificacion-de-calidad-de-codigo)
+##### K — Profundización en temas específicos
+- [Apendice K: Profundizacion en temas especificos](#apendice-k-profundizacion-en-temas-especificos)
 
-#### M — Tutorial para novatos totales
-- [Apéndice M: Tutorial paso a paso para novatos totales](#apendice-m-tutorial-paso-a-paso-para-novatos-totales)
+##### KK — Tipos de tests
+- [Apendice KK: Tipos de tests y cuando usar cada uno](#apendice-kk-tipos-de-tests-y-cuando-usar-cada-uno)
 
-#### MM — Conversiones de modelo mental
-- [Apéndice MM: Conversiones de modelo mental](#apendice-mm-conversiones-de-modelo-mental)
+##### L — Ensayos pedagógicos
+- [Apendice L: Ensayos pedagogicos sobre Rust y el desarrollo profesional](#apendice-l-ensayos-pedagogicos-sobre-rust-y-el-desarrollo-profesional)
 
-#### N — Resumen ejecutivo para lideres
-- [Apéndice N: Resumen ejecutivo para líderes técnicos](#apendice-n-resumen-ejecutivo-para-lideres-tecnicos)
+##### LL — Lista de verificación de calidad
+- [Apendice LL: Lista de verificacion de calidad de codigo](#apendice-ll-lista-de-verificacion-de-calidad-de-codigo)
 
-#### NN — Mensaje final
-- [Apéndice NN: Mensaje final](#apendice-nn-mensaje-final)
+##### M — Tutorial para novatos totales
+- [Apendice M: Tutorial paso a paso para novatos totales](#apendice-m-tutorial-paso-a-paso-para-novatos-totales)
 
-#### O — Glosario de terminos mexicanos
-- [Apéndice O: Glosario de términos mexicanos del ERP/CRM](#apendice-o-glosario-de-terminos-mexicanos-del-erpcrm)
+##### MM — Conversiones de modelo mental
+- [Apendice MM: Conversiones de modelo mental](#apendice-mm-conversiones-de-modelo-mental)
 
-#### OO — Catalogo de errores comunes de Rust
-- [Apéndice OO: Catálogo completo de errores comunes de Rust y cómo solucionarlos](#apendice-oo-catalogo-completo-de-errores-comunes-de-rust-y-como-solucionarlos)
+##### N — Resumen ejecutivo para líderes
+- [Apendice N: Resumen ejecutivo para lideres tecnicos](#apendice-n-resumen-ejecutivo-para-lideres-tecnicos)
 
-#### P — Consideraciones legales y fiscales
-- [Apéndice P: Consideraciones legales y fiscales](#apendice-p-consideraciones-legales-y-fiscales)
+##### NN — Mensaje final
+- [Apendice NN: Mensaje final](#apendice-nn-mensaje-final)
 
-#### PP — Estructura de directorios del proyecto
-- [Apéndice PP: Estructura de directorios del proyecto final](#apendice-pp-estructura-de-directorios-del-proyecto-final)
+##### O — Glosario de términos mexicanos
+- [Apendice O: Glosario de terminos mexicanos del ERP/CRM](#apendice-o-glosario-de-terminos-mexicanos-del-erpcrm)
 
-#### Q — Glosario final y agradecimientos
-- [Apéndice Q: Glosario final y agradecimientos](#apendice-q-glosario-final-y-agradecimientos)
+##### OO — Catálogo de errores comunes de Rust
+- [Apendice OO: Catalogo completo de errores comunes de Rust y como solucionarlos](#apendice-oo-catalogo-completo-de-errores-comunes-de-rust-y-como-solucionarlos)
 
-#### QQ — Quick reference de los endpoints
-- [Apéndice QQ: Quick reference de los endpoints](#apendice-qq-quick-reference-de-los-endpoints)
+##### P — Consideraciones legales y fiscales
+- [Apendice P: Consideraciones legales y fiscales](#apendice-p-consideraciones-legales-y-fiscales)
 
-#### R — Analisis profundo del ERP/CRM
-- [Apéndice R: Análisis profundo del ERP/CRM empresarial](#apendice-r-analisis-profundo-del-erpcrm-empresarial)
+##### PP — Estructura de directorios del proyecto
+- [Apendice PP: Estructura de directorios del proyecto final](#apendice-pp-estructura-de-directorios-del-proyecto-final)
 
-#### RR — Manual de operacion del ERP
-- [Apéndice RR: Manual de operación del ERP](#apendice-rr-manual-de-operacion-del-erp)
+##### Q — Glosario final y agradecimientos
+- [Apendice Q: Glosario final y agradecimientos](#apendice-q-glosario-final-y-agradecimientos)
 
-#### S — Recursos visuales del ERP
-- [Apéndice S: Recursos visuales del ERP](#apendice-s-recursos-visuales-del-erp)
+##### QQ — Quick reference de los endpoints
+- [Apendice QQ: Quick reference de los endpoints](#apendice-qq-quick-reference-de-los-endpoints)
 
-#### SS — Decisiones arquitectonicas (ADR)
-- [Apéndice SS: Decisiones arquitectónicas y su justificación](#apendice-ss-decisiones-arquitectonicas-y-su-justificacion)
+##### R — Análisis profundo del ERP/CRM
+- [Apendice R: Analisis profundo del ERP/CRM empresarial](#apendice-r-analisis-profundo-del-erpcrm-empresarial)
 
-#### T — Ejercicios avanzados
-- [Apéndice T: Ejercicios avanzados y proyectos integradores](#apendice-t-ejercicios-avanzados-y-proyectos-integradores)
+##### RR — Manual de operación del ERP
+- [Apendice RR: Manual de operacion del ERP](#apendice-rr-manual-de-operacion-del-erp)
 
-#### TT — Decalogo del programador Rust
-- [Apéndice TT: Decálogo del programador Rust](#apendice-tt-decalogo-del-programador-rust)
+##### S — Recursos visuales del ERP
+- [Apendice S: Recursos visuales del ERP](#apendice-s-recursos-visuales-del-erp)
 
-#### U — Reflexiones sobre la longevidad
-- [Apéndice U: Reflexiones sobre la longevidad del software](#apendice-u-reflexiones-sobre-la-longevidad-del-software)
+##### SS — Decisiones arquitectónicas (ADR)
+- [Apendice SS: Decisiones arquitectonicas y su justificacion](#apendice-ss-decisiones-arquitectonicas-y-su-justificacion)
 
-#### UU — Recursos en espanol
-- [Apéndice UU: Recursos en español](#apendice-uu-recursos-en-espanol)
+##### T — Ejercicios avanzados
+- [Apendice T: Ejercicios avanzados y proyectos integradores](#apendice-t-ejercicios-avanzados-y-proyectos-integradores)
 
-#### V — Vocabulario recomendado
-- [Apéndice V: Vocabulario recomendado para el ERP/CRM](#apendice-v-vocabulario-recomendado-para-el-erpcrm)
+##### TT — Decálogo del programador Rust
+- [Apendice TT: Decalogo del programador Rust](#apendice-tt-decalogo-del-programador-rust)
 
-#### VV — Glosario final (parte 3)
-- [Apéndice VV: Glosario final (parte 3)](#apendice-vv-glosario-final-parte-3)
+##### U — Reflexiones sobre la longevidad
+- [Apendice U: Reflexiones sobre la longevidad del software](#apendice-u-reflexiones-sobre-la-longevidad-del-software)
 
-#### W — Ultimas recomendaciones y cierre
-- [Apéndice W: Últimas recomendaciones y cierre](#apendice-w-ultimas-recomendaciones-y-cierre)
+##### UU — Recursos en español
+- [Apendice UU: Recursos en espanol](#apendice-uu-recursos-en-espanol)
 
-#### WW — El ultimo apendice
-- [Apéndice WW: El último apéndice](#apendice-ww-el-ultimo-apendice)
+##### V — Vocabulario recomendado
+- [Apendice V: Vocabulario recomendado para el ERP/CRM](#apendice-v-vocabulario-recomendado-para-el-erpcrm)
 
-#### X — Historia del software empresarial
-- [Apéndice X: La historia del software empresarial](#apendice-x-la-historia-del-software-empresarial)
+##### VV — Glosario final (parte 3)
+- [Apendice VV: Glosario final (parte 3)](#apendice-vv-glosario-final-parte-3)
 
-#### XX — La aventura de aprender Rust
-- [Apéndice XX: La aventura de aprender Rust](#apendice-xx-la-aventura-de-aprender-rust)
+##### W — Últimas recomendaciones y cierre
+- [Apendice W: Ultimas recomendaciones y cierre](#apendice-w-ultimas-recomendaciones-y-cierre)
 
-#### Y — Glosario de argot de Rust
-- [Apéndice Y: Glosario de argot de Rust](#apendice-y-glosario-de-argot-de-rust)
+##### WW — El último apéndice
+- [Apendice WW: El ultimo apendice](#apendice-ww-el-ultimo-apendice)
 
-#### YY — Proximos pasos despues del manual
-- [Apéndice YY: Próximos pasos después del manual](#apendice-yy-proximos-pasos-despues-del-manual)
+##### X — Historia del software empresarial
+- [Apendice X: La historia del software empresarial](#apendice-x-la-historia-del-software-empresarial)
 
-#### Z — Recursos visuales complementarios
-- [Apéndice Z: Recursos visuales complementarios](#apendice-z-recursos-visuales-complementarios)
+##### XX — La aventura de aprender Rust
+- [Apendice XX: La aventura de aprender Rust](#apendice-xx-la-aventura-de-aprender-rust)
 
-#### ZZ — La ultima leccion
-- [Apéndice ZZ: La última lección](#apendice-zz-la-ultima-leccion)
+##### Y — Glosario de argot de Rust
+- [Apendice Y: Glosario de argot de Rust](#apendice-y-glosario-de-argot-de-rust)
 
-#### Apendices numerados (A1-A160)
-- [Apéndice A1: Manual de usuario final del ERP/CRM](#apendice-a1-manual-de-usuario-final-del-erpcrm)
-- [Apéndice A2: Glosario de términos de facturación](#apendice-a2-glosario-de-terminos-de-facturacion)
-- [Apéndice A3: Tips de productividad](#apendice-a3-tips-de-productividad)
-- [Apéndice A4: Glosario matemático](#apendice-a4-glosario-matematico)
-- [Apéndice A5: Errores más comunes en la API](#apendice-a5-errores-mas-comunes-en-la-api)
-- [Apéndice A6: Tabla de comparación de velocidades](#apendice-a6-tabla-de-comparacion-de-velocidades)
-- [Apéndice A7: Abreviaciones comunes](#apendice-a7-abreviaciones-comunes)
-- [Apéndice A8: Hoja de ruta de aprendizaje recomendada](#apendice-a8-hoja-de-ruta-de-aprendizaje-recomendada)
-- [Apéndice A9: Mensaje al programador junior](#apendice-a9-mensaje-al-programador-junior)
-- [Apéndice A10: Cierre absoluto](#apendice-a10-cierre-absoluto)
-- [Apéndice A11: El proyecto paso a paso - construyendo el ERP desde cero](#apendice-a11-el-proyecto-paso-a-paso-construyendo-el-erp-desde-cero)
-- [Apéndice A12: Glosario de términos de marketing y CRM](#apendice-a12-glosario-de-terminos-de-marketing-y-crm)
-- [Apéndice A13: Plan de estudios de Rust por nivel](#apendice-a13-plan-de-estudios-de-rust-por-nivel)
-- [Apéndice A14: Errores más comunes en la compilación de la API](#apendice-a14-errores-mas-comunes-en-la-compilacion-de-la-api)
-- [Apéndice A15: Hoja de cálculo mental](#apendice-a15-hoja-de-calculo-mental)
-- [Apéndice A16: Notas finales](#apendice-a16-notas-finales)
-- [Apéndice A17: Análisis económico del ERP/CRM](#apendice-a17-analisis-economico-del-erpcrm)
-- [Apéndice A18: Roadmap del proyecto](#apendice-a18-roadmap-del-proyecto)
-- [Apéndice A19: Casos de éxito de ERPs en Rust](#apendice-a19-casos-de-exito-de-erps-en-rust)
-- [Apéndice A20: Tips avanzados de Rust](#apendice-a20-tips-avanzados-de-rust)
-- [Apéndice A21: Glosario final de apéndices](#apendice-a21-glosario-final-de-apendices)
-- [Apéndice A22: Resumen ejecutivo final](#apendice-a22-resumen-ejecutivo-final)
-- [Apéndice A23: Reflexión sobre el proceso](#apendice-a23-reflexion-sobre-el-proceso)
-- [Apéndice A24: Mensaje personal](#apendice-a24-mensaje-personal)
-- [Apéndice A25: Manual de deployment a producción](#apendice-a25-manual-de-deployment-a-produccion)
-- [Apéndice A26: Conversión de otros ERPs a Rust](#apendice-a26-conversion-de-otros-erps-a-rust)
-- [Apéndice A27: Glosario de términos del manual](#apendice-a27-glosario-de-terminos-del-manual)
-- [Apéndice A28: Manual de uso de rust-analyzer](#apendice-a28-manual-de-uso-de-rust-analyzer)
-- [Apéndice A29: Glosario de términos fiscales mexicanos](#apendice-a29-glosario-de-terminos-fiscales-mexicanos)
-- [Apéndice A30: El verdadero cierre](#apendice-a30-el-verdadero-cierre)
-- [Apéndice A31: Comparativa con otras soluciones](#apendice-a31-comparativa-con-otras-soluciones)
-- [Apéndice A32: Recursos por idioma](#apendice-a32-recursos-por-idioma)
-- [Apéndice A33: El test del compilador](#apendice-a33-el-test-del-compilador)
-- [Apéndice A34: Cómo contribuir](#apendice-a34-como-contribuir)
-- [Apéndice A35: La historia del ERP](#apendice-a35-la-historia-del-erp)
-- [Apéndice A36: Glosario de argot de programadores](#apendice-a36-glosario-de-argot-de-programadores)
-- [Apéndice A37: Final final final](#apendice-a37-final-final-final)
-- [Apéndice A38: Manual de supervivencia del desarrollador de ERPs](#apendice-a38-manual-de-supervivencia-del-desarrollador-de-erps)
-- [Apéndice A39: El test del junior](#apendice-a39-el-test-del-junior)
-- [Apéndice A40: El test del senior](#apendice-a40-el-test-del-senior)
-- [Apéndice A41: El test del arquitecto](#apendice-a41-el-test-del-arquitecto)
-- [Apéndice A42: El test del CFDI](#apendice-a42-el-test-del-cfdi)
-- [Apéndice A43: El test del deployment](#apendice-a43-el-test-del-deployment)
-- [Apéndice A44: La frase célebre de Rust](#apendice-a44-la-frase-celebre-de-rust)
-- [Apéndice A45: Manual de estilo del manual](#apendice-a45-manual-de-estilo-del-manual)
-- [Apéndice A46: Hoja de ruta del manual (futuro)](#apendice-a46-hoja-de-ruta-del-manual-futuro)
-- [Apéndice A47: Reconocimientos](#apendice-a47-reconocimientos)
-- [Apéndice A48: El último párrafo](#apendice-a48-el-ultimo-parrafo)
-- [Apéndice A49: Las preguntas más frecuentes (FAQ)](#apendice-a49-las-preguntas-mas-frecuentes-faq)
-- [Apéndice A50: Decisiones de diseño del manual](#apendice-a50-decisiones-de-diseno-del-manual)
-- [Apéndice A51: Glosario de términos avanzados de Rust](#apendice-a51-glosario-de-terminos-avanzados-de-rust)
-- [Apéndice A52: Performance tuning avanzado](#apendice-a52-performance-tuning-avanzado)
-- [Apéndice A53: Seguridad avanzada](#apendice-a53-seguridad-avanzada)
-- [Apéndice A54: Patrones avanzados de concurrencia](#apendice-a54-patrones-avanzados-de-concurrencia)
-- [Apéndice A55: Integración con otros sistemas](#apendice-a55-integracion-con-otros-sistemas)
-- [Apéndice A56: Recursos para DevOps](#apendice-a56-recursos-para-devops)
-- [Apéndice A57: Mensaje final a la comunidad](#apendice-a57-mensaje-final-a-la-comunidad)
-- [Apéndice A58: La biblia del ERP - Conceptos fundamentales](#apendice-a58-la-biblia-del-erp-conceptos-fundamentales)
-- [Apéndice A59: Implementación de referencia completa](#apendice-a59-implementacion-de-referencia-completa)
-- [Apéndice A60: El fin del manual](#apendice-a60-el-fin-del-manual)
-- [Apéndice A61: El código fuente completo de un ERP mínimo viable](#apendice-a61-el-codigo-fuente-completo-de-un-erp-minimo-viable)
-- [Apéndice A62: El RFC desde cero](#apendice-a62-el-rfc-desde-cero)
-- [Apéndice A63: El IVA desde cero](#apendice-a63-el-iva-desde-cero)
-- [Apéndice A64: El IEPS desde cero](#apendice-a64-el-ieps-desde-cero)
-- [Apéndice A65: La factura electrónica paso a paso](#apendice-a65-la-factura-electronica-paso-a-paso)
-- [Apéndice A66: El ERP en cifras](#apendice-a66-el-erp-en-cifras)
-- [Apéndice A67: Conclusión absoluta](#apendice-a67-conclusion-absoluta)
-- [Apéndice A68: La arquitectura hexagonal aplicada al ERP](#apendice-a68-la-arquitectura-hexagonal-aplicada-al-erp)
-- [Apéndice A69: Domain-Driven Design (DDD) aplicado al ERP](#apendice-a69-domain-driven-design-ddd-aplicado-al-erp)
-- [Apéndice A70: La revolución silenciosa de Rust en 2026](#apendice-a70-la-revolucion-silenciosa-de-rust-en-2026)
-- [Apéndice A71: El código que cambia el mundo](#apendice-a71-el-codigo-que-cambia-el-mundo)
-- [Apéndice A72: La biblia del programador](#apendice-a72-la-biblia-del-programador)
-- [Apéndice A73: El último mensaje](#apendice-a73-el-ultimo-mensaje)
-- [Apéndice A74: El manual del arquitecto de software](#apendice-a74-el-manual-del-arquitecto-de-software)
-- [Apéndice A75: El estado del arte en 2026](#apendice-a75-el-estado-del-arte-en-2026)
-- [Apéndice A76: El día a día del programador Rust](#apendice-a76-el-dia-a-dia-del-programador-rust)
-- [Apéndice A77: La comunidad de Rust en México](#apendice-a77-la-comunidad-de-rust-en-mexico)
-- [Apéndice A78: Hoja de ruta del ERP](#apendice-a78-hoja-de-ruta-del-erp)
-- [Apéndice A79: Los mandamientos del ERP](#apendice-a79-los-mandamientos-del-erp)
-- [Apéndice A80: La bitácora del manual](#apendice-a80-la-bitacora-del-manual)
-- [Apéndice A81: El código fuente de los mini-proyectos](#apendice-a81-el-codigo-fuente-de-los-mini-proyectos)
-- [Apéndice A82: El proyecto final explicado](#apendice-a82-el-proyecto-final-explicado)
-- [Apéndice A83: El test final del manual](#apendice-a83-el-test-final-del-manual)
-- [Apéndice A84: Las mil palabras finales](#apendice-a84-las-mil-palabras-finales)
-- [Apéndice A85: La ética del programador de ERPs](#apendice-a85-la-etica-del-programador-de-erps)
-- [Apéndice A86: La matemática detrás del ERP](#apendice-a86-la-matematica-detras-del-erp)
-- [Apéndice A87: El sistema de salud del ERP](#apendice-a87-el-sistema-de-salud-del-erp)
-- [Apéndice A88: El test del conocimiento](#apendice-a88-el-test-del-conocimiento)
-- [Apéndice A89: El poder de la documentación](#apendice-a89-el-poder-de-la-documentacion)
-- [Apéndice A90: El test de fuego](#apendice-a90-el-test-de-fuego)
-- [Apéndice A91: El manual del mentor](#apendice-a91-el-manual-del-mentor)
-- [Apéndice A92: El test del ERP completo](#apendice-a92-el-test-del-erp-completo)
-- [Apéndice A93: El final del viaje](#apendice-a93-el-final-del-viaje)
-- [Apéndice A94: La biblia de las herramientas de Rust](#apendice-a94-la-biblia-de-las-herramientas-de-rust)
-- [Apéndice A95: El código de la excelencia](#apendice-a95-el-codigo-de-la-excelencia)
-- [Apéndice A96: El test del tiempo](#apendice-a96-el-test-del-tiempo)
-- [Apéndice A97: Los números del manual](#apendice-a97-los-numeros-del-manual)
-- [Apéndice A98: Los proyectos de muestra](#apendice-a98-los-proyectos-de-muestra)
-- [Apéndice A99: La despedida](#apendice-a99-la-despedida)
-- [Apéndice A100: El manual de instalación paso a paso](#apendice-a100-el-manual-de-instalacion-paso-a-paso)
-- [Apéndice A101: La línea del tiempo del manual](#apendice-a101-la-linea-del-tiempo-del-manual)
-- [Apéndice A102: El test del primer día](#apendice-a102-el-test-del-primer-dia)
-- [Apéndice A103: El test del año](#apendice-a103-el-test-del-ano)
-- [Apéndice A104: El test de la vida](#apendice-a104-el-test-de-la-vida)
-- [Apéndice A105: El manual de uso final](#apendice-a105-el-manual-de-uso-final)
-- [Apéndice A106: Las palabras de cierre](#apendice-a106-las-palabras-de-cierre)
-- [Apéndice A107: El test del programador completo](#apendice-a107-el-test-del-programador-completo)
-- [Apéndice A108: La biblia de los errores del programador](#apendice-a108-la-biblia-de-los-errores-del-programador)
-- [Apéndice A109: El test de la motivación](#apendice-a109-el-test-de-la-motivacion)
-- [Apéndice A110: La despedida final](#apendice-a110-la-despedida-final)
-- [Apéndice A111: La biblia de las preguntas](#apendice-a111-la-biblia-de-las-preguntas)
-- [Apéndice A112: La biblia de los recursos](#apendice-a112-la-biblia-de-los-recursos)
-- [Apéndice A113: El test del ERP en producción](#apendice-a113-el-test-del-erp-en-produccion)
-- [Apéndice A114: La biblia de los mandamientos del programador ético](#apendice-a114-la-biblia-de-los-mandamientos-del-programador-etico)
-- [Apéndice A115: El test del programador de Rust](#apendice-a115-el-test-del-programador-de-rust)
-- [Apéndice A116: La despedida](#apendice-a116-la-despedida)
-- [Apéndice A117: El manual de la arquitectura empresarial](#apendice-a117-el-manual-de-la-arquitectura-empresarial)
-- [Apéndice A118: La biblia de la seguridad](#apendice-a118-la-biblia-de-la-seguridad)
-- [Apéndice A119: El test del programador de software](#apendice-a119-el-test-del-programador-de-software)
-- [Apéndice A120: La despedida final final](#apendice-a120-la-despedida-final-final)
-- [Apéndice A121: La biblia de la comunicación](#apendice-a121-la-biblia-de-la-comunicacion)
-- [Apéndice A122: El test del líder técnico](#apendice-a122-el-test-del-lider-tecnico)
-- [Apéndice A123: La biblia del ERP/CRM](#apendice-a123-la-biblia-del-erpcrm)
-- [Apéndice A124: El manual del producto](#apendice-a124-el-manual-del-producto)
-- [Apéndice A125: La despedida absoluta](#apendice-a125-la-despedida-absoluta)
-- [Apéndice A126: El test del programador resiliente](#apendice-a126-el-test-del-programador-resiliente)
-- [Apéndice A127: La biblia del liderazgo técnico](#apendice-a127-la-biblia-del-liderazgo-tecnico)
-- [Apéndice A128: La biblia del código limpio](#apendice-a128-la-biblia-del-codigo-limpio)
-- [Apéndice A129: La despedida](#apendice-a129-la-despedida)
-- [Apéndice A130: La biblia de la productividad](#apendice-a130-la-biblia-de-la-productividad)
-- [Apéndice A131: La biblia de la gestión del tiempo](#apendice-a131-la-biblia-de-la-gestion-del-tiempo)
-- [Apéndice A132: La biblia de la documentación](#apendice-a132-la-biblia-de-la-documentacion)
-- [Apéndice A133: La biblia de las reuniones](#apendice-a133-la-biblia-de-las-reuniones)
-- [Apéndice A134: La biblia de la comunicación escrita](#apendice-a134-la-biblia-de-la-comunicacion-escrita)
-- [Apéndice A135: La biblia de la revisión de código](#apendice-a135-la-biblia-de-la-revision-de-codigo)
-- [Apéndice A136: La despedida del manual](#apendice-a136-la-despedida-del-manual)
-- [Apéndice A137: La biblia de la resiliencia personal](#apendice-a137-la-biblia-de-la-resiliencia-personal)
-- [Apéndice A138: La biblia de la creatividad](#apendice-a138-la-biblia-de-la-creatividad)
-- [Apéndice A139: La biblia de la gestión de proyectos](#apendice-a139-la-biblia-de-la-gestion-de-proyectos)
-- [Apéndice A140: La biblia de la calidad del software](#apendice-a140-la-biblia-de-la-calidad-del-software)
-- [Apéndice A141: La biblia de la entrega continua](#apendice-a141-la-biblia-de-la-entrega-continua)
-- [Apéndice A142: La biblia del software libre](#apendice-a142-la-biblia-del-software-libre)
-- [Apéndice A143: La biblia de la tecnología](#apendice-a143-la-biblia-de-la-tecnologia)
-- [Apéndice A144: La despedida final del manual](#apendice-a144-la-despedida-final-del-manual)
-- [Apéndice A145: La biblia de la carrera profesional](#apendice-a145-la-biblia-de-la-carrera-profesional)
-- [Apéndice A146: La biblia del software empresarial](#apendice-a146-la-biblia-del-software-empresarial)
-- [Apéndice A147: La biblia del ERP/CRM en México](#apendice-a147-la-biblia-del-erpcrm-en-mexico)
-- [Apéndice A148: La biblia del Rust empresarial](#apendice-a148-la-biblia-del-rust-empresarial)
-- [Apéndice A149: La despedida absoluta final](#apendice-a149-la-despedida-absoluta-final)
-- [Apéndice A150: La biblia del aprendizaje](#apendice-a150-la-biblia-del-aprendizaje)
-- [Apéndice A151: La biblia de la enseñanza](#apendice-a151-la-biblia-de-la-ensenanza)
-- [Apéndice A152: La biblia del software](#apendice-a152-la-biblia-del-software)
-- [Apéndice A153: La biblia del programador](#apendice-a153-la-biblia-del-programador)
-- [Apéndice A154: La despedida final final final](#apendice-a154-la-despedida-final-final-final)
-- [Apéndice A155: La biblia del cierre](#apendice-a155-la-biblia-del-cierre)
-- [Apéndice A156: La biblia del todo](#apendice-a156-la-biblia-del-todo)
-- [Apéndice A157: La biblia del final](#apendice-a157-la-biblia-del-final)
-- [Apéndice A158: El cierre](#apendice-a158-el-cierre)
-- [Apéndice A159: Las últimas palabras](#apendice-a159-las-ultimas-palabras)
-- [Apéndice A160: ¡Ya casi llegamos!](#apendice-a160-ya-casi-llegamos)
+##### YY — Próximos pasos después del manual
+- [Apendice YY: Proximos pasos despues del manual](#apendice-yy-proximos-pasos-despues-del-manual)
 
-### [Epilogo: el manual como proyecto vivo](#epilogo-el-manual-como-proyecto-vivo)
+##### Z — Recursos visuales complementarios
+- [Apendice Z: Recursos visuales complementarios](#apendice-z-recursos-visuales-complementarios)
 
-### [Apendice FINAL: ¡Lo logramos!](#apendice-final-lo-logramos)
+##### ZZ — La última lección
+- [Apendice ZZ: La ultima leccion](#apendice-zz-la-ultima-leccion)
 
-### Diagrama entidad–relacion del ERP/CRM (referencia global)
+### [Epílogo: el manual como proyecto vivo](#)
+
+### Diagrama entidad–relación del ERP/CRM (referencia global)
 
 ```mermaid
 erDiagram
