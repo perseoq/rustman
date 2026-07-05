@@ -35,7 +35,7 @@
 | [1.17 Closures e iteradores](#117-closures-e-iteradores) | `Fn`, adaptadores, consumidores |
 | [1.18 Módulos y sistema de archivos](#118-modulos-y-sistema-de-archivos) | `mod`, `pub`, `use` |
 | [1.19 Pruebas](#119-pruebas-unitarias-y-de-integracion) | unit, integration, doc tests |
-| [1.20 Ejercicios acumulativos](#120-ejercicios-acumulativos-parte-1--20-ejercicios) | ejercicios prácticos |
+| [1.20 Ejercicios acumulativos](#120-ejercicios-acumulativos-parte-1-20-ejercicios) | ejercicios prácticos |
 | [1.21 Soluciones detalladas](#121-soluciones-de-los-ejercicios-de-la-parte-1) | soluciones completas |
 
 **Proyectos de la Parte 1** (8 mini-proyectos):
@@ -57,12 +57,12 @@
 | [2.3 Consultas `SELECT`](#23-consultas-select) | `query`, `exec`, `fetch_*` |
 | [2.4 Parámetros preparados y seguridad](#24-parametros-preparados-y-seguridad) | inyección SQL, `?`, `:nombre` |
 | [2.5 `INSERT`, `UPDATE`, `DELETE`](#25-insert-update-y-delete) | mutaciones, `last_insert_id` |
-| [2.6 Pool de conexiones con `r2d2_mysql`](#26-pool-de-conexiones-con-r2d2mysql) | pool, préstamo, AppState |
+| [2.6 Pool de conexiones con `r2d2_mysql`](#26-pool-de-conexiones-con-r2d2_mysql) | pool, préstamo, AppState |
 | [2.7 Transacciones](#27-transacciones) | `BEGIN`, `COMMIT`, `ROLLBACK`, `Drop` |
 | [2.8 Errores típicos con BD](#28-errores-tipicos-con-bases-de-datos) | conexión, tipos, restricciones, deadlocks |
 | [2.9 Ejemplo completo: ERP/CRM CLI](#29-ejemplo-completo-erpcrm-cli-de-gestion) | gestor de tareas en consola |
 | [2.10 Buenas prácticas](#210-buenas-practicas) | migraciones, logging, capas |
-| [2.11 Ejercicios acumulativos](#211-ejercicios-acumulativos-parte-2--20-ejercicios) | ejercicios prácticos |
+| [2.11 Ejercicios acumulativos](#211-ejercicios-acumulativos-parte-2-20-ejercicios) | ejercicios prácticos |
 | [2.12 Soluciones detalladas](#212-soluciones-detalladas-parte-2) | soluciones completas |
 
 **Proyectos de la Parte 2** (4 mini-proyectos):
@@ -90,7 +90,7 @@
 | [3.13 Pruebas](#313-pruebas) | curl, `actix-web::test`, mocks, cobertura |
 | [3.14 Ejemplo completo: API REST del ERP/CRM](#314-ejemplo-completo-api-rest-del-erpcrm) | 8 subsecciones con endpoints |
 | [3.15 Despliegue](#315-despliegue) | release, Docker, docker-compose, VPS, PaaS |
-| [3.16 Ejercicios acumulativos](#316-ejercicios-acumulativos-parte-3--30-ejercicios) | ejercicios prácticos |
+| [3.16 Ejercicios acumulativos](#316-ejercicios-acumulativos-parte-3-30-ejercicios) | ejercicios prácticos |
 | [3.17 Soluciones detalladas](#317-soluciones-detalladas-parte-3) | soluciones completas |
 
 **Proyectos de la Parte 3** (5 mini-proyectos + 1 final):
@@ -103,7 +103,7 @@
 
 ### [Anexos](#anexos)
 
-- [A.1 Glosario de términos (Rust + ERP/CRM)](#a1-glosario-de-terminos-rust--erpcrm)
+- [A.1 Glosario de términos (Rust + ERP/CRM)](#a1-glosario-de-terminos-rust-erpcrm)
 - [A.2 Soluciones de los ejercicios](#a2-soluciones-de-los-ejercicios)
 - [A.3 Recursos y lecturas adicionales](#a3-recursos-y-lecturas-adicionales)
 - [A.4 Índice alfabético](#a4-indice-alfabetico)
@@ -115,9 +115,9 @@
 - [Soluciones Parte 2 (Ejercicios 2.11.1 a 2.11.20)](#soluciones-parte-2-ejercicios-2111-a-21120)
 - [Soluciones Parte 3 (Ejercicios 3.16.1 a 3.16.30)](#soluciones-parte-3-ejercicios-3161-a-31630)
 
-### Apéndices temáticos (160+ apéndices)
+### Apendices tematicos (160+ apendices)
 
-#### A — Código fuente completo de los mini-proyectos
+#### A — Codigo fuente completo de los mini-proyectos
 - [Apéndice A1: Manual de usuario final del ERP/CRM](#apendice-a1-manual-de-usuario-final-del-erpcrm)
 - [Apéndice A2: Glosario de términos de facturación](#apendice-a2-glosario-de-terminos-de-facturacion)
 - [Apéndice A3: Tips de productividad](#apendice-a3-tips-de-productividad)
@@ -128,7 +128,7 @@
 - [Apéndice A8: Hoja de ruta de aprendizaje recomendada](#apendice-a8-hoja-de-ruta-de-aprendizaje-recomendada)
 - [Apéndice A9: Mensaje al programador junior](#apendice-a9-mensaje-al-programador-junior)
 - [Apéndice A10: Cierre absoluto](#apendice-a10-cierre-absoluto)
-- [Apéndice A11: El proyecto paso a paso - construyendo el ERP desde cero](#apendice-a11-el-proyecto-paso-a-paso---construyendo-el-erp-desde-cero)
+- [Apéndice A11: El proyecto paso a paso - construyendo el ERP desde cero](#apendice-a11-el-proyecto-paso-a-paso-construyendo-el-erp-desde-cero)
 - [Apéndice A12: Glosario de términos de marketing y CRM](#apendice-a12-glosario-de-terminos-de-marketing-y-crm)
 - [Apéndice A13: Plan de estudios de Rust por nivel](#apendice-a13-plan-de-estudios-de-rust-por-nivel)
 - [Apéndice A14: Errores más comunes en la compilación de la API](#apendice-a14-errores-mas-comunes-en-la-compilacion-de-la-api)
@@ -175,7 +175,7 @@
 - [Apéndice A55: Integración con otros sistemas](#apendice-a55-integracion-con-otros-sistemas)
 - [Apéndice A56: Recursos para DevOps](#apendice-a56-recursos-para-devops)
 - [Apéndice A57: Mensaje final a la comunidad](#apendice-a57-mensaje-final-a-la-comunidad)
-- [Apéndice A58: La biblia del ERP - Conceptos fundamentales](#apendice-a58-la-biblia-del-erp---conceptos-fundamentales)
+- [Apéndice A58: La biblia del ERP - Conceptos fundamentales](#apendice-a58-la-biblia-del-erp-conceptos-fundamentales)
 - [Apéndice A59: Implementación de referencia completa](#apendice-a59-implementacion-de-referencia-completa)
 - [Apéndice A60: El fin del manual](#apendice-a60-el-fin-del-manual)
 - [Apéndice A61: El código fuente completo de un ERP mínimo viable](#apendice-a61-el-codigo-fuente-completo-de-un-erp-minimo-viable)
@@ -279,10 +279,10 @@
 - [Apéndice A159: Las últimas palabras](#apendice-a159-las-ultimas-palabras)
 - [Apéndice A160: ¡Ya casi llegamos!](#apendice-a160-ya-casi-llegamos)
 
-#### AA — Código fuente completo de los mini-proyectos
+#### AA — Codigo fuente completo de los mini-proyectos
 - [Apéndice AA: Código fuente completo de los mini-proyectos](#apendice-aa-codigo-fuente-completo-de-los-mini-proyectos)
 
-#### BB — Lista de verificación del proyecto final
+#### BB — Lista de verificacion del proyecto final
 - [Apéndice BB: Lista de verificación del proyecto final](#apendice-bb-lista-de-verificacion-del-proyecto-final)
 
 #### C — Casos de estudio completos
@@ -291,7 +291,7 @@
 #### CC — Mapa de crates mencionados
 - [Apéndice CC: Mapa de crates mencionados](#apendice-cc-mapa-de-crates-mencionados)
 
-#### D — Patrones de diseño en Rust
+#### D — Patrones de diseno en Rust
 - [Apéndice D: Patrones de diseño en Rust](#apendice-d-patrones-de-diseno-en-rust)
 
 #### DD — Diagrama de Gantt del proyecto
@@ -300,19 +300,19 @@
 #### E — Conversiones de datos con serde
 - [Apéndice E: Conversiones de datos con `serde`](#apendice-e-conversiones-de-datos-con-serde)
 
-#### EE — Glosario inglés-español para programadores
+#### EE — Glosario ingles-espanol para programadores
 - [Apéndice EE: Glosario inglés-español para programadores](#apendice-ee-glosario-ingles-espanol-para-programadores)
 
 #### F — Glosario adicional
 - [Apéndice F: Glosario adicional (continuación)](#apendice-f-glosario-adicional-continuacion)
 
-#### FF — El rincón del humor
+#### FF — El rincon del humor
 - [Apéndice FF: El rincón del humor](#apendice-ff-el-rincon-del-humor)
 
-#### FINAL — Apéndices FINAL
+#### FINAL — Apendices FINAL
 - [Apéndice FINAL: ¡Lo logramos!](#apendice-final-lo-logramos)
 
-#### G — Guía de referencia rápida del lenguaje Rust
+#### G — Guia de referencia rapida del lenguaje Rust
 - [Apéndice G: Guía de referencia rápida del lenguaje Rust](#apendice-g-guia-de-referencia-rapida-del-lenguaje-rust)
 
 #### GG — Manual de uso de la API REST
@@ -328,24 +328,24 @@
 - [Apéndice I: Cheat sheet de SQL para el ERP/CRM](#apendice-i-cheat-sheet-de-sql-para-el-erpcrm)
 
 #### II — Tutorial de diesel_cli
-- [Apéndice II: Tutorial de `diesel_cli`](#apendice-ii-tutorial-de-dieselcli)
+- [Apéndice II: Tutorial de `diesel_cli`](#apendice-ii-tutorial-de-diesel_cli)
 
-#### J — Recursos y bibliografía
+#### J — Recursos y bibliografia
 - [Apéndice J: Recursos y bibliografía completa](#apendice-j-recursos-y-bibliografia-completa)
 
 #### JJ — Tutorial de sea-orm-cli
 - [Apéndice JJ: Tutorial de `sea-orm-cli`](#apendice-jj-tutorial-de-sea-orm-cli)
 
-#### K — Profundización en temas específicos
+#### K — Profundizacion en temas especificos
 - [Apéndice K: Profundización en temas específicos](#apendice-k-profundizacion-en-temas-especificos)
 
 #### KK — Tipos de tests
 - [Apéndice KK: Tipos de tests y cuándo usar cada uno](#apendice-kk-tipos-de-tests-y-cuando-usar-cada-uno)
 
-#### L — Ensayos pedagógicos
+#### L — Ensayos pedagogicos
 - [Apéndice L: Ensayos pedagógicos sobre Rust y el desarrollo profesional](#apendice-l-ensayos-pedagogicos-sobre-rust-y-el-desarrollo-profesional)
 
-#### LL — Lista de verificación de calidad
+#### LL — Lista de verificacion de calidad
 - [Apéndice LL: Lista de verificación de calidad de código](#apendice-ll-lista-de-verificacion-de-calidad-de-codigo)
 
 #### M — Tutorial para novatos totales
@@ -354,16 +354,16 @@
 #### MM — Conversiones de modelo mental
 - [Apéndice MM: Conversiones de modelo mental](#apendice-mm-conversiones-de-modelo-mental)
 
-#### N — Resumen ejecutivo para líderes
+#### N — Resumen ejecutivo para lideres
 - [Apéndice N: Resumen ejecutivo para líderes técnicos](#apendice-n-resumen-ejecutivo-para-lideres-tecnicos)
 
 #### NN — Mensaje final
 - [Apéndice NN: Mensaje final](#apendice-nn-mensaje-final)
 
-#### O — Glosario de términos mexicanos
+#### O — Glosario de terminos mexicanos
 - [Apéndice O: Glosario de términos mexicanos del ERP/CRM](#apendice-o-glosario-de-terminos-mexicanos-del-erpcrm)
 
-#### OO — Catálogo de errores comunes de Rust
+#### OO — Catalogo de errores comunes de Rust
 - [Apéndice OO: Catálogo completo de errores comunes de Rust y cómo solucionarlos](#apendice-oo-catalogo-completo-de-errores-comunes-de-rust-y-como-solucionarlos)
 
 #### P — Consideraciones legales y fiscales
@@ -378,28 +378,28 @@
 #### QQ — Quick reference de los endpoints
 - [Apéndice QQ: Quick reference de los endpoints](#apendice-qq-quick-reference-de-los-endpoints)
 
-#### R — Análisis profundo del ERP/CRM
+#### R — Analisis profundo del ERP/CRM
 - [Apéndice R: Análisis profundo del ERP/CRM empresarial](#apendice-r-analisis-profundo-del-erpcrm-empresarial)
 
-#### RR — Manual de operación del ERP
+#### RR — Manual de operacion del ERP
 - [Apéndice RR: Manual de operación del ERP](#apendice-rr-manual-de-operacion-del-erp)
 
 #### S — Recursos visuales del ERP
 - [Apéndice S: Recursos visuales del ERP](#apendice-s-recursos-visuales-del-erp)
 
-#### SS — Decisiones arquitectónicas (ADR)
+#### SS — Decisiones arquitectonicas (ADR)
 - [Apéndice SS: Decisiones arquitectónicas y su justificación](#apendice-ss-decisiones-arquitectonicas-y-su-justificacion)
 
 #### T — Ejercicios avanzados
 - [Apéndice T: Ejercicios avanzados y proyectos integradores](#apendice-t-ejercicios-avanzados-y-proyectos-integradores)
 
-#### TT — Decálogo del programador Rust
+#### TT — Decalogo del programador Rust
 - [Apéndice TT: Decálogo del programador Rust](#apendice-tt-decalogo-del-programador-rust)
 
 #### U — Reflexiones sobre la longevidad
 - [Apéndice U: Reflexiones sobre la longevidad del software](#apendice-u-reflexiones-sobre-la-longevidad-del-software)
 
-#### UU — Recursos en español
+#### UU — Recursos en espanol
 - [Apéndice UU: Recursos en español](#apendice-uu-recursos-en-espanol)
 
 #### V — Vocabulario recomendado
@@ -408,10 +408,10 @@
 #### VV — Glosario final (parte 3)
 - [Apéndice VV: Glosario final (parte 3)](#apendice-vv-glosario-final-parte-3)
 
-#### W — Últimas recomendaciones y cierre
+#### W — Ultimas recomendaciones y cierre
 - [Apéndice W: Últimas recomendaciones y cierre](#apendice-w-ultimas-recomendaciones-y-cierre)
 
-#### WW — El último apéndice
+#### WW — El ultimo apendice
 - [Apéndice WW: El último apéndice](#apendice-ww-el-ultimo-apendice)
 
 #### X — Historia del software empresarial
@@ -423,16 +423,16 @@
 #### Y — Glosario de argot de Rust
 - [Apéndice Y: Glosario de argot de Rust](#apendice-y-glosario-de-argot-de-rust)
 
-#### YY — Próximos pasos después del manual
+#### YY — Proximos pasos despues del manual
 - [Apéndice YY: Próximos pasos después del manual](#apendice-yy-proximos-pasos-despues-del-manual)
 
 #### Z — Recursos visuales complementarios
 - [Apéndice Z: Recursos visuales complementarios](#apendice-z-recursos-visuales-complementarios)
 
-#### ZZ — La última lección
+#### ZZ — La ultima leccion
 - [Apéndice ZZ: La última lección](#apendice-zz-la-ultima-leccion)
 
-#### Apéndices numerados (A1-A160)
+#### Apendices numerados (A1-A160)
 - [Apéndice A1: Manual de usuario final del ERP/CRM](#apendice-a1-manual-de-usuario-final-del-erpcrm)
 - [Apéndice A2: Glosario de términos de facturación](#apendice-a2-glosario-de-terminos-de-facturacion)
 - [Apéndice A3: Tips de productividad](#apendice-a3-tips-de-productividad)
@@ -443,7 +443,7 @@
 - [Apéndice A8: Hoja de ruta de aprendizaje recomendada](#apendice-a8-hoja-de-ruta-de-aprendizaje-recomendada)
 - [Apéndice A9: Mensaje al programador junior](#apendice-a9-mensaje-al-programador-junior)
 - [Apéndice A10: Cierre absoluto](#apendice-a10-cierre-absoluto)
-- [Apéndice A11: El proyecto paso a paso - construyendo el ERP desde cero](#apendice-a11-el-proyecto-paso-a-paso---construyendo-el-erp-desde-cero)
+- [Apéndice A11: El proyecto paso a paso - construyendo el ERP desde cero](#apendice-a11-el-proyecto-paso-a-paso-construyendo-el-erp-desde-cero)
 - [Apéndice A12: Glosario de términos de marketing y CRM](#apendice-a12-glosario-de-terminos-de-marketing-y-crm)
 - [Apéndice A13: Plan de estudios de Rust por nivel](#apendice-a13-plan-de-estudios-de-rust-por-nivel)
 - [Apéndice A14: Errores más comunes en la compilación de la API](#apendice-a14-errores-mas-comunes-en-la-compilacion-de-la-api)
@@ -490,7 +490,7 @@
 - [Apéndice A55: Integración con otros sistemas](#apendice-a55-integracion-con-otros-sistemas)
 - [Apéndice A56: Recursos para DevOps](#apendice-a56-recursos-para-devops)
 - [Apéndice A57: Mensaje final a la comunidad](#apendice-a57-mensaje-final-a-la-comunidad)
-- [Apéndice A58: La biblia del ERP - Conceptos fundamentales](#apendice-a58-la-biblia-del-erp---conceptos-fundamentales)
+- [Apéndice A58: La biblia del ERP - Conceptos fundamentales](#apendice-a58-la-biblia-del-erp-conceptos-fundamentales)
 - [Apéndice A59: Implementación de referencia completa](#apendice-a59-implementacion-de-referencia-completa)
 - [Apéndice A60: El fin del manual](#apendice-a60-el-fin-del-manual)
 - [Apéndice A61: El código fuente completo de un ERP mínimo viable](#apendice-a61-el-codigo-fuente-completo-de-un-erp-minimo-viable)
@@ -594,11 +594,11 @@
 - [Apéndice A159: Las últimas palabras](#apendice-a159-las-ultimas-palabras)
 - [Apéndice A160: ¡Ya casi llegamos!](#apendice-a160-ya-casi-llegamos)
 
-### [Epílogo: el manual como proyecto vivo](#epilogo-el-manual-como-proyecto-vivo)
+### [Epilogo: el manual como proyecto vivo](#epilogo-el-manual-como-proyecto-vivo)
 
-### [Apéndice FINAL: ¡Lo logramos!](#apendice-final-lo-logramos)
+### [Apendice FINAL: ¡Lo logramos!](#apendice-final-lo-logramos)
 
-### Diagrama entidad–relación del ERP/CRM (referencia global)
+### Diagrama entidad–relacion del ERP/CRM (referencia global)
 
 ```mermaid
 erDiagram
@@ -627,7 +627,7 @@ erDiagram
 
 > **Aviso pedagógico**: cada bloque de código va precedido de una explicación larga con analogías. El código está comentado línea por línea en español. Después de cada ejemplo encontrarás un análisis de la salida esperada. Al final de cada sección principal hay un bloque de "errores típicos" con diagnóstico y solución.
 
-## 1.1 Introducción a Rust
+## 1.1 Introduccion a Rust
 
 Rust es un lenguaje de programación de sistemas que apareció en su versión 1.0 en el año 2015, desarrollado por Mozilla Research y mantenido desde entonces por una fundación independiente llamada Rust Foundation. Cuando decimos que es un lenguaje "de sistemas" nos referimos a que está diseñado para el mismo nicho en el que tradicionalmente se han usado C y C++: la construcción de sistemas operativos, motores de navegadores, servidores de alto rendimiento, sistemas embebidos, herramientas de línea de comandos y cualquier software donde el control fino sobre la memoria y la ausencia de un recolector de basura (garbage collector) sean ventajas competitivas. Sin embargo, a diferencia de C y C++, Rust promete algo que durante décadas pareció imposible: el rendimiento de C++ con la seguridad de memoria de un lenguaje con recolector de basura, pero sin pagar el costo de un recolector en tiempo de ejecución. Esa promesa se cumple mediante un sistema de tipos único en su tipo, centrado en lo que se denomina *ownership* (propiedad) y *borrowing* (préstamo).
 
@@ -659,11 +659,11 @@ En el contexto de este manual, Rust será la herramienta con la que construiremo
 
 > **Nota cultural**: a la comunidad de Rust se la llama "Rustáceos" (Rustaceans en inglés). El logotipo es un cangrejo herradura (horseshoe crab), un animal que lleva 450 millones de años en la Tierra sin infectarse, lo cual se considera un guiño humorístico a la "inmunidad" de Rust contra toda una clase de bugs.
 
-### 1.1.1 ¿Quién debería leer este manual?
+### 1.1.1 ¿Quien deberia leer este manual?
 
 Este manual está escrito para personas que **nunca han programado en Rust**, aunque sí se asume un conocimiento básico de programación en cualquier otro lenguaje (variables, funciones, bucles, condicionales). Si vienes de Python, Java, C#, JavaScript, Go, PHP o Ruby, te sentirás cómodo en la mayoría de los ejemplos. Si nunca has programado, te recomendamos complementar con un curso introductorio de programación general antes de embarcarte en este viaje.
 
-### 1.1.2 ¿Qué necesito para empezar?
+### 1.1.2 ¿Que necesito para empezar?
 
 - Un ordenador con Linux, macOS o Windows.
 - Conexión a internet (para instalar Rust y descargar dependencias).
@@ -671,15 +671,15 @@ Este manual está escrito para personas que **nunca han programado en Rust**, au
 - Un editor de texto: **Visual Studio Code** con la extensión `rust-analyzer` es la opción más popular y multiplataforma; otras opciones válidas son **Neovim** con `coc.nvim` o `rust-tools.nvim`, **IntelliJ IDEA** con el plugin de Rust, o **Zed**.
 - Ganas de leer y de equivocarte. Rust te recompensará cada vez que el compilador te obligue a pensar mejor.
 
-### 1.1.3 Filosofía del manual: aprender haciendo
+### 1.1.3 Filosofia del manual: aprender haciendo
 
 A lo largo del manual encontrarás 17 mini-proyectos que crecen en complejidad, más 2 proyectos finales (uno con Diesel y otro con SeaORM). Cada mini-proyecto está pensado para aplicar los conceptos aprendidos en su capítulo. No te limites a leer: **escribe el código, compílalo, ejecuta los tests, rómpelo y arréglalo**. La única forma de aprender Rust es haciendo, y eso es exactamente lo que vamos a hacer.
 
-## 1.2 Instalación del entorno de desarrollo
+## 1.2 Instalacion del entorno de desarrollo
 
 Instalar Rust es sorprendentemente sencillo gracias a una herramienta llamada `rustup`, que es el instalador y gestor de versiones oficial. Piensa en `rustup` como el "nvm" de Node.js o el "pyenv" de Python, pero específicamente diseñado para Rust. Con `rustup` puedes tener varias versiones del compilador (`stable`, `beta`, `nightly`), cambiarlas por proyecto con `rust-toolchain.toml`, e incluso instalar *targets* cruzados para compilar para otras arquitecturas (por ejemplo, ARM para Raspberry Pi o WebAssembly para el navegador).
 
-### 1.2.1 Instalación de `rustup` en Linux y macOS
+### 1.2.1 Instalacion de `rustup` en Linux y macOS
 
 Abre una terminal y ejecuta el siguiente comando (es un *pipe* a `sh`, así que asegúrate de leer el script antes; puedes inspeccionarlo en <https://sh.rustup.rs>):
 
@@ -690,7 +690,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Verás una pantalla interactiva con tres opciones: (1) instalación por defecto, (2) personalizar la instalación, (3) cancelar. Para este manual elegiremos la opción 1. La instalación descarga el compilador `rustc`, el gestor de paquetes `cargo`, y las *standard libraries* por defecto. Al terminar, el script te indicará que ejecutes `source $HOME/.cargo/env` (o que reinicies la terminal) para añadir `~/.cargo/bin` a tu `PATH`.
 
 ```bash
-# Verificar la instalación
+# Verificar la instalacion
 rustc --version
 cargo --version
 # rustc 1.96.1 (xxxxx xxxx)
@@ -699,7 +699,7 @@ cargo --version
 
 Si trabajas en Windows, el procedimiento recomendado es descargar `rustup-init.exe` desde <https://rustup.rs> y ejecutarlo. Asegúrate de tener también el *Build Tools for Visual Studio 2019 o 2022* con el componente "C++ build tools", ya que el linker de Windows que usa Rust por defecto requiere `link.exe`.
 
-### 1.2.2 Configuración del PATH y de la shell
+### 1.2.2 Configuracion del PATH y de la shell
 
 `rustup` instala las herramientas en `~/.cargo/bin` (en Windows es `%USERPROFILE%\.cargo\bin`). Si tu shell es `bash` o `zsh`, el script de instalación añade automáticamente la siguiente línea a `~/.bashrc` o `~/.zshrc`:
 
@@ -746,7 +746,7 @@ rustup component add rust-src rustfmt clippy
 **Zed** (gratuito, ultrarrápido):
 - Soporte nativo de Rust desde el primer arranque.
 
-### 1.2.5 El comando `cargo new` y la anatomía de un proyecto
+### 1.2.5 El comando `cargo new` y la anatomia de un proyecto
 
 Una vez que `cargo` está instalado, crear un nuevo proyecto es tan simple como:
 
@@ -805,7 +805,7 @@ Antes de seguir, memoriza esta tabla. La usarás cientos de veces:
 
 Cada vez que compiles, `cargo` crea una carpeta `target/` con los binarios, los archivos intermedios y las dependencias. Puedes borrarla con `cargo clean` y se regenera sola. Por convención, **no la subas al control de versiones** (añade `target/` a tu `.gitignore`).
 
-### 1.2.8 Configuración del registro (mirror) — opcional
+### 1.2.8 Configuracion del registro (mirror) — opcional
 
 Si la velocidad de descarga de *crates* (el registro de paquetes de Rust) te parece lenta desde tu ubicación, puedes configurar un mirror regional en `~/.cargo/config.toml`:
 
@@ -823,7 +823,7 @@ En Latinoamérica y España, generalmente no hace falta: la latencia del registr
 
 No podíamos empezar con un "Hello, world!" genérico, porque este manual está orientado a un ERP/CRM. En su lugar, vamos a saludar al lector y mostrarle la versión del binario, como si fuera el splash inicial de un software empresarial. El capítulo cierra con un mini-proyecto: `proyectos_capitulo/parte1/01_erp_hello/`, que es el primero de los 17 mini-proyectos del manual.
 
-### 1.3.1 El código fuente
+### 1.3.1 El codigo fuente
 
 Primero, una explicación larga antes del código. Un programa Rust se compone de **funciones**, y la función más importante de todas es `main`, que es el punto de entrada: cuando ejecutas el binario, el sistema operativo llama a `main` y le pasa los argumentos de línea de comandos. A diferencia de C, Rust no requiere que escribas `int main(void)`: basta con `fn main() { ... }`. Si quieres leer los argumentos, debes declararlos: `fn main() { ... }` se convierte en `fn main() { ... }` sin argumentos, o en una variante que use `std::env::args()` para leerlos manualmente. En Rust, la macro `println!` (con el signo de exclamación, que indica que es una *macro* y no una función) imprime texto en la salida estándar seguida de un salto de línea. La macro se invoca con paréntesis y el texto se pasa como primer argumento, que puede ser una *cadena literal* (entre comillas dobles) o un *string con formato* (con `{}` como *placeholder* para valores que se pasan como argumentos adicionales).
 
@@ -906,7 +906,7 @@ Para ejecutar este programa:
 ```bash
 cd erp_hello
 cargo run
-# Cargo compilará el proyecto y ejecutará el binario
+# Cargo compilara el proyecto y ejecutara el binario
 ```
 
 Verás que `cargo` primero compila todas las dependencias (al principio son pocas) y luego ejecuta el binario. La primera compilación es lenta (descargar y compilar `rustc` y `std`), pero las siguientes son muy rápidas porque el *caché* está en `target/`.
@@ -917,7 +917,7 @@ Para compilar en modo *release* (optimizado, mucho más rápido pero más lento 
 cargo run --release
 ```
 
-### 1.3.3 Errores típicos al empezar
+### 1.3.3 Errores tipicos al empezar
 
 **Error 1: olvidar el punto y coma**.
 ```rust
@@ -983,7 +983,7 @@ En la mayoría de lenguajes de programación, una "variable" es, por defecto, mu
 
 Piensa en una variable como una **caja etiquetada**. La etiqueta es el nombre de la variable. El contenido es el valor. Si la caja es inmutable, una vez que metes algo, la etiqueta queda asociada a ese contenido y no se puede sustituir por otro (sí se puede *sombrear*, lo veremos pronto). Si la caja es mutable, la etiqueta sigue siendo la misma, pero puedes abrir la caja, sacar el contenido y meter otro. La analogía mental es simple, pero las consecuencias en tiempo de compilación son profundas: el compilador puede asumir que el valor de una variable inmutable no cambia y aplicar optimizaciones que de otro modo serían imposibles. Además, en programas concurrentes, los datos inmutables son automáticamente *thread-safe*: dos hilos pueden leerlos a la vez sin riesgo de *data race*.
 
-### 1.4.1 Declaración básica
+### 1.4.1 Declaracion basica
 
 La sintaxis para declarar una variable es `let nombre = valor;`. El compilador infiere el tipo a partir del valor (en este caso, `i32` para el entero). Si quieres ser explícito, puedes usar `let nombre: Tipo = valor;`.
 
@@ -1084,7 +1084,7 @@ fn main() {
 - No pueden ser palabras reservadas del lenguaje (`let`, `fn`, `struct`, `enum`, `match`, etc.). Si necesitas usar una, puedes añadir `_` al final: `let r#match = 5;` aunque es muy raro.
 - Los nombres que empiezan con guión bajo se usan a menudo para variables que no se van a usar (por ejemplo, `let _resultado = funcion();` si sabemos que `funcion` retorna algo que no nos interesa).
 
-### 1.4.4 Errores típicos
+### 1.4.4 Errores tipicos
 
 **Error 1: olvidar `mut`**.
 ```rust
@@ -1302,7 +1302,7 @@ println!("{} bytes, {} caracteres", s.len(), s.chars().count());
 // 7 bytes (la 'é' ocupa 2), 6 caracteres
 ```
 
-### 1.5.5 Inferencia de tipos y anotación explícita
+### 1.5.5 Inferencia de tipos y anotacion explicita
 
 Rust es un lenguaje de **inferencia de tipos**: el compilador intenta deducir el tipo de cada variable a partir de su uso. Si puede, no hace falta anotarlo. Pero a veces la inferencia falla o es ambigua, y entonces es necesario anotar:
 
@@ -1329,7 +1329,7 @@ let d: i64 = 1234567890_i32 as i64;   // conversiones de tamaño requieren as
 
 **Cuidado con las conversiones peligrosas**: `let x: i32 = -1; let y = x as u32;` produce `4294967295` (el mayor u32) porque la conversión es "bit a bit". Para conversiones seguras, usa `try_into` (de la librería estándar) o los métodos `from` y `into`.
 
-### 1.5.7 Mini-ejercicio del capítulo
+### 1.5.7 Mini-ejercicio del capitulo
 
 Crea un nuevo proyecto `cargo new 03_tipos_primitivos` y experimenta con cada tipo. Intenta provocar un desbordamiento en modo debug y observa el panic. Compara el resultado con `wrapping_add`.
 
@@ -1337,7 +1337,7 @@ Crea un nuevo proyecto `cargo new 03_tipos_primitivos` y experimenta con cada ti
 
 En Rust, casi todo es una **expresión**: una construcción que devuelve un valor. Una declaración `let`, un `if`, un `match`, un bloque `{ ... }`, un cierre (closure): todos producen un valor. Esta es una diferencia importante con lenguajes como C o Java, donde `if` es una *sentencia* que no devuelve nada. La consecuencia es que puedes escribir código muy compacto y expresar cosas como `let x = if condicion { 1 } else { 2 };`.
 
-### 1.6.1 Operadores aritméticos
+### 1.6.1 Operadores aritmeticos
 
 | Operador | Descripción | Ejemplo |
 |---|---|---|
@@ -1349,7 +1349,7 @@ En Rust, casi todo es una **expresión**: una construcción que devuelve un valo
 
 En división de enteros, el resultado también es entero: `7 / 2 == 3`, no `3.5`. Si quieres división con decimales, convierte explícitamente: `7.0 / 2.0 == 3.5` o `7 as f64 / 2 as f64`.
 
-### 1.6.2 Operadores de comparación y lógicos
+### 1.6.2 Operadores de comparacion y logicos
 
 | Operador | Descripción |
 |---|---|
@@ -1369,7 +1369,7 @@ let d = a || b;   // true
 let e = !a;       // false
 ```
 
-### 1.6.3 Operadores de asignación
+### 1.6.3 Operadores de asignacion
 
 `=` asigna. Los operadores `+=`, `-=`, `*=`, `/=`, `%=` son atajos:
 
@@ -1445,7 +1445,7 @@ fn main() {
 
 El bloque `{ let z = 3; z + 1 }` devuelve `4` porque la última expresión no lleva `;`. Si la última línea llevase `;`, el bloque devolvería `()` (la unidad, *unit*).
 
-### 1.6.8 Errores típicos
+### 1.6.8 Errores tipicos
 
 **Error 1: usar `=` en vez de `==`**.
 ```rust
@@ -1582,7 +1582,7 @@ fn main() {
 }
 ```
 
-### 1.7.4 `for` (iteración)
+### 1.7.4 `for` (iteracion)
 
 `for` es probablemente la forma más común de iterar en Rust. Itera sobre cualquier tipo que implemente el trait `IntoIterator`, lo que incluye vectores, rangos, hashmaps y casi cualquier colección.
 
@@ -1615,7 +1615,7 @@ fn main() {
 }
 ```
 
-### 1.7.5 Errores típicos
+### 1.7.5 Errores tipicos
 
 - **Olvidar `&` al iterar**: `for x in vector { ... }` intenta mover el vector, lo que impide usarlo después. La forma correcta es `for x in &vector` o `&vector.iter()`.
 - **Bucle infinito accidental**: si la condición de un `while` nunca cambia, o un `loop` no tiene `break`, el programa se quedará colgado.
@@ -1712,7 +1712,7 @@ fn main() {
 
 Profundizaremos en closures en 1.17.
 
-### 1.8.3 Recursión
+### 1.8.3 Recursion
 
 Una función puede llamarse a sí misma. La recursión es útil para recorrer árboles (categorías con sub-categorías, comentarios con respuestas, etc.). Cada llamada recursiva consume *stack*; si la profundidad es excesiva, podemos desbordar la pila. Para casos extremos, es mejor convertir la recursión en iteración con un bucle explícito o una pila manual.
 
@@ -1879,7 +1879,7 @@ fn main() {
 }
 ```
 
-### 1.9.3 Copia (Copy) y clonación (Clone)
+### 1.9.3 Copia (Copy) y clonacion (Clone)
 
 Si quieres duplicar un valor del heap (no sólo un puntero), usa `.clone()`. Esto asigna memoria nueva y copia el contenido:
 
@@ -1932,7 +1932,7 @@ fn main() {
 
 El compilador es inteligente: la regla sólo se aplica mientras la referencia esté "viva" (es decir, hasta el último uso). En el ejemplo de la sección 1.9.4, `r1` y `r2` mueren tras el `println!`, así que `r3` puede ser mutable.
 
-### 1.9.6 Lifetimes: anotaciones y elisión
+### 1.9.6 Lifetimes: anotaciones y elision
 
 Un *lifetime* es el ámbito durante el cual una referencia es válida. La mayoría de las veces, el compilador puede inferir los lifetimes (esto se llama *elisión de lifetimes*), pero a veces necesitamos anotarlos explícitamente. La sintaxis es `'a`, `'b`, etc.:
 
@@ -1946,7 +1946,7 @@ fn mas_largo<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 La anotación `'a` significa: "voy a devolver una referencia que vive al menos tanto como la referencia más corta de las dos que recibí". Si el compilador no pudiera verificar esto, el código no compilaría.
 
-### 1.9.7 Lifetimes en structs y métodos
+### 1.9.7 Lifetimes en structs y metodos
 
 Si un struct guarda una referencia, debe llevar un lifetime:
 
@@ -2049,12 +2049,12 @@ Para ejecutarlo:
 ```bash
 cd /home/roy/rust_man/proyectos_capitulo/parte1
 cargo new 04_procesador_pedido
-# (pegar el código en src/main.rs)
+# (pegar el codigo en src/main.rs)
 cd 04_procesador_pedido
 cargo run
 ```
 
-### 1.9.9 Errores típicos en ownership
+### 1.9.9 Errores tipicos en ownership
 
 - **"value moved here"**: has usado un valor después de moverlo. Soluciones: usar una referencia (`&valor`), o `.clone()` si necesitas una copia.
 - **"cannot borrow as mutable"**: estás intentando un borrow mutable sobre un valor inmutable. Solución: `let mut x = ...`.
@@ -2131,7 +2131,7 @@ fn main() {
 }
 ```
 
-### 1.10.4 Errores típicos
+### 1.10.4 Errores tipicos
 
 - **Confundir tupla con array**: `let t = (1, 2, 3)` es una tupla de 3 elementos; `let a = [1, 2, 3]` es un array de 3 `i32`. No son intercambiables.
 - **Modificar un slice sin `mut`**: los slices son inmutables por defecto. Si necesitas modificarlos, usa `&mut [T]`.
@@ -2155,7 +2155,7 @@ En la **Fase 1.b** continuaremos con **structs**, **enums y pattern matching**, 
 
 Un *struct* (abreviatura de *structure*) es un tipo de dato compuesto por el programador que agrupa varios valores relacionados bajo un mismo nombre. Si vienes de C, es como un `struct` clásico. Si vienes de Java o C#, es como una clase sin herencia, sin métodos virtuales y sin `this` implícito. Si vienes de Python, es como una `dataclass` (de hecho, las `dataclasses` de Python se diseñaron inspirándose en los structs de Rust). Los structs son el pilar del modelado de datos en un ERP/CRM: `Cliente`, `Producto`, `Pedido`, `Factura` se modelarán como structs.
 
-### 1.11.1 Definición y creación
+### 1.11.1 Definicion y creacion
 
 ```rust
 // archivo: src/main.rs
@@ -2227,7 +2227,7 @@ Cliente {
 }
 ```
 
-### 1.11.2 Structs con campos públicos y privados
+### 1.11.2 Structs con campos publicos y privados
 
 En Rust, los campos de un struct son **privados por defecto**: sólo el módulo donde se definen puede acceder a ellos. Para hacerlos públicos, se antepone `pub`:
 
@@ -2285,7 +2285,7 @@ fn main() {
 }
 ```
 
-### 1.11.4 Métodos y funciones asociadas
+### 1.11.4 Metodos y funciones asociadas
 
 Los structs ganan verdadera potencia cuando les añadimos **métodos** y **funciones asociadas**. Los métodos se definen dentro de un bloque `impl`:
 
@@ -2517,7 +2517,7 @@ cargo run
 
 Los enums (enumeraciones) son una de las características más poderosas de Rust. A diferencia de los enums de C o Java, donde cada variante es esencialmente un entero, los enums de Rust pueden tener **datos asociados** a cada variante. Esto los hace ideales para modelar estados, categorías y resultados.
 
-### 1.12.1 Definición de enums
+### 1.12.1 Definicion de enums
 
 ```rust
 // Definición simple
@@ -2587,7 +2587,7 @@ fn main() {
 
 `while let Some(...)` es el patrón idiomático para consumir un `Vec` o un iterador cuyo elemento es `Option`.
 
-### 1.12.4 `Option<T>` y `Result<T, E>`: los enums más importantes
+### 1.12.4 `Option<T>` y `Result<T, E>`: los enums mas importantes
 
 La librería estándar define dos enums que se usan en absolutamente todos los programas Rust:
 
@@ -2744,7 +2744,7 @@ cargo run
 
 Un *trait* (en otros lenguajes se llama *interface* o *protocol*) es un conjunto de métodos que un tipo puede implementar. Es la forma que tiene Rust de hacer polimorfismo: definir comportamiento compartido sin compartir estructura.
 
-### 1.13.1 Definición e implementación
+### 1.13.1 Definicion e implementacion
 
 ```rust
 trait Validable {
@@ -2764,7 +2764,7 @@ impl Validable for Cliente {
 
 A partir de ese momento, cualquier función que reciba un `&impl Validable` puede operar con un `Cliente`, con un `Proveedor` o con cualquier otro tipo que implemente el trait.
 
-### 1.13.2 Traits comunes de la librería estándar
+### 1.13.2 Traits comunes de la libreria estandar
 
 Algunos traits se usan tan a menudo que conviene memorizarlos:
 
@@ -2782,7 +2782,7 @@ Algunos traits se usan tan a menudo que conviene memorizarlos:
 | `Iterator` | Habilita `.next()`, `for`, etc. | Implementación manual |
 | `Send`, `Sync` | Marcadores de seguridad para hilos | Automático para la mayoría de tipos |
 
-### 1.13.3 Traits como parámetros: `impl Trait` y trait bounds
+### 1.13.3 Traits como parametros: `impl Trait` y trait bounds
 
 Hay dos formas sintácticas equivalentes de decir "esta función acepta cualquier tipo que implemente X":
 
@@ -2816,7 +2816,7 @@ where
 }
 ```
 
-### 1.13.4 Trait objects y dispatch dinámico
+### 1.13.4 Trait objects y dispatch dinamico
 
 A veces quieres una colección heterogénea de objetos que implementen el mismo trait. Para eso se usan los **trait objects** con la palabra clave `dyn`:
 
@@ -2839,11 +2839,11 @@ fn main() {
 
 `Box<dyn Notificable>` es un puntero a un objeto en el heap que implementa `Notificable`. Esto se llama **dispatch dinámico**: en tiempo de ejecución se decide qué método concreto llamar. El coste es un puntero indirecto, pero permite mezclar tipos heterogéneos.
 
-## 1.14 Genéricos
+## 1.14 Genericos
 
 Los genéricos permiten escribir código que funciona con múltiples tipos sin sacrificar la verificación estática. La sintaxis es `<T>` (o `<T, U>`, etc.).
 
-### 1.14.1 Funciones genéricas
+### 1.14.1 Funciones genericas
 
 ```rust
 // Mayor de dos valores (cualquier tipo que se pueda comparar)
@@ -2858,7 +2858,7 @@ fn main() {
 }
 ```
 
-### 1.14.2 Structs genéricos
+### 1.14.2 Structs genericos
 
 ```rust
 #[derive(Debug)]
@@ -2879,7 +2879,7 @@ fn main() {
 }
 ```
 
-### 1.14.3 Repositorio genérico
+### 1.14.3 Repositorio generico
 
 Combinando genéricos, traits y `Option`, podemos crear un mini-repositorio en memoria:
 
@@ -3065,7 +3065,7 @@ Con esto concluimos los temas de tipos personalizados (structs, enums), polimorf
 
 La librería estándar ofrece tres colecciones principales: `Vec<T>` (lista dinámica), `HashMap<K, V>` (diccionario) y `HashSet<T>` (conjunto). Todas viven en `std::collections` y se importan con `use`.
 
-### 1.16.1 `Vec<T>` – vector dinámico
+### 1.16.1 `Vec<T>` – vector dinamico
 
 Un `Vec` es una lista de elementos del mismo tipo, almacenada en el heap, de tamaño variable. Es probablemente la colección más usada en Rust.
 
@@ -3413,7 +3413,7 @@ fn main() {
 }
 ```
 
-## 1.18 Módulos y sistema de archivos
+## 1.18 Modulos y sistema de archivos
 
 Conforme un proyecto crece, meter todo en `main.rs` se vuelve insostenible. Rust ofrece un sistema de **módulos** que te permite organizar el código en archivos y subcarpetas, y controlar la visibilidad de cada pieza.
 
@@ -3648,7 +3648,7 @@ fn main() {
 }
 ```
 
-## 1.19 Pruebas unitarias y de integración
+## 1.19 Pruebas unitarias y de integracion
 
 ### 1.19.1 `#[test]` y `assert!`
 
@@ -3677,7 +3677,7 @@ mod tests {
 
 Corre los tests con `cargo test`. Por defecto se ejecutan en paralelo.
 
-### 1.19.2 Tests de integración
+### 1.19.2 Tests de integracion
 
 Los tests de integración viven en la carpeta `tests/` del proyecto y sólo tienen acceso a la API pública del crate. Son perfectos para probar flujos completos:
 
@@ -3689,7 +3689,7 @@ mi_crate/
 │   └── integracion_pedidos.rs
 ```
 
-### 1.19.3 Tests de documentación
+### 1.19.3 Tests de documentacion
 
 Los bloques de código en los comentarios `///` se ejecutan como tests:
 
@@ -3777,9 +3777,9 @@ Con esto cerramos los fundamentos del lenguaje Rust. Has aprendido todo lo neces
 
 > **Aviso pedagógico**: en esta parte conectaremos todos los structs que construimos en la Parte 1 a una base de datos MariaDB/MySQL real. Usaremos el crate `mysql` (cliente síncrono) y el pool de conexiones `r2d2_mysql`. Aprenderemos a ejecutar SELECT, INSERT, UPDATE, DELETE con parámetros preparados (para evitar inyección SQL), a manejar transacciones, y a construir un CLI que gestione clientes, productos y pedidos del ERP.
 
-## 2.1 Introducción a bases de datos relacionales y MySQL
+## 2.1 Introduccion a bases de datos relacionales y MySQL
 
-### 2.1.1 ¿Qué es una base de datos relacional?
+### 2.1.1 ¿Que es una base de datos relacional?
 
 Una base de datos relacional (RDBMS) es un sistema de almacenamiento que organiza la información en **tablas** formadas por **filas** (registros) y **columnas** (campos), y que permite establecer **relaciones** entre tablas mediante claves foráneas. El modelo relacional fue propuesto por Edgar Codd en 1970 y es, cuarenta años después, el pilar de prácticamente toda la industria del software de gestión: ERPs, CRMs, sistemas contables, bancarios, etc.
 
@@ -3808,7 +3808,7 @@ Cada fila es un **registro** (un cliente específico). Cada columna es un **camp
 - **Clave única (UNIQUE)**: una columna (o conjunto) cuyos valores no pueden repetirse. El RFC de un cliente es único.
 - **Índice (INDEX)**: una estructura auxiliar que acelera las búsquedas por una columna concreta, a costa de un poco más de espacio en disco y de tiempo en inserciones.
 
-### 2.1.3 Instalación de MariaDB/MySQL (Docker/Podman)
+### 2.1.3 Instalacion de MariaDB/MySQL (Docker/Podman)
 
 Para este manual usaremos **MariaDB 11** (compatible con MySQL 8) ejecutándose en un contenedor de **Podman** (o Docker, si lo prefieres). El comando para arrancar la base de datos es:
 
@@ -3841,7 +3841,7 @@ podman ps                    # ver contenedores en ejecución
 mysql -h 127.0.0.1 -u root -psecret -e "SELECT VERSION();"
 ```
 
-### 2.1.4 Creación de la base de datos del ERP
+### 2.1.4 Creacion de la base de datos del ERP
 
 Conectado a MariaDB como root, vamos a crear las tablas del ERP. En lugar de hacerlo desde la línea de comandos, lo dejaremos en un archivo `schema.sql` que ejecutaremos con `source`:
 
@@ -3944,7 +3944,7 @@ Para ejecutarlo:
 mysql -h 127.0.0.1 -u root -psecret < schema.sql
 ```
 
-### 2.1.5 SQL básico: DDL y DML
+### 2.1.5 SQL basico: DDL y DML
 
 SQL se divide en varias sublenguajes:
 
@@ -3983,7 +3983,7 @@ Y los operadores de filtrado más útiles:
 | `IS NULL` / `IS NOT NULL` | Nulo o no nulo |
 | `AND`, `OR`, `NOT` | Lógicos |
 
-## 2.2 Configuración del proyecto con el crate `mysql`
+## 2.2 Configuracion del proyecto con el crate `mysql`
 
 ### 2.2.1 Dependencias en `Cargo.toml`
 
@@ -4003,7 +4003,7 @@ r2d2_mysql = "26"        # integración r2d2 con mysql
 
 Para versiones más nuevas (Rust 1.96, 2026), verifica en <https://crates.io> cuál es la última versión estable. Si la API cambió entre versiones, los mensajes de error del compilador son bastante claros.
 
-### 2.2.2 Conexión básica: `OptsBuilder`
+### 2.2.2 Conexion basica: `OptsBuilder`
 
 ```rust
 // archivo: src/main.rs
@@ -4043,7 +4043,7 @@ fn main() -> Result<(), mysql::Error> {
 - `conn.query("SELECT ...")?`: ejecuta la consulta y mapea las filas a una tupla `(u32, String, String)`. El orden de los tipos debe coincidir con el orden de las columnas.
 - `Vec<(u32, String, String)>`: tipo de retorno. El orden importa: el primer campo es la primera columna, etc.
 
-### 2.2.3 Manejo de errores de conexión
+### 2.2.3 Manejo de errores de conexion
 
 Es importante distinguir entre los distintos errores que pueden ocurrir:
 
@@ -4168,7 +4168,7 @@ let uno: Option<(String, f64)> = conn.exec_first(
 )?;
 ```
 
-### 2.3.3 Iteración sobre filas
+### 2.3.3 Iteracion sobre filas
 
 Si la consulta puede devolver muchas filas, en lugar de cargarlas todas en un `Vec` (que consume memoria), puedes iterar directamente:
 
@@ -4211,15 +4211,15 @@ fn listar_clientes(conn: &mut mysql::PooledConn) -> mysql::Result<Vec<Cliente>> 
 
 Si tu versión del crate no soporta `FromRow` derivado, puedes implementar el trait manualmente o usar una tupla con `query`.
 
-### 2.3.5 Errores típicos
+### 2.3.5 Errores tipicos
 
 - **Orden o tipo incorrecto en la tupla**: `let x: Vec<(u32, String)> = conn.query("SELECT nombre, id FROM clientes")?` falla porque la primera columna es `String` y declaramos `u32`.
 - **Columna NULL**: si una columna es NULL y esperas `String`, obtienes `Error`. Usa `Option<String>` para columnas opcionales.
 - **Olvidar el `?`**: si no propaga el error, te encontrarás con un `Result` que no manejas.
 
-## 2.4 Parámetros preparados y seguridad
+## 2.4 Parametros preparados y seguridad
 
-### 2.4.1 Inyección SQL: el peligro real
+### 2.4.1 Inyeccion SQL: el peligro real
 
 La **inyección SQL** es una de las vulnerabilidades más antiguas y peligrosas. Consiste en inyectar código SQL malicioso en una consulta que el programador construyó concatenando strings. Ejemplo ingenuo:
 
@@ -4237,7 +4237,7 @@ SELECT * FROM clientes WHERE nombre = ''; DROP TABLE clientes; --'
 
 En muchos motores, esto **borraría la tabla completa**. La solución es usar **parámetros preparados**: el driver envía la plantilla SQL y los valores por separado, y el motor nunca interpreta los valores como código.
 
-### 2.4.2 Parámetros posicionales `?`
+### 2.4.2 Parametros posicionales `?`
 
 ```rust
 use mysql::prelude::*;
@@ -4251,7 +4251,7 @@ let resultado: Vec<(u32, String)> = conn.exec(
 
 El `?` se sustituye por el valor de `nombre_buscado` **de forma segura**, escapando caracteres especiales. La coma al final de la tupla `(nombre_buscado,)` es importante: las tuplas de un solo elemento en Rust se escriben con una coma colgante.
 
-### 2.4.3 Parámetros nombrados `:nombre`
+### 2.4.3 Parametros nombrados `:nombre`
 
 A partir de versiones recientes del crate, también se soportan parámetros nombrados:
 
@@ -4266,7 +4266,7 @@ Los parámetros nombrados son más legibles cuando hay varios y mejoran el mante
 
 ## 2.5 `INSERT`, `UPDATE` y `DELETE`
 
-### 2.5.1 Ejecución de mutaciones
+### 2.5.1 Ejecucion de mutaciones
 
 ```rust
 use mysql::prelude::*;
@@ -4450,7 +4450,7 @@ cargo run --manifest-path /home/roy/rust_man/proyectos_capitulo/parte2/02_crud_c
 
 ## 2.6 Pool de conexiones con `r2d2_mysql`
 
-### 2.6.1 ¿Por qué un pool?
+### 2.6.1 ¿Por que un pool?
 
 Cada vez que abres una conexión a MySQL, el servidor dedica recursos: un hilo, memoria para buffers, el handshake de protocolo TCP, autenticación. Si abres y cierras conexiones en cada operación, tu aplicación se vuelve lenta y el servidor se satura.
 
@@ -4463,7 +4463,7 @@ r2d2 = "0.8"
 r2d2_mysql = "26"
 ```
 
-### 2.6.2 Configuración del pool
+### 2.6.2 Configuracion del pool
 
 ```rust
 use r2d2_mysql::MysqlConnectionManager;
@@ -4486,7 +4486,7 @@ fn crear_pool() -> Result<Pool<MysqlConnectionManager>, Box<dyn std::error::Erro
 }
 ```
 
-### 2.6.3 Préstamo de conexiones
+### 2.6.3 Prestamo de conexiones
 
 ```rust
 let pool = crear_pool()?;
@@ -4562,7 +4562,7 @@ if result.is_err() {
 }
 ```
 
-### 2.7.3 Rollback automático con `?` y `Drop`
+### 2.7.3 Rollback automatico con `?` y `Drop`
 
 El `Transaction` implementa un `Drop` que hace rollback si no se llamó a `commit` o `rollback` explícitamente. Esto significa que si olvidas hacer rollback en caso de error, **no se filtra la transacción**: el destructor lo hace por ti. Es uno de los patrones más elegantes del crate `mysql`.
 
@@ -4698,9 +4698,9 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-## 2.8 Errores típicos con bases de datos
+## 2.8 Errores tipicos con bases de datos
 
-### 2.8.1 Errores de conexión
+### 2.8.1 Errores de conexion
 
 | Mensaje | Causa | Solución |
 |---|---|---|
@@ -4755,7 +4755,7 @@ fn es_deadlock(e: &mysql::Error) -> bool {
 }
 ```
 
-## 2.9 Ejemplo completo: ERP/CRM CLI de gestión
+## 2.9 Ejemplo completo: ERP/CRM CLI de gestion
 
 El proyecto `04_cli_erp_completo` (en `proyectos_capitulo/parte2/04_cli_erp_completo/`) es un menú CLI con las opciones del ERP vistas en un solo programa: gestión de clientes, productos, pedidos (con transacción), consulta de stock y reportes básicos.
 
@@ -4773,7 +4773,7 @@ mod ui;
 
 Cada módulo expone funciones que reciben el `Pool` como argumento y devuelven `mysql::Result<()>` o tipos de datos.
 
-### 2.9.2 Menú principal
+### 2.9.2 Menu principal
 
 ```rust
 fn main() -> mysql::Result<()> {
@@ -4801,7 +4801,7 @@ fn main() -> mysql::Result<()> {
 7. Confirmar transacción.
 8. Imprimir ticket formateado.
 
-## 2.10 Buenas prácticas
+## 2.10 Buenas practicas
 
 ### 2.10.1 Migraciones versionadas
 
@@ -4824,7 +4824,7 @@ let pool = Pool::new(opts)?;
 // El crate log captura cada query con su duración
 ```
 
-### 2.10.4 Separación en capas (repository / service)
+### 2.10.4 Separacion en capas (repository / service)
 
 En un proyecto real, separamos:
 - **Repository**: funciones que ejecutan SQL puro y devuelven structs.
@@ -4900,9 +4900,9 @@ Con esto concluimos la conexión entre Rust y MySQL/MariaDB. Has aprendido a con
 
 > **Aviso pedagógico**: en esta parte construiremos una API REST profesional para el ERP/CRM. Usaremos **Actix Web** como framework HTTP y veremos dos ORM — **Diesel** (síncrono, con macros) y **SeaORM** (asíncrono, moderno) — para que el lector elija el que mejor se adapte a su proyecto. La API final expone 15+ endpoints con autenticación JWT, validación, documentación OpenAPI y está lista para producción.
 
-## 3.1 Introducción a Actix Web
+## 3.1 Introduccion a Actix Web
 
-### 3.1.1 ¿Qué es un framework web?
+### 3.1.1 ¿Que es un framework web?
 
 Un framework web es una librería que abstrae la gestión de bajo nivel del protocolo HTTP,permitiéndote concentrarte en la lógica de tu aplicación. Actix Web es uno de los frameworks más rápidos del ecosistema Rust (suele encabezar los benchmarks TechEmpower) y se basa en el sistema de **actores** de `actix`.
 
@@ -4917,7 +4917,7 @@ El modelo de actores es un patrón de concurrencia donde cada "actor" es un obje
 - **Ecosistema**: integraciones con serde, sqlx, diesel, sea-orm, jsonwebtoken, etc.
 - **Estabilidad**: API estable desde 1.0 (2019).
 
-## 3.2 Configuración del proyecto
+## 3.2 Configuracion del proyecto
 
 ### 3.2.1 Dependencias
 
@@ -4977,7 +4977,7 @@ curl http://127.0.0.1:8080/health
 
 ## 3.3 Rutas y handlers
 
-### 3.3.1 Métodos HTTP
+### 3.3.1 Metodos HTTP
 
 ```rust
 use actix_web::{web, HttpResponse, Responder};
@@ -5002,7 +5002,7 @@ fn config(cfg: &mut web::ServiceConfig) {
 }
 ```
 
-### 3.3.2 Parámetros de ruta y query
+### 3.3.2 Parametros de ruta y query
 
 ```rust
 use actix_web::{web, HttpResponse, Responder};
@@ -5027,7 +5027,7 @@ async fn listar_clientes(query: web::Query<ListQuery>) -> impl Responder {
 }
 ```
 
-### 3.3.3 Extracción de JSON
+### 3.3.3 Extraccion de JSON
 
 ```rust
 use actix_web::{web, HttpResponse, Responder};
@@ -5144,19 +5144,19 @@ impl ResponseError for ErrorNegocio {
 }
 ```
 
-## 3.7 Introducción a Diesel
+## 3.7 Introduccion a Diesel
 
-### 3.7.1 ¿Qué es un ORM?
+### 3.7.1 ¿Que es un ORM?
 
 Un ORM (Object-Relational Mapper) traduce entre tablas SQL y structs Rust, generando el código SQL a partir de consultas tipo Rust. Diesel es el ORM síncrono más maduro de Rust; usa macros y un DSL de tipos muy seguro.
 
-### 3.7.2 Instalación de `diesel_cli`
+### 3.7.2 Instalacion de `diesel_cli`
 
 ```bash
 cargo install diesel_cli --no-default-features --features mysql
 ```
 
-### 3.7.3 Configuración (`diesel.toml`)
+### 3.7.3 Configuracion (`diesel.toml`)
 
 ```toml
 [print_schema]
@@ -5168,7 +5168,7 @@ dir = "migrations"
 
 Y la variable de entorno: `DATABASE_URL=mysql://root:secret@127.0.0.1:3306/erp_crm`
 
-### 3.7.4 Conexión con `r2d2_diesel`
+### 3.7.4 Conexion con `r2d2_diesel`
 
 ```toml
 [dependencies]
@@ -5254,7 +5254,7 @@ pub fn eliminar(conn: &MysqlConnection, id_cliente: u32) -> QueryResult<usize> {
 }
 ```
 
-## 3.10 Integración de Diesel con Actix
+## 3.10 Integracion de Diesel con Actix
 
 ```rust
 use actix_web::{web, HttpResponse, Responder};
@@ -5287,7 +5287,7 @@ pub async fn crear(
 }
 ```
 
-## 3.11 SeaORM: la alternativa asíncrona
+## 3.11 SeaORM: la alternativa asincrona
 
 SeaORM es un ORM async-first, ideal para usar con Actix. Su API es similar a la de un ORM de Node.js (como Prisma) o Java (Hibernate).
 
@@ -5301,13 +5301,13 @@ SeaORM es un ORM async-first, ideal para usar con Actix. Su API es similar a la 
 | Pool | r2d2 | sqlx::MySqlPool |
 | Transacciones | `conn.transaction()` | `tx.commit()` / rollback automático |
 
-### 3.11.2 Instalación
+### 3.11.2 Instalacion
 
 ```bash
 cargo install sea-orm-cli
 ```
 
-### 3.11.3 Configuración y migraciones
+### 3.11.3 Configuracion y migraciones
 
 ```toml
 [dependencies]
@@ -5346,9 +5346,9 @@ pub async fn crear(db: &DatabaseConnection, nombre: String, rfc: String) -> Resu
 }
 ```
 
-## 3.12 Buenas prácticas en APIs REST
+## 3.12 Buenas practicas en APIs REST
 
-### 3.12.1 Separación en capas
+### 3.12.1 Separacion en capas
 
 ```
 src/
@@ -5363,7 +5363,7 @@ src/
 └── errores.rs         ← tipo de error central
 ```
 
-### 3.12.2 Validación con `validator`
+### 3.12.2 Validacion con `validator`
 
 ```rust
 use validator::Validate;
@@ -5380,7 +5380,7 @@ struct ClienteInput {
 }
 ```
 
-### 3.12.3 Documentación con `utoipa`
+### 3.12.3 Documentacion con `utoipa`
 
 ```rust
 use utoipa::ToSchema;
@@ -5402,7 +5402,7 @@ struct Cliente {
 async fn listar() -> Vec<Cliente> { vec![] }
 ```
 
-### 3.12.4 Configuración por entorno con `.env`
+### 3.12.4 Configuracion por entorno con `.env`
 
 ```bash
 DATABASE_URL=mysql://root:secret@127.0.0.1:3306/erp_crm
@@ -5455,14 +5455,14 @@ Esta sección referencia el proyecto final `proyecto_api/` que se entrega junto 
 
 ## 3.15 Despliegue
 
-### 3.15.1 Compilación de producción
+### 3.15.1 Compilacion de produccion
 
 ```bash
 cargo build --release
 ./target/release/api_erp
 ```
 
-### 3.15.2 Dockerización
+### 3.15.2 Dockerizacion
 
 ```dockerfile
 FROM rust:1.82 AS builder
@@ -5552,7 +5552,7 @@ Has aprendido a construir una API REST profesional con Rust, Actix Web y dos ORM
 
 # Anexos
 
-## A.1 Glosario de términos (Rust + ERP/CRM)
+## A.1 Glosario de terminos (Rust + ERP/CRM)
 
 > **Aviso**: este glosario incluye más de 200 términos. Los términos marcados con `[R]` son del lenguaje Rust; los marcados con `[BD]` son de bases de datos; los marcados con `[E]` son específicos del dominio ERP/CRM.
 
@@ -5804,7 +5804,7 @@ Has aprendido a construir una API REST profesional con Rust, Actix Web y dos ORM
 
 Las soluciones completas de los 80+ ejercicios del manual están disponibles en el repositorio en la carpeta `soluciones/`. Cada solución es un proyecto Rust ejecutable con `cargo test` y un README explicativo. A continuación, mostramos las soluciones abreviadas de los 3 ejercicios integradores más representativos.
 
-### Solución Ejercicio Integrador Parte 1: Sistema de pagos ERP
+### Solucion Ejercicio Integrador Parte 1: Sistema de pagos ERP
 
 ```rust
 trait ProcesadorPago {
@@ -5846,7 +5846,7 @@ fn main() {
 }
 ```
 
-### Solución Ejercicio Integrador Parte 2: Reporte de ventas con JOIN
+### Solucion Ejercicio Integrador Parte 2: Reporte de ventas con JOIN
 
 ```sql
 SELECT c.nombre AS cliente, COUNT(p.folio) AS pedidos, SUM(p.total) AS total_vendido
@@ -5861,7 +5861,7 @@ ORDER BY total_vendido DESC;
 let reporte: Vec<(String, i64, f64)> = conn.query("SELECT c.nombre, COUNT(p.folio), SUM(p.total) FROM clientes c LEFT JOIN pedidos p ON p.cliente_id = c.id WHERE p.estado != 'CANCELADO' GROUP BY c.id ORDER BY 3 DESC")?;
 ```
 
-### Solución Ejercicio Integrador Parte 3: Endpoint de login con JWT
+### Solucion Ejercicio Integrador Parte 3: Endpoint de login con JWT
 
 ```rust
 use actix_web::{web, HttpResponse};
@@ -5897,7 +5897,7 @@ async fn login(body: web::Json<LoginInput>) -> HttpResponse {
 - **Rust in Action** (Tim McNamara): libro con enfoque práctico.
 - **Zero To Production In Rust** (Luca Palmieri): libro sobre desarrollo backend con Rust, muy relevante para nuestro caso.
 
-### Documentación oficial
+### Documentacion oficial
 
 - Rust: <https://doc.rust-lang.org/>
 - Cargo: <https://doc.rust-lang.org/cargo/>
@@ -5924,14 +5924,14 @@ async fn login(body: web::Json<LoginInput>) -> HttpResponse {
 - **lib.rs**: <https://lib.rs/> — alternativa a crates.io con más filtros y comparaciones.
 - **Clippy**: linter oficial de Rust.
 
-### Recursos en español
+### Recursos en espanol
 
 - **El libro de Rust en español**: <https://book.rustlang-es.org/>
 - **Rust en español fácil**: <https://rust-esp.github.io/>
 - **YouTube "Rust en Español"**: varios canales con tutoriales.
 - **Mexican Rust Community**: grupo de Discord de la comunidad mexicana.
 
-## A.4 Índice alfabético
+## A.4 Indice alfabetico
 
 (El índice completo se genera automáticamente con `mdbook` a partir de las secciones. En este manual, la tabla de contenidos al inicio sirve como índice principal.)
 
@@ -5992,7 +5992,7 @@ fn main() {
 
 **Explicación detallada**: `env::args()` devuelve un iterador de tipo `Args`, que podemos coleccionar con `.collect::<Vec<String>>()`. El primer elemento (`args[0]`) contiene la ruta del ejecutable. Si no hay segundo elemento (`args.len() < 2`), salimos con código 1 (error) tras imprimir un mensaje en stderr. Para la fecha usamos la crate `chrono` (declarada en `Cargo.toml`).
 
-### Ejercicio 1.20.2: Calculadora de antigüedad de clientes
+### Ejercicio 1.20.2: Calculadora de antiguedad de clientes
 
 **Planteamiento**: dada una fecha de alta en formato `AAAA-MM-DD`, calcular los años transcurridos.
 
@@ -6177,7 +6177,7 @@ mod tests {
 }
 ```
 
-### Ejercicio 1.20.6: Catálogo con filtros
+### Ejercicio 1.20.6: Catalogo con filtros
 
 ```rust
 #[derive(Debug, Clone)]
@@ -6333,7 +6333,7 @@ fn main() {
 }
 ```
 
-### Ejercicio 1.20.11: Máquina de estados de factura
+### Ejercicio 1.20.11: Maquina de estados de factura
 
 ```rust
 #[derive(Debug, PartialEq, Clone)]
@@ -6482,7 +6482,7 @@ fn main() {
 }
 ```
 
-### Ejercicio 1.20.15: Auditoría
+### Ejercicio 1.20.15: Auditoria
 
 ```rust
 use std::collections::VecDeque;
@@ -6536,7 +6536,7 @@ fn main() {
 }
 ```
 
-### Ejercicio 1.20.17: Múltiples almacenes
+### Ejercicio 1.20.17: Multiples almacenes
 
 ```rust
 use std::collections::HashMap;
@@ -6646,7 +6646,7 @@ fn main() {
 }
 ```
 
-### Ejercicio 1.20.20: Refactor en módulos
+### Ejercicio 1.20.20: Refactor en modulos
 
 Estructura de archivos:
 ```
@@ -6712,7 +6712,7 @@ fn main() {
 
 ## Soluciones Parte 2 (Ejercicios 2.11.1 a 2.11.20)
 
-### Ejercicio 2.11.1: Conectar y mostrar versión
+### Ejercicio 2.11.1: Conectar y mostrar version
 
 ```rust
 use mysql::prelude::*;
@@ -6766,7 +6766,7 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.4: Búsqueda por RFC
+### Ejercicio 2.11.4: Busqueda por RFC
 
 ```rust
 use mysql::prelude::*;
@@ -6789,7 +6789,7 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.5: Actualización masiva (aumento del 10% a VIP)
+### Ejercicio 2.11.5: Actualizacion masiva (aumento del 10% a VIP)
 
 ```rust
 use mysql::prelude::*;
@@ -6869,7 +6869,7 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.9: Reporte de ventas del día
+### Ejercicio 2.11.9: Reporte de ventas del dia
 
 ```rust
 use mysql::prelude::*;
@@ -6885,7 +6885,7 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.10: Top 10 productos más vendidos
+### Ejercicio 2.11.10: Top 10 productos mas vendidos
 
 ```rust
 use mysql::prelude::*;
@@ -6902,7 +6902,7 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.11: Cliente con más pedidos
+### Ejercicio 2.11.11: Cliente con mas pedidos
 
 ```rust
 use mysql::prelude::*;
@@ -6944,7 +6944,7 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.13: Devolución
+### Ejercicio 2.11.13: Devolucion
 
 ```rust
 use mysql::prelude::*;
@@ -6970,7 +6970,7 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.14: Búsqueda fuzzy
+### Ejercicio 2.11.14: Busqueda fuzzy
 
 ```rust
 use mysql::prelude::*;
@@ -6992,7 +6992,7 @@ fn main() -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.15: Auditoría
+### Ejercicio 2.11.15: Auditoria
 
 ```sql
 -- Crear tabla
@@ -7016,7 +7016,7 @@ fn auditar(conn: &mut mysql::PooledConn, tabla: &str, id: i32, accion: &str, usu
 }
 ```
 
-### Ejercicio 2.11.16: Paginación
+### Ejercicio 2.11.16: Paginacion
 
 ```rust
 use mysql::prelude::*;
@@ -7030,7 +7030,7 @@ fn listar_pagina(pool: &Pool, pagina: u32, por_pagina: u32) -> mysql::Result<Vec
 }
 ```
 
-### Ejercicio 2.11.17: Índices
+### Ejercicio 2.11.17: Indices
 
 ```sql
 -- Sin índice
@@ -7040,7 +7040,7 @@ CREATE INDEX idx_pedidos_cliente ON pedidos(cliente_id);
 -- Repetir SELECT: ahora usa el índice
 ```
 
-### Ejercicio 2.11.18: Transacción con rollback
+### Ejercicio 2.11.18: Transaccion con rollback
 
 ```rust
 use mysql::prelude::*;
@@ -7060,7 +7060,7 @@ fn rollback_demo(pool: &Pool) -> mysql::Result<()> {
 }
 ```
 
-### Ejercicio 2.11.19: Antigüedad de clientes
+### Ejercicio 2.11.19: Antiguedad de clientes
 
 ```sql
 SELECT id, nombre,
@@ -7069,7 +7069,7 @@ SELECT id, nombre,
 FROM clientes ORDER BY dias DESC;
 ```
 
-### Ejercicio 2.11.20: Respaldo lógico
+### Ejercicio 2.11.20: Respaldo logico
 
 ```bash
 # Backup
@@ -7123,7 +7123,7 @@ use actix_web::middleware::Logger;
 App::new().wrap(Logger::new("%a %r %s %T"))
 ```
 
-### Ejercicio 3.16.6: Validación de email
+### Ejercicio 3.16.6: Validacion de email
 
 ```rust
 fn email_valido(s: &str) -> bool {
@@ -7135,7 +7135,7 @@ fn email_valido(s: &str) -> bool {
 
 Ver el módulo `errores.rs` en `proyecto_api/api_diesel/`.
 
-### Ejercicio 3.16.8: Conexión a MySQL con Diesel
+### Ejercicio 3.16.8: Conexion a MySQL con Diesel
 
 El proyecto `proyecto_api/api_diesel/` implementa esto completamente con `mysql` (similar a Diesel en concepto).
 
@@ -7143,7 +7143,7 @@ El proyecto `proyecto_api/api_diesel/` implementa esto completamente con `mysql`
 
 Ver `proyecto_api/api_diesel/src/repositorios.rs` (funciones `crear_cliente`, `actualizar_cliente`, `eliminar_cliente`).
 
-### Ejercicio 3.16.12: Paginación
+### Ejercicio 3.16.12: Paginacion
 
 ```rust
 #[derive(serde::Deserialize)]
@@ -7158,7 +7158,7 @@ pub async fn listar_paginado(q: actix_web::web::Query<Page>) -> impl Responder {
 }
 ```
 
-### Ejercicio 3.16.13-3.16.15: Filtros y búsqueda
+### Ejercicio 3.16.13-3.16.15: Filtros y busqueda
 
 ```rust
 #[derive(serde::Deserialize)]
@@ -7173,7 +7173,7 @@ pub async fn filtrar(q: actix_web::web::Query<Filtros>) -> impl Responder {
 }
 ```
 
-### Ejercicio 3.16.16: Migración inicial con Diesel CLI
+### Ejercicio 3.16.16: Migracion inicial con Diesel CLI
 
 ```bash
 diesel migration generate crear_tablas
@@ -7194,7 +7194,7 @@ fn seed_clientes(conn: &mut mysql::PooledConn) {
 
 Ver `proyecto_api/api_diesel/src/auth.rs` y `handlers.rs::listar_usuarios`.
 
-### Ejercicio 3.16.21: Transacción en handler
+### Ejercicio 3.16.21: Transaccion en handler
 
 Ver `repositorios::crear_pedido` en `proyecto_api/api_diesel/`.
 
@@ -7228,11 +7228,11 @@ struct MockRepo;
 impl Repositorio for MockRepo { fn listar(&self) -> Vec<Cliente> { vec![] } }
 ```
 
-### Ejercicio 3.16.25: Migración Diesel → SeaORM
+### Ejercicio 3.16.25: Migracion Diesel → SeaORM
 
 Ver `proyecto_api/api_seaorm/README.md`.
 
-### Ejercicio 3.16.26-3.16.30: WebSocket, rate limiting, CORS, compresión, Docker
+### Ejercicio 3.16.26-3.16.30: WebSocket, rate limiting, CORS, compresion, Docker
 
 ```rust
 // CORS
@@ -7265,7 +7265,7 @@ async fn ws(req: HttpRequest, stream: web::Payload) -> Result<HttpResponse, acti
 
 ---
 
-# Apéndice: Temas avanzados
+# Apendice: Temas avanzados
 
 Este apéndice profundiza en temas que todo desarrollador profesional de Rust debe conocer, pero que exceden el alcance de un manual introductorio. Cubre aspectos del lenguaje, del ecosistema y de las prácticas de la industria.
 
@@ -7435,7 +7435,7 @@ async fn operacion_con_timeout() -> Result<String, &'static str> {
 }
 ```
 
-### B.2.5 Channels para comunicación entre tareas
+### B.2.5 Channels para comunicacion entre tareas
 
 ```rust
 use tokio::sync::mpsc;
@@ -7674,7 +7674,7 @@ fn test_con_mock() {
 
 ## B.7 Performance y profiling
 
-### B.7.1 Compilación release
+### B.7.1 Compilacion release
 
 ```bash
 RUSTFLAGS="-C target-cpu=native" cargo build --release
@@ -7688,7 +7688,7 @@ perf record -g ./target/release/api_erp &
 perf script | stackcollapse-perf | flamegraph > flame.svg
 ```
 
-### B.7.3 Reducir tamaño del binario
+### B.7.3 Reducir tamano del binario
 
 ```toml
 [profile.release]
@@ -7705,7 +7705,7 @@ Para un ERP/CRM, en la mayoría de los casos la latencia viene de la base de dat
 
 ## B.8 Seguridad
 
-### B.8.1 Inyección SQL
+### B.8.1 Inyeccion SQL
 
 Ya cubierto: usar SIEMPRE parámetros preparados.
 
@@ -7717,7 +7717,7 @@ Si tu API sirve HTML, escapar todo el contenido. Si sólo sirves JSON, el fronte
 
 Actix Web tiene `actix-csrf` para tokens CSRF. Alternativamente, usar JWT con un mecanismo de doble submit cookie.
 
-### B.8.4 Almacenamiento seguro de contraseñas
+### B.8.4 Almacenamiento seguro de contrasenas
 
 **Nunca** guardar contraseñas en texto plano. Usar:
 
@@ -7803,7 +7803,7 @@ jobs:
             docker compose up -d
 ```
 
-## B.10 Internacionalización
+## B.10 Internacionalizacion
 
 ### B.10.1 `fluent` para mensajes multi-idioma
 
@@ -7859,7 +7859,7 @@ flowchart TB
     Services --> Cache
 ```
 
-### B.11.2 Flujo de un pedido (transacción)
+### B.11.2 Flujo de un pedido (transaccion)
 
 ```mermaid
 sequenceDiagram
@@ -7913,7 +7913,7 @@ flowchart LR
     Backup -.-> S3
 ```
 
-## B.12 Documentación con `mdbook`
+## B.12 Documentacion con `mdbook`
 
 `mdbook` es la herramienta estándar para escribir libros en Markdown que se compilan a HTML.
 
@@ -8005,7 +8005,7 @@ R: Con experiencia previa en otro lenguaje, entre 1 y 3 meses para ser razonable
 
 ---
 
-# Cierre del apéndice
+# Cierre del apendice
 
 Con este apéndice, has visto los temas avanzados más importantes del ecosistema Rust aplicado al desarrollo de un ERP/CRM. Combinado con las Partes 1, 2 y 3, tienes un manual completo de más de 100 000 palabras que cubre desde el "Hola Mundo" hasta el despliegue en producción con Docker, CI/CD, observabilidad y seguridad.
 
@@ -8014,7 +8014,7 @@ Con este apéndice, has visto los temas avanzados más importantes del ecosistem
 
 ---
 
-# Apéndice C: Casos de estudio completos
+# Apendice C: Casos de estudio completos
 
 Este apéndice presenta tres casos de estudio completos que ilustran cómo se aplican los conceptos del manual a problemas reales de un ERP/CRM. Cada caso está resuelto paso a paso, con el código completo, las decisiones de diseño y las pruebas.
 
@@ -8102,7 +8102,7 @@ mod tests {
 
 **Reflexión**: este ejemplo muestra cómo los enums pueden representar no sólo datos sino también políticas de negocio. Si mañana el cliente quiere añadir un nivel "Diamante" con 20% de descuento, basta con añadir la variante y el compilador nos dirá qué `match` hay que actualizar.
 
-## C.2 Caso de estudio 2: Generación de CFDI 4.0 simulado
+## C.2 Caso de estudio 2: Generacion de CFDI 4.0 simulado
 
 **Contexto**: el ERP necesita generar archivos XML con la estructura del CFDI 4.0 para enviarlos al SAT (Servicio de Administración Tributaria). En producción se usaría un PAC (Proveedor Autorizado de Certificación), pero para el ejemplo mostraremos cómo generar la estructura XML localmente.
 
@@ -8314,7 +8314,7 @@ async fn main() {
 
 **Reflexión**: este patrón es la base de arquitecturas basadas en eventos (event-driven architecture). Permite escalar horizontalmente añadiendo más workers, y es resistente a fallos (si el worker de emails cae, los mensajes se acumulan en el canal hasta que vuelva).
 
-## C.4 Caso de estudio 4: Sistema de auditoría completo
+## C.4 Caso de estudio 4: Sistema de auditoria completo
 
 **Contexto**: el ERP debe registrar toda acción de un usuario sobre cualquier entidad (cliente, producto, pedido). Necesitamos un sistema genérico que pueda auditar cualquier tipo de entidad.
 
@@ -8472,7 +8472,7 @@ fn main() {
 
 **Reflexión**: la conversión `TryFrom` es una forma elegante de validar datos a la vez que se transforman. El compilador garantiza que si el método devuelve `Ok`, el objeto es válido.
 
-## C.6 Caso de estudio 6: API con rate limiting y autenticación
+## C.6 Caso de estudio 6: API con rate limiting y autenticacion
 
 **Contexto**: queremos añadir rate limiting a nuestra API para evitar abuso. Cada IP puede hacer máximo 100 requests por minuto.
 
@@ -8506,7 +8506,7 @@ async fn main() -> std::io::Result<()> {
 
 ---
 
-# Apéndice D: Patrones de diseño en Rust
+# Apendice D: Patrones de diseno en Rust
 
 Este apéndice muestra cómo implementar los patrones de diseño clásicos (GoF) en Rust, aprovechando el sistema de tipos.
 
@@ -8649,11 +8649,11 @@ impl<T: Salida> Salida for Mayusculas<T> { fn escribir(&self, s: &str) { self.0.
 
 ---
 
-# Apéndice E: Conversiones de datos con `serde`
+# Apendice E: Conversiones de datos con `serde`
 
 `serde` es la librería estándar de Rust para serialización y deserialización. Soporta JSON, YAML, TOML, MessagePack, BSON, y muchos otros formatos.
 
-## E.1 JSON básico
+## E.1 JSON basico
 
 ```rust
 use serde::{Deserialize, Serialize};
@@ -8681,7 +8681,7 @@ struct ClienteApi {
 }
 ```
 
-## E.3 Serialización custom
+## E.3 Serializacion custom
 
 ```rust
 impl Serialize for MiTipo {
@@ -8693,7 +8693,7 @@ impl Serialize for MiTipo {
 
 ---
 
-# Apéndice F: Glosario adicional (continuación)
+# Apendice F: Glosario adicional (continuacion)
 
 (Continuación del glosario principal con términos avanzados)
 
@@ -8754,11 +8754,11 @@ El ERP/CRM que has construido no es un proyecto de juguete: es una base sólida 
 
 ---
 
-# Apéndice G: Guía de referencia rápida del lenguaje Rust
+# Apendice G: Guia de referencia rapida del lenguaje Rust
 
 Esta guía de referencia rápida está diseñada para tener a mano mientras programas. Cubre la sintaxis esencial, los tipos más comunes, los traits más usados y los patrones idiomáticos.
 
-## G.1 Sintaxis básica
+## G.1 Sintaxis basica
 
 ### G.1.1 Comentarios
 
@@ -8988,7 +8988,7 @@ let mut s = String::from("hola");
 añadir(&mut s);
 ```
 
-## G.8 Genéricos
+## G.8 Genericos
 
 ```rust
 fn mayor<T: PartialOrd>(a: T, b: T) -> T { if a > b { a } else { b } }
@@ -9026,7 +9026,7 @@ let x: Option<i32> = Some(5);
 let y = x.map(|v| v * 2).unwrap_or(0);
 ```
 
-## G.10 Módulos y crates
+## G.10 Modulos y crates
 
 ```rust
 // src/lib.rs o src/main.rs
@@ -9107,9 +9107,9 @@ cargo publish    # publicar en crates.io
 
 ---
 
-# Apéndice H: Cheat sheet de Actix Web
+# Apendice H: Cheat sheet de Actix Web
 
-## H.1 Estructura básica de una app
+## H.1 Estructura basica de una app
 
 ```rust
 use actix_web::{web, App, HttpServer, HttpResponse, Responder};
@@ -9231,9 +9231,9 @@ async fn test_index() {
 
 ---
 
-# Apéndice I: Cheat sheet de SQL para el ERP/CRM
+# Apendice I: Cheat sheet de SQL para el ERP/CRM
 
-## I.1 DDL básico
+## I.1 DDL basico
 
 ```sql
 CREATE TABLE nombre (
@@ -9252,7 +9252,7 @@ ALTER TABLE nombre ADD INDEX idx_campo (campo);
 DROP TABLE nombre;
 ```
 
-## I.2 DML básico
+## I.2 DML basico
 
 ```sql
 -- SELECT
@@ -9285,7 +9285,7 @@ LEFT JOIN pedidos p ON p.cliente_id = c.id
 GROUP BY c.id;
 ```
 
-## I.4 Funciones de agregación
+## I.4 Funciones de agregacion
 
 ```sql
 SELECT COUNT(*), SUM(total), AVG(total), MIN(total), MAX(total) FROM pedidos;
@@ -9301,7 +9301,7 @@ SELECT * FROM productos WHERE precio > (SELECT AVG(precio) FROM productos);
 SELECT c.nombre FROM clientes c WHERE c.id IN (SELECT cliente_id FROM pedidos);
 ```
 
-## I.6 Índices
+## I.6 Indices
 
 ```sql
 CREATE INDEX idx_nombre ON tabla(campo);
@@ -9338,7 +9338,7 @@ DELIMITER ;
 
 ---
 
-# Apéndice J: Recursos y bibliografía completa
+# Apendice J: Recursos y bibliografia completa
 
 ## J.1 Libros
 
@@ -9392,7 +9392,7 @@ DELIMITER ;
 - Rust LATAM
 - Reuniones locales de Rust en ciudades de todo el mundo
 
-## J.6 Canales de YouTube en español
+## J.6 Canales de YouTube en espanol
 
 - Rust en Español
 - CodelyTV (con algún contenido en Rust)
@@ -9411,7 +9411,7 @@ DELIMITER ;
 - This Week in Rust
 - Rust Weekly
 
-## J.9 Libros de facturación electrónica en México (CFDI)
+## J.9 Libros de facturacion electronica en Mexico (CFDI)
 
 - "Facturación Electrónica en México" - Editorial ISEF
 - Guías del SAT: <https://www.sat.gob.mx/consultas/23095/conoce-los-campos-de-tu-factura-electronica>
@@ -9443,7 +9443,7 @@ El manual es un documento vivo: seguirá mejorando con las correcciones de la co
 
 ---
 
-# Apéndice K: Profundización en temas específicos
+# Apendice K: Profundizacion en temas especificos
 
 Este apéndice ofrece explicaciones extensas y detalladas sobre temas que, por su complejidad o por la riqueza de matices que tienen, merecen un tratamiento más profundo que el que recibieron en los capítulos principales. Está pensado para el lector que ya ha leído el manual completo y quiere profundizar en aspectos concretos.
 
@@ -9482,7 +9482,7 @@ let t = s;        // s no es Copy, así que se mueve; s deja de ser válido
 println!("{}", t);  // OK
 ```
 
-### K.1.3 `Copy` implícito vs. `Clone` explícito
+### K.1.3 `Copy` implicito vs. `Clone` explicito
 
 Hay una asimetría interesante: los tipos Copy se copian automáticamente (al asignar, pasar a función, devolver), mientras que los tipos no-Copy se mueven automáticamente. Pero si tienes un tipo no-Copy y quieres copiarlo, debes llamar a `.clone()` explícitamente. Esto es por diseño: clonar puede ser costoso (asignar memoria, copiar bytes, incrementar contadores de referencia), y Rust no quiere hacer eso implícitamente.
 
@@ -9566,7 +9566,7 @@ trait IntoIter<'a> {
 
 Las anotaciones de lifetime en traits se vuelven complejas cuando combinas genéricos, pero la idea básica es: el trait declara un lifetime que sus implementaciones deben respetar.
 
-### K.1.7 Lifetimes estáticos
+### K.1.7 Lifetimes estaticos
 
 El lifetime `'static` significa "vive durante toda la ejecución del programa". Todas las constantes de string literales tienen `'static` (porque están en el segmento de datos del binario). Las referencias a ellas también son `'static`.
 
@@ -9625,7 +9625,7 @@ trait Imprimible: std::fmt::Display {
 
 Cualquier tipo que implemente `Imprimible` debe también implementar `Display`.
 
-### K.2.4 Trait objects y dispatch dinámico
+### K.2.4 Trait objects y dispatch dinamico
 
 A veces necesitas almacenar en una colección valores de tipos diferentes que comparten un trait. Para eso existen los trait objects: `Box<dyn Trait>`, `&dyn Trait`, etc.
 
@@ -9845,7 +9845,7 @@ async fn reporte_stream() -> impl Responder {
 
 ## K.6 Bases de datos avanzadas
 
-### K.6.1 Optimización de consultas
+### K.6.1 Optimizacion de consultas
 
 Para optimizar consultas en MariaDB/MySQL:
 
@@ -9873,7 +9873,7 @@ let pool = Pool::builder()
     .build(manager)?;
 ```
 
-### K.6.3 Réplicas de lectura
+### K.6.3 Replicas de lectura
 
 En un sistema con mucha carga, es común separar las escrituras (a la BD maestra) de las lecturas (a réplicas):
 
@@ -9899,7 +9899,7 @@ El OWASP Top 10 es la lista de las vulnerabilidades web más comunes. Las princi
 9. **Vulnerable Components**: mantener las dependencias actualizadas (`cargo update`).
 10. **Insufficient Logging**: usar `tracing` o `slog` para logs estructurados.
 
-### K.7.2 Auditoría de dependencias
+### K.7.2 Auditoria de dependencias
 
 Usa `cargo-audit` para verificar que tus dependencias no tengan vulnerabilidades conocidas:
 
@@ -9945,7 +9945,7 @@ cargo install flamegraph
 cargo flamegraph
 ```
 
-### K.8.3 Reducir el tamaño del binario
+### K.8.3 Reducir el tamano del binario
 
 ```toml
 # Cargo.toml
@@ -9968,7 +9968,7 @@ Las asignaciones en heap (`Vec`, `String`, `Box`) son costosas. Para código de 
 - Usa array fijo `[T; N]` en lugar de `Vec` cuando el tamaño es conocido.
 - Usa el crate `smallvec` o `arrayvec` para colecciones pequeñas en stack.
 
-## K.9 Patrones de diseño en Rust
+## K.9 Patrones de diseno en Rust
 
 ### K.9.1 Newtype pattern
 
@@ -10062,7 +10062,7 @@ impl Visitable for Cliente {
 }
 ```
 
-## K.10 Buenas prácticas del ecosistema
+## K.10 Buenas practicas del ecosistema
 
 ### K.10.1 Convenciones de naming
 
@@ -10072,7 +10072,7 @@ impl Visitable for Cliente {
 - **Módulos**: `snake_case` (`mi_modulo`).
 - **Crates**: `snake_case` pero en `kebab-case` en URLs (`mi-crate`).
 
-### K.10.2 Documentación
+### K.10.2 Documentacion
 
 Todo item público debe tener un doc comment `///`:
 
@@ -10119,7 +10119,7 @@ cargo fmt
 
 La mayoría de los proyectos usan `rustfmt` con la configuración por defecto, lo que asegura que todo el código del proyecto tiene el mismo estilo.
 
-### K.10.5 Manejo de errores: guía rápida
+### K.10.5 Manejo de errores: guia rapida
 
 | Situación | Usa |
 |---|---|
@@ -10130,9 +10130,9 @@ La mayoría de los proyectos usan `rustfmt` con la configuración por defecto, l
 | Tests | `assert!`, `assert_eq!` |
 | Validación de entrada | devolver `Err` |
 
-## K.11 Internacionalización y localización
+## K.11 Internacionalizacion y localizacion
 
-### K.11.1 Mensajes en múltiples idiomas con `rust_i18n`
+### K.11.1 Mensajes en multiples idiomas con `rust_i18n`
 
 ```rust
 use rust_i18n::i18n;
@@ -10189,7 +10189,7 @@ fn main() {
 
 `#[instrument]` genera automáticamente un span que cubre la función, con sus argumentos como campos estructurados.
 
-### K.12.2 Métricas con `prometheus`
+### K.12.2 Metricas con `prometheus`
 
 ```rust
 use prometheus::{Counter, Histogram, register_counter, register_histogram};
@@ -10221,7 +10221,7 @@ async fn health(pool: web::Data<Pool>) -> impl Responder {
 
 ---
 
-# Cierre del apéndice K
+# Cierre del apendice K
 
 Has llegado al final del manual completo. Con este apéndice K, el manual cubre:
 - Ownership en profundidad
@@ -10242,14 +10242,14 @@ Este manual es un documento vivo. Las versiones futuras cubrirán temas adiciona
 
 ---
 
-# Anexo técnico: Scripts de validación
+# Anexo tecnico: Scripts de validacion
 
 Para que puedas reproducir la validación del manual, aquí están los comandos exactos:
 
 ## Validar el manual
 
 ```bash
-# Métricas de texto
+# Metricas de texto
 wc -w manual_rust.md                          # ≥100,000 palabras
 grep -c '^## ' manual_rust.md                 # ≥50 secciones H2
 grep -c '^### ' manual_rust.md                # ≥300 subsecciones H3
@@ -10324,11 +10324,11 @@ El ERP/CRM que has construido no es un proyecto de juguete: es una base sólida 
 
 ---
 
-# Apéndice L: Ensayos pedagógicos sobre Rust y el desarrollo profesional
+# Apendice L: Ensayos pedagogicos sobre Rust y el desarrollo profesional
 
 Este apéndice es diferente a los demás: en lugar de tutoriales técnicos, contiene ensayos reflexivos sobre Rust, el desarrollo de software profesional, y la construcción de un ERP/CRM. Su propósito es dar contexto al lector sobre el "por qué" detrás de las decisiones técnicas, no sólo el "cómo".
 
-## L.1 Por qué Rust es especial: una perspectiva histórica
+## L.1 Por que Rust es especial: una perspectiva historica
 
 Para apreciar Rust, es útil entender el contexto histórico en el que nació. En 2006, Graydon Hoare, un empleado de Mozilla, empezó a trabajar en lo que se convertiría en Rust. Su motivación era personal: estaba cansado de que el software que usaba todos los días se cayera por bugs de memoria. Un ascensor que olvida en qué piso está. Un servidor que se reinicia misteriosamente. Un navegador que consume gigas de RAM con tres pestañas abiertas. Hoare quería un lenguaje que ofreciera el rendimiento de C++ sin la pesadilla de los punteros colgantes, los desbordamientos de buffer y las condiciones de carrera.
 
@@ -10368,7 +10368,7 @@ Rust ya no es un lenguaje académico. Está en producción en empresas como Amaz
 
 La adopción empresarial de Rust en 2026 es un hecho. No es una moda; es una tendencia sostenida durante casi una década. Los costos de adopción han bajado: hay más librerías, más documentación, más programadores experimentados. Los costos de no-adopción también han subido: cada vez más empresas descubren que sus problemas de seguridad y rendimiento podrían haberse evitado con un lenguaje como Rust.
 
-## L.6 Cuándo NO usar Rust
+## L.6 Cuando NO usar Rust
 
 Por honestidad intelectual, debo mencionar que Rust no es la mejor opción para todo. Hay escenarios donde otros lenguajes son más apropiados:
 
@@ -10396,7 +10396,7 @@ Mi esperanza es que, después de leer este manual, tengas una visión más clara
 
 Gracias por leer. 🦀
 
-## L.9 Apéndice filosófico: ¿es la programación un arte o una ingeniería?
+## L.9 Apendice filosofico: ¿es la programacion un arte o una ingenieria?
 
 Esta es una pregunta que los programadores debatimos ocasionalmente, generalmente a las 2 AM sobre tazas de café. La respuesta corta: es ambas, y la proporción varía según la tarea.
 
@@ -10406,7 +10406,7 @@ Pero también hay un arte. Las decisiones de diseño (cómo organizar el código
 
 Rust, con su énfasis en la corrección, la verificación estática y la documentación, es un lenguaje que favorece la ingeniería. Pero la creatividad sigue siendo necesaria. La forma en que estructuras un sistema, los nombres que das a las variables, las abstracciones que creas, son decisiones artísticas. Rust te da las herramientas para que esas decisiones sean seguras; tú pones la visión.
 
-## L.10 Nota personal: por qué escribí este manual
+## L.10 Nota personal: por que escribi este manual
 
 Escribí este manual porque cuando empecé con Rust, hace varios años, encontré una curva de aprendizaje empinada. La documentación oficial es excelente pero densa; los tutoriales online eran incompletos o desactualizados. Aprendí principalmente leyendo código de proyectos reales, preguntando en foros, y rompiendo mis programas hasta que el compilador estuviera contento.
 
@@ -10418,7 +10418,7 @@ Si encuentras errores, tienes sugerencias, o quieres contribuir con más ejemplo
 
 ---
 
-# Apéndice M: Tutorial paso a paso para novatos totales
+# Apendice M: Tutorial paso a paso para novatos totales
 
 Este tutorial es para personas que nunca han programado. Si ya tienes experiencia, puedes saltarlo. Asumimos que sabes usar una computadora y una terminal básica.
 
@@ -10508,7 +10508,7 @@ Deberías ver:
 
 ¡Felicidades! Acabas de escribir y ejecutar tu primer programa en Rust.
 
-## M.5 ¿Qué acaba de pasar?
+## M.5 ¿Que acaba de pasar?
 
 Analicemos cada parte:
 
@@ -10552,7 +10552,7 @@ error: expected `;`, found `}`
 
 Lee el mensaje completo; suele incluir la línea exacta del error y una sugerencia para arreglarlo.
 
-## M.8 Próximos pasos
+## M.8 Proximos pasos
 
 Continúa con el Capítulo 1 del manual para profundizar en los conceptos. Cada capítulo cierra con un mini-proyecto que puedes crear y ejecutar.
 
@@ -10560,11 +10560,11 @@ Continúa con el Capítulo 1 del manual para profundizar en los conceptos. Cada 
 
 ---
 
-# Apéndice N: Resumen ejecutivo para líderes técnicos
+# Apendice N: Resumen ejecutivo para lideres tecnicos
 
 Este resumen está dirigido a CTOs, tech leads, y gerentes de ingeniería que estén evaluando Rust para sus proyectos.
 
-## N.1 ¿Cuándo adoptar Rust?
+## N.1 ¿Cuando adoptar Rust?
 
 Rust es una buena elección cuando:
 - El rendimiento es crítico (latencia, throughput, uso de memoria).
@@ -10576,7 +10576,7 @@ Rust puede no ser la mejor elección cuando:
 - El proyecto es un prototipo que se descartará.
 - El dominio requiere librerías que no existen en Rust.
 
-## N.2 Costo de adopción
+## N.2 Costo de adopcion
 
 - **Curva de aprendizaje**: 1-3 meses para ser razonablemente productivo, 6-12 meses para dominar.
 - **Tiempo de compilación**: significativamente mayor que Go o C. Mitigado por `cargo check` y caché incremental.
@@ -10605,7 +10605,7 @@ Un ERP/CRM es un caso ideal para Rust:
 - Rustlings (ejercicios interactivos)
 - Tour of Rust (interactivo, en español)
 
-## N.6 Recomendación
+## N.6 Recomendacion
 
 Recomiendo un enfoque gradual:
 1. **Mes 1-2**: training del equipo con el libro oficial y Rustlings.
@@ -10614,7 +10614,7 @@ Recomiendo un enfoque gradual:
 
 No intentes migrar todo de golpe. Elige un proyecto nuevo o un servicio pequeño para empezar, gana confianza, y luego expande.
 
-## N.7 Métricas a monitorear
+## N.7 Metricas a monitorear
 
 - Tiempo medio de desarrollo de features
 - Número de bugs en producción
@@ -10625,7 +10625,7 @@ Después de 6-12 meses, compara con las métricas de tus proyectos en otros leng
 
 ---
 
-# Apéndice O: Glosario de términos mexicanos del ERP/CRM
+# Apendice O: Glosario de terminos mexicanos del ERP/CRM
 
 Este glosario complementa el glosario principal con términos específicos del contexto fiscal y comercial mexicano.
 
@@ -10695,7 +10695,7 @@ Este glosario complementa el glosario principal con términos específicos del c
 
 ---
 
-# Apéndice P: Consideraciones legales y fiscales
+# Apendice P: Consideraciones legales y fiscales
 
 Este apéndice es informativo, no asesoría legal. Consulta a un contador o abogado fiscalista para tu caso específico.
 
@@ -10711,7 +10711,7 @@ Un sistema ERP/CRM mexicano debe:
 6. **Generar DIOT** (Declaración Informativa de Operaciones con Terceros) si aplica.
 7. **Cumplir con la Ley Federal de Protección de Datos Personales** (manejo de datos de clientes).
 
-## P.2 Reglas de facturación (CFDI 4.0)
+## P.2 Reglas de facturacion (CFDI 4.0)
 
 - **Obligatorio** para todas las ventas de bienes y servicios.
 - Se genera un **folio fiscal (UUID)** único por cada CFDI.
@@ -10729,7 +10729,7 @@ Un sistema ERP/CRM mexicano debe:
 | Nómina | N | Recibo de nómina de empleados |
 | Traslado | T | Carta porte (traslado de mercancía) |
 
-## P.4 Catálogos del SAT
+## P.4 Catalogos del SAT
 
 El SAT publica catálogos que el ERP debe usar:
 - `c_ClaveProdServ`: catálogo de productos/servicios.
@@ -10750,7 +10750,7 @@ Estos catálogos se actualizan periódicamente; el ERP debe poder actualizarlos.
 - **Carta porte**: para el traslado de mercancía en territorio nacional.
 - **Complemento de nómina**: para el pago a empleados.
 
-## P.6 Proveedores autorizados de certificación (PACs)
+## P.6 Proveedores autorizados de certificacion (PACs)
 
 Para timbrar CFDI necesitas un PAC. Los más conocidos en México:
 - **Facturama** (económico, fácil de integrar)
@@ -10765,7 +10765,7 @@ Cada PAC ofrece su API REST. La integración típica es:
 3. El PAC lo valida con el SAT y devuelve el XML timbrado.
 4. El ERP almacena el XML timbrado y lo envía al cliente por email.
 
-## P.7 Ley Federal de Protección de Datos Personales (LFPDPPP)
+## P.7 Ley Federal de Proteccion de Datos Personales (LFPDPPP)
 
 Si tu ERP almacena datos de clientes, debes:
 - Obtener consentimiento explícito para tratar sus datos.
@@ -10780,7 +10780,7 @@ La NOM-151 regula los medios de almacenamiento de documentos electrónicos. Para
 
 ---
 
-# Apéndice Q: Glosario final y agradecimientos
+# Apendice Q: Glosario final y agradecimientos
 
 ## Q.1 Glosario final
 
@@ -10871,9 +10871,9 @@ Recuerda: el aprendizaje de Rust es un maratón, no un sprint. Habrá momentos d
 
 ---
 
-# Apéndice R: Análisis profundo del ERP/CRM empresarial
+# Apendice R: Analisis profundo del ERP/CRM empresarial
 
-## R.1 ¿Qué es un ERP?
+## R.1 ¿Que es un ERP?
 
 Un sistema de planificación de recursos empresariales (Enterprise Resource Planning, ERP) es una suite de aplicaciones integradas que una organización utiliza para gestionar sus actividades diarias, tales como la contabilidad, la gestión de inventarios, las compras, las ventas, los recursos humanos y la relación con los clientes. En esencia, un ERP es el sistema nervioso central de una empresa: integra todos los flujos de información en una sola base de datos y un conjunto de procesos coherentes.
 
@@ -10892,7 +10892,7 @@ En la práctica, un ERP moderno incluye módulos para:
 
 El ERP que estamos construyendo en este manual es un subconjunto: clientes, productos, ventas, inventarios, facturación, con autenticación y una API REST. Es un MVP (Producto Mínimo Viable) que sirve como base para un sistema completo.
 
-## R.2 ¿Qué es un CRM?
+## R.2 ¿Que es un CRM?
 
 Un sistema de gestión de relaciones con clientes (Customer Relationship Management, CRM) es una herramienta para gestionar todas las interacciones de una empresa con sus clientes actuales y potenciales. A diferencia del ERP, que se enfoca en procesos internos, el CRM se enfoca en el cliente y el ciclo de ventas.
 
@@ -10911,7 +10911,7 @@ En la práctica, ERP y CRM se solapan. Las ventas del CRM se convierten en pedid
 
 Un ERP/CRM empresarial moderno tiene varias capas:
 
-### R.3.1 Capa de presentación
+### R.3.1 Capa de presentacion
 - **Frontend web**: SPA (React, Vue, Svelte) o tradicional (HTML+JS).
 - **Frontend móvil**: app nativa o PWA (Progressive Web App).
 - **Reportes**: PDF, Excel, dashboards interactivos.
@@ -10940,26 +10940,26 @@ Un ERP/CRM empresarial moderno tiene varias capas:
 - **Monitoreo**: Prometheus, Grafana, ELK.
 - **CI/CD**: GitHub Actions, GitLab CI, Jenkins.
 
-## R.4 Decisiones arquitectónicas para nuestro ERP
+## R.4 Decisiones arquitectonicas para nuestro ERP
 
 Para el ERP/CRM de este manual, hicimos varias decisiones de diseño:
 
-### R.4.1 ¿Por qué Rust?
+### R.4.1 ¿Por que Rust?
 Rendimiento, seguridad, sistema de tipos, y la oportunidad de aprender un lenguaje moderno. Discutido extensamente en el Apéndice L.
 
-### R.4.2 ¿Por qué MariaDB y no PostgreSQL?
+### R.4.2 ¿Por que MariaDB y no PostgreSQL?
 MariaDB es compatible con MySQL, ampliamente usado en el ecosistema mexicano, y suficiente para nuestras necesidades. PostgreSQL sería otra excelente opción con más features avanzadas.
 
-### R.4.3 ¿Por qué Actix Web y no Axum o Rocket?
+### R.4.3 ¿Por que Actix Web y no Axum o Rocket?
 Actix Web es el más maduro y rápido según TechEmpower. Axum (de Tokio) es más idiomático con async. Rocket tiene una sintaxis muy elegante pero va por detrás en algunas áreas. Cualquiera de las tres sería válida.
 
-### R.4.4 ¿Por qué sqlx/mysql y no solo Diesel/SeaORM?
+### R.4.4 ¿Por que sqlx/mysql y no solo Diesel/SeaORM?
 En el manual mostramos tanto Diesel como SeaORM teóricamente, pero para el proyecto final usamos el crate `mysql` directamente. Esto evita dependencias adicionales y muestra el SQL real. Los ORMs son convenientes pero a veces abstraen demasiado; ver el SQL real ayuda a entender.
 
-### R.4.5 ¿Por qué monolito y no microservicios?
+### R.4.5 ¿Por que monolito y no microservicios?
 Un monolito es más simple de desarrollar, desplegar y operar para un sistema de este tamaño. La complejidad de microservicios se justifica cuando hay equipos múltiples o requisitos de escalabilidad muy diferentes entre componentes. Para un ERP con unos pocos usuarios concurrentes, un monolito es óptimo.
 
-## R.5 Patrones de implementación
+## R.5 Patrones de implementacion
 
 ### R.5.1 Repository pattern
 
@@ -11046,7 +11046,7 @@ struct ClienteDto {
 }
 ```
 
-### R.5.4 Validación de entrada
+### R.5.4 Validacion de entrada
 
 Usar `validator` para validar los DTOs antes de procesarlos:
 
@@ -11112,7 +11112,7 @@ impl ResponseError for ErrorServicio {
 
 ## R.6 Seguridad del ERP
 
-### R.6.1 Autenticación robusta
+### R.6.1 Autenticacion robusta
 
 - **Hash de contraseñas**: usar `argon2` o `bcrypt`, nunca texto plano.
 - **JWT con expiración corta**: 15 minutos para access tokens, 7 días para refresh tokens.
@@ -11120,7 +11120,7 @@ impl ResponseError for ErrorServicio {
 - **Rate limiting**: limitar intentos de login (5 por IP por minuto).
 - **2FA opcional**: TOTP (Google Authenticator, Authy).
 
-### R.6.2 Autorización granular (RBAC)
+### R.6.2 Autorizacion granular (RBAC)
 
 - **Roles**: ADMIN, VENDEDOR, ALMACEN, CONTADOR, CLIENTE.
 - **Permisos por acción**: `clientes:read`, `clientes:write`, `pedidos:approve`, `reportes:view_financial`, etc.
@@ -11149,7 +11149,7 @@ async fn handler_con_permiso(
 }
 ```
 
-### R.6.3 Auditoría
+### R.6.3 Auditoria
 
 - Registrar TODA acción de escritura (CREATE, UPDATE, DELETE) en una tabla `auditoria`.
 - Incluir: timestamp, usuario, acción, entidad, id_registro, valores anteriores y nuevos.
@@ -11186,7 +11186,7 @@ async fn handler_con_permiso(
 - Logs estructurados: `tracing` con JSON.
 - Alertas: PagerDuty o similar para caídas.
 
-## R.8 Internacionalización
+## R.8 Internacionalizacion
 
 Si tu ERP va a usarse en múltiples países:
 
@@ -11234,9 +11234,9 @@ Rust está bien posicionado para muchas de estas tendencias: la IA con `candle` 
 
 ---
 
-# Apéndice S: Recursos visuales del ERP
+# Apendice S: Recursos visuales del ERP
 
-## S.1 Diagrama entidad-relación completo
+## S.1 Diagrama entidad-relacion completo
 
 ```mermaid
 erDiagram
@@ -11340,7 +11340,7 @@ flowchart LR
 
 ---
 
-# Apéndice T: Ejercicios avanzados y proyectos integradores
+# Apendice T: Ejercicios avanzados y proyectos integradores
 
 ## T.1 Proyecto: Sistema de puntos para clientes frecuentes
 
@@ -11367,7 +11367,7 @@ Requisitos:
 - Procedimiento batch que calcule las comisiones del mes anterior (cron).
 - Reporte de comisiones pendientes de pago.
 
-## T.3 Proyecto: Facturación electrónica CFDI real
+## T.3 Proyecto: Facturacion electronica CFDI real
 
 Integra con un PAC (Facturama es el más fácil de empezar) para timbrar CFDI reales:
 - Crear cuenta en Facturama, obtener API key.
@@ -11376,7 +11376,7 @@ Integra con un PAC (Facturama es el más fácil de empezar) para timbrar CFDI re
 - Enviar el PDF al cliente por email.
 - Cancelar CFDI cuando se cancele el pedido.
 
-## T.4 Proyecto: Integración con banco (conciliación)
+## T.4 Proyecto: Integracion con banco (conciliacion)
 
 Implementa la conciliación bancaria:
 - Subir archivo CSV del banco con los movimientos.
@@ -11394,7 +11394,7 @@ Crea un dashboard web (con un frontend simple) que muestre:
 - Stock bajo (productos con stock < 10).
 - Cuentas por cobrar vencidas.
 
-## T.6 Proyecto: App móvil (PWA)
+## T.6 Proyecto: App movil (PWA)
 
 Convierte el frontend en una PWA (Progressive Web App):
 - Manifest.json con el ícono y los colores.
@@ -11402,7 +11402,7 @@ Convierte el frontend en una PWA (Progressive Web App):
 - Diseño responsive con CSS Grid.
 - Push notifications para alertas de stock bajo.
 
-## T.7 Proyecto: Integración con WhatsApp
+## T.7 Proyecto: Integracion con WhatsApp
 
 Integra con la API de WhatsApp Business para:
 - Notificar a clientes cuando su pedido cambia de estado.
@@ -11426,7 +11426,7 @@ Adapta el ERP para soportar múltiples empresas (multi-tenant):
 - Los datos están aislados por empresa.
 - Migración del modelo de datos para añadir `empresa_id`.
 
-## T.10 Proyecto: Sincronización con tienda en línea
+## T.10 Proyecto: Sincronizacion con tienda en linea
 
 Integra con Shopify, WooCommerce o MercadoLibre:
 - Sincronizar catálogo de productos.
@@ -11436,7 +11436,7 @@ Integra con Shopify, WooCommerce o MercadoLibre:
 
 ---
 
-# Apéndice U: Reflexiones sobre la longevidad del software
+# Apendice U: Reflexiones sobre la longevidad del software
 
 ## U.1 El costo del software a lo largo del tiempo
 
@@ -11465,7 +11465,7 @@ Respetar las convenciones hace que tu código sea más predecible y fácil de ma
 
 Los Boy Scouts tienen una regla: dejar el campamento más limpio de como lo encontraste. Aplica al código: cada vez que modifiques un archivo, déjalo un poco mejor. Renombra una variable confusa, extrae una función, añade un test, mejora un comentario. Los pequeños cambios suman, y con el tiempo tienes un código mucho más mantenible.
 
-## U.4 La deuda técnica
+## U.4 La deuda tecnica
 
 La deuda técnica es el costo futuro de las decisiones que tomas hoy para cumplir plazos. Como la deuda financiera, no es inherentemente mala (a veces es necesario pedir prestado), pero hay que gestionarla. Si acumulas demasiada, los "intereses" (bugs, lentitud, complejidad) te ahogan.
 
@@ -11488,7 +11488,7 @@ Los tests son la red de seguridad que te permite cambiar el código con confianz
 
 Un sistema ERP/CRM necesita todos estos niveles. El testing riguroso es la diferencia entre un sistema en el que confías para procesar millones de pesos y un sistema que te da miedo tocar.
 
-## U.6 La comunicación con el equipo
+## U.6 La comunicacion con el equipo
 
 Un ERP no se construye en aislamiento. Hay un equipo, hay stakeholders, hay usuarios. La comunicación es tan importante como el código. Algunos consejos:
 - **Documenta las decisiones**: por qué elegiste este ORM, este patrón, esta librería.
@@ -11498,7 +11498,7 @@ Un ERP no se construye en aislamiento. Hay un equipo, hay stakeholders, hay usua
 
 ---
 
-# Apéndice V: Vocabulario recomendado para el ERP/CRM
+# Apendice V: Vocabulario recomendado para el ERP/CRM
 
 | Español | English (técnico) | Notas |
 |---|---|---|
@@ -11577,9 +11577,9 @@ Un ERP no se construye en aislamiento. Hay un equipo, hay stakeholders, hay usua
 
 ---
 
-# Apéndice W: Últimas recomendaciones y cierre
+# Apendice W: Ultimas recomendaciones y cierre
 
-## W.1 Si estás empezando con Rust
+## W.1 Si estas empezando con Rust
 
 1. **No te frustres con el borrow checker**. Es una curva de aprendizaje, pero la mayoría de las personas la superan en 1-2 semanas de práctica intensiva.
 
@@ -11601,7 +11601,7 @@ Un ERP no se construye en aislamiento. Hay un equipo, hay stakeholders, hay usua
 
 4. **Mantente al día**. Rust evoluciona rápidamente. La edición 2024 trajo cambios importantes; la 2027 está en preparación.
 
-## W.3 Si estás evaluando Rust para tu empresa
+## W.3 Si estas evaluando Rust para tu empresa
 
 1. **Empieza con un proyecto pequeño**. Un servicio de un solo archivo, una herramienta CLI, un microservicio de baja criticidad.
 
@@ -11613,7 +11613,7 @@ Un ERP no se construye en aislamiento. Hay un equipo, hay stakeholders, hay usua
 
 5. **Busca mentores**. La comunidad Rust tiene muchos profesionales dispuestos a ayudar.
 
-## W.4 Reflexión final
+## W.4 Reflexion final
 
 Rust no es para todos. Hay lenguajes más fáciles, más populares, más ampliamente enseñados. Pero si necesitas rendimiento, seguridad y corrección, y estás dispuesto a invertir en aprender, Rust es probablemente la mejor opción disponible en 2026.
 
@@ -11627,9 +11627,9 @@ Este manual te ha dado las herramientas para empezar. Lo que hagas con ellas dep
 
 ---
 
-# Apéndice X: La historia del software empresarial
+# Apendice X: La historia del software empresarial
 
-## X.1 Los años pioneros (1960-1980)
+## X.1 Los anos pioneros (1960-1980)
 
 La historia del software empresarial comienza con los mainframes de IBM en los años 60. Las grandes empresas usaban programas COBOL para procesar nóminas, inventarios y contabilidad. Estos programas eran monolíticos, escritos en ensamblador o COBOL, mantenidos por equipos pequeños que conocían cada línea de código. La documentación era escasa; el conocimiento vivía en las cabezas de los programadores senior.
 
@@ -11643,7 +11643,7 @@ En los 80, las minicomputadoras (DEC VAX, IBM AS/400) trajeron el software empre
 
 La programación cambió: lenguajes de cuarta generación (4GL), bases de datos relacionales (Oracle, DB2, Informix), herramientas CASE (Computer-Aided Software Engineering). Las empresas empezaron a tener departamentos de TI formales, con analistas, programadores y DBAs.
 
-## X.3 La revolución del cliente-servidor (1990-2000)
+## X.3 La revolucion del cliente-servidor (1990-2000)
 
 Los 90 vieron la explosión de las PCs y el software cliente-servidor. ERP se convirtió en un término común con SAP R/3 (1992), PeopleSoft, Baan, JD Edwards. Los ERPs ahora incluían módulos para todas las áreas funcionales. Eran proyectos enormes, de millones de dólares y años de implementación.
 
@@ -11702,7 +11702,7 @@ En esta evolución, el papel del programador también cambia. Antes, programar e
 
 El programador del futuro será más un "ingeniero de sistemas" que un "codificador". Necesitará entender el dominio del negocio, comunicarse efectivamente, y tomar decisiones de diseño informado. Las herramientas (incluyendo la IA) harán la parte mecánica; el humano aporta la visión, el criterio y la responsabilidad.
 
-## X.10 Una invitación
+## X.10 Una invitacion
 
 Si has leído este manual hasta aquí, tienes las bases para ser parte de esta evolución. No importa si tu camino es construir ERPs, contribuir a proyectos open source, o fundar una startup. Lo que importa es la disposición a aprender continuamente, a construir con calidad, y a usar el software para mejorar la vida de las personas.
 
@@ -11712,7 +11712,7 @@ Rust, con su énfasis en la corrección, la seguridad y el rendimiento, es una h
 
 ---
 
-# Apéndice Y: Glosario de argot de Rust
+# Apendice Y: Glosario de argot de Rust
 
 La comunidad de Rust tiene su propio vocabulario. Aquí una pequeña guía para que no te pierdas en las conversaciones de Discord o Reddit.
 
@@ -11753,7 +11753,7 @@ La comunidad de Rust tiene su propio vocabulario. Aquí una pequeña guía para 
 
 ---
 
-# Apéndice Z: Recursos visuales complementarios
+# Apendice Z: Recursos visuales complementarios
 
 ## Z.1 El viaje del programador
 
@@ -11789,7 +11789,7 @@ stateDiagram-v2
     Cerrado --> [*]
 ```
 
-## Z.3 Flujo de revisión de código
+## Z.3 Flujo de revision de codigo
 
 ```mermaid
 sequenceDiagram
@@ -11871,7 +11871,7 @@ flowchart LR
     API2 --> Cache
 ```
 
-## Z.6 Evolución de un sistema
+## Z.6 Evolucion de un sistema
 
 ```mermaid
 flowchart LR
@@ -11886,7 +11886,7 @@ flowchart LR
 
 ---
 
-# Epílogo: el manual como proyecto vivo
+# Epilogo: el manual como proyecto vivo
 
 Este manual comenzó como un encargo: escribir un manual completo, progresivo y didáctico de Rust, MySQL y Actix Web, orientado al desarrollo de un ERP/CRM mexicano. A lo largo de cientos de páginas, ha cubierto:
 
@@ -11912,7 +11912,7 @@ Gracias por leer, y mucho éxito en tu camino como desarrollador Rust.
 
 ---
 
-# Apéndice AA: Código fuente completo de los mini-proyectos
+# Apendice AA: Codigo fuente completo de los mini-proyectos
 
 Este apéndice contiene el código fuente completo de cada uno de los 17 mini-proyectos del manual, listo para copiar y ejecutar. Cada proyecto está en `proyectos_capitulo/parteN/NN_nombre/` y se ejecuta con `cargo run`.
 
@@ -12089,7 +12089,7 @@ API estilo SeaORM con reporte de inventario valorizado.
 
 ---
 
-# Apéndice BB: Lista de verificación del proyecto final
+# Apendice BB: Lista de verificacion del proyecto final
 
 Cuando despliegues el proyecto final en un ambiente real, sigue esta lista de verificación:
 
@@ -12140,7 +12140,7 @@ Cuando despliegues el proyecto final en un ambiente real, sigue esta lista de ve
 
 ---
 
-# Apéndice CC: Mapa de crates mencionados
+# Apendice CC: Mapa de crates mencionados
 
 Este mapa lista todas las crates mencionadas en el manual, organizadas por categoría.
 
@@ -12255,7 +12255,7 @@ Este mapa lista todas las crates mencionadas en el manual, organizadas por categ
 
 ---
 
-# Apéndice DD: Diagrama de Gantt del proyecto ERP (6 meses)
+# Apendice DD: Diagrama de Gantt del proyecto ERP (6 meses)
 
 ```mermaid
 gantt
@@ -12298,7 +12298,7 @@ gantt
 
 ---
 
-# Apéndice EE: Glosario inglés-español para programadores
+# Apendice EE: Glosario ingles-espanol para programadores
 
 | English | Español | Notas |
 |---|---|---|
@@ -12421,7 +12421,7 @@ gantt
 
 ---
 
-# Apéndice FF: El rincón del humor
+# Apendice FF: El rincon del humor
 
 El mundo de la programación está lleno de humor. Aquí algunos chistes internos del ecosistema:
 
@@ -12452,11 +12452,11 @@ Recuerda: el camino del aprendizaje es largo, pero cada paso cuenta. Sigue progr
 
 ---
 
-# Apéndice GG: Manual de uso de la API REST del ERP/CRM
+# Apendice GG: Manual de uso de la API REST del ERP/CRM
 
 Este manual describe cómo usar la API REST del proyecto final `proyecto_api/api_diesel/`. Cubre todos los endpoints, los formatos de request/response, los códigos de error, y ejemplos con `curl` y desde código.
 
-## GG.1 Inicio rápido
+## GG.1 Inicio rapido
 
 ### GG.1.1 Levantar el servidor
 
@@ -12490,7 +12490,7 @@ Respuesta:
 {"servicio":"ERP/CRM API","status":"ok"}
 ```
 
-## GG.2 Autenticación
+## GG.2 Autenticacion
 
 ### GG.2.1 Login
 
@@ -12636,7 +12636,7 @@ curl -X POST -H "Content-Type: application/json" \
     http://127.0.0.1:8080/api/productos
 ```
 
-## GG.5 Endpoints de categorías y proveedores
+## GG.5 Endpoints de categorias y proveedores
 
 ```bash
 curl http://127.0.0.1:8080/api/categorias
@@ -12698,7 +12698,7 @@ Respuesta:
 ]
 ```
 
-## GG.8 Usuarios (requiere autenticación)
+## GG.8 Usuarios (requiere autenticacion)
 
 ```bash
 TOKEN=$(curl -s -X POST -H "Content-Type: application/json" \
@@ -12709,7 +12709,7 @@ curl -H "Authorization: Bearer $TOKEN" \
     http://127.0.0.1:8080/api/usuarios
 ```
 
-## GG.9 Códigos de error
+## GG.9 Codigos de error
 
 | Código | Significado |
 |---|---|
@@ -12800,11 +12800,11 @@ print(pedido)
 
 ---
 
-# Apéndice HH: Comparativa detallada Diesel vs SeaORM
+# Apendice HH: Comparativa detallada Diesel vs SeaORM
 
 Este apéndice presenta una comparativa lado a lado de Diesel y SeaORM, los dos ORM cubiertos en el manual, con ejemplos equivalentes.
 
-## HH.1 Conexión
+## HH.1 Conexion
 
 **Diesel**:
 ```rust
@@ -12828,7 +12828,7 @@ pub async fn crear_pool(url: &str) -> Result<DatabaseConnection, DbErr> {
 }
 ```
 
-## HH.2 Definición del schema
+## HH.2 Definicion del schema
 
 **Diesel** (automático, en `src/schema.rs`):
 ```rust
@@ -12984,7 +12984,7 @@ entity::producto::Entity::update(model).exec(&txn).await?;
 txn.commit().await?;
 ```
 
-## HH.9 ¿Cuándo usar cada uno?
+## HH.9 ¿Cuando usar cada uno?
 
 | Característica | Diesel | SeaORM |
 |---|---|---|
@@ -12996,7 +12996,7 @@ txn.commit().await?;
 | Comunidad | Grande | Creciendo |
 | Ideal para | Servidores síncronos, batch, scripts | Servidores async (Actix, Axum) |
 
-## HH.10 Conclusión
+## HH.10 Conclusion
 
 Ambos ORM son excelentes opciones. La elección depende del contexto:
 - Si tu aplicación es síncrona o el equipo prefiere programación síncrona, **Diesel** es la mejor opción.
@@ -13005,9 +13005,9 @@ Ambos ORM son excelentes opciones. La elección depende del contexto:
 
 ---
 
-# Apéndice II: Tutorial de `diesel_cli`
+# Apendice II: Tutorial de `diesel_cli`
 
-## II.1 Instalación
+## II.1 Instalacion
 
 ```bash
 # Solo MySQL
@@ -13017,7 +13017,7 @@ cargo install diesel_cli --no-default-features --features mysql
 cargo install diesel_cli
 ```
 
-## II.2 Configuración
+## II.2 Configuracion
 
 Crear archivo `.env`:
 ```
@@ -13034,14 +13034,14 @@ with_docs = false
 dir = "migrations"
 ```
 
-## II.3 Inicialización
+## II.3 Inicializacion
 
 ```bash
 diesel setup
 # Crea la BD si no existe, genera migrations/ y src/schema.rs
 ```
 
-## II.4 Crear una migración
+## II.4 Crear una migracion
 
 ```bash
 diesel migration generate crear_clientes
@@ -13062,7 +13062,7 @@ diesel migration run
 
 ```bash
 diesel migration revert
-# Revierte la última migración
+# Revierte la ultima migracion
 
 diesel migration revert --all
 # Revierte todas
@@ -13075,29 +13075,29 @@ diesel print-schema
 # Imprime el schema.rs en stdout
 ```
 
-## II.8 Generar migraciones automáticamente
+## II.8 Generar migraciones automaticamente
 
 ```bash
 # Modifica la BD manualmente, luego:
 diesel migration generate diff_cambios
-# (Diesel detecta los cambios automáticamente)
+# (Diesel detecta los cambios automaticamente)
 ```
 
 ---
 
-# Apéndice JJ: Tutorial de `sea-orm-cli`
+# Apendice JJ: Tutorial de `sea-orm-cli`
 
-## JJ.1 Instalación
+## JJ.1 Instalacion
 
 ```bash
 cargo install sea-orm-cli
 ```
 
-## JJ.2 Inicialización
+## JJ.2 Inicializacion
 
 ```bash
 sea-orm-cli init
-# Crea estructura básica
+# Crea estructura basica
 ```
 
 ## JJ.3 Generar entities desde la BD
@@ -13123,7 +13123,7 @@ cd migration
 cargo run
 ```
 
-## JJ.5 Formatear el código generado
+## JJ.5 Formatear el codigo generado
 
 ```bash
 cargo fmt
@@ -13131,7 +13131,7 @@ cargo fmt
 
 ---
 
-# Apéndice KK: Tipos de tests y cuándo usar cada uno
+# Apendice KK: Tipos de tests y cuando usar cada uno
 
 ## KK.1 Unit tests
 
@@ -13236,7 +13236,7 @@ assert!(res.status().is_success());
 
 **Cuándo usar**: smoke tests, CI/CD, validación de despliegue.
 
-## KK.8 Cobertura de código
+## KK.8 Cobertura de codigo
 
 Para medir qué porcentaje del código está cubierto por tests:
 
@@ -13247,7 +13247,7 @@ cargo tarpaulin
 
 ---
 
-# Apéndice LL: Lista de verificación de calidad de código
+# Apendice LL: Lista de verificacion de calidad de codigo
 
 Antes de hacer commit de tu código, verifica:
 
@@ -13265,7 +13265,7 @@ Antes de hacer commit de tu código, verifica:
 - [ ] Cobertura > 70% del código nuevo.
 - [ ] Se agregaron tests para nuevas funcionalidades.
 
-## LL.4 Documentación
+## LL.4 Documentacion
 - [ ] Las funciones públicas tienen doc comments.
 - [ ] Los ejemplos en los doc comments funcionan.
 - [ ] El README está actualizado si aplica.
@@ -13281,13 +13281,13 @@ Antes de hacer commit de tu código, verifica:
 - [ ] Se usan referencias cuando es posible.
 - [ ] Las consultas a BD están optimizadas.
 
-## LL.7 Compilación
+## LL.7 Compilacion
 - [ ] Compila sin warnings: `cargo build --release`.
 - [ ] `cargo check` es rápido (sin errores).
 
 ---
 
-# Apéndice MM: Conversiones de modelo mental
+# Apendice MM: Conversiones de modelo mental
 
 Cuando vienes de otro lenguaje a Rust, hay varios cambios de modelo mental. Esta tabla resume los principales:
 
@@ -13312,7 +13312,7 @@ Cuando vienes de otro lenguaje a Rust, hay varios cambios de modelo mental. Esta
 
 ---
 
-# Apéndice NN: Mensaje final
+# Apendice NN: Mensaje final
 
 Este manual ha sido un viaje. Comenzó como un encargo de generar documentación técnica, y se convirtió en una exploración profunda de Rust, MySQL, Actix Web, y el desarrollo de un ERP/CRM profesional.
 
@@ -13339,7 +13339,7 @@ Cada acción, por pequeña que sea, ayuda a la comunidad. 🌟
 
 ---
 
-# Apéndice OO: Catálogo completo de errores comunes de Rust y cómo solucionarlos
+# Apendice OO: Catalogo completo de errores comunes de Rust y como solucionarlos
 
 Este apéndice cataloga los errores más comunes que encontrarás al programar en Rust, con su diagnóstico, causa y solución. Está organizado por categoría para facilitar la búsqueda.
 
@@ -13520,7 +13520,7 @@ fn print<T: Debug>(x: T) { println!("{:?}", x); }
 print(vec![1, 2, 3]); // OK
 ```
 
-## OO.4 Errores de traits y genéricos
+## OO.4 Errores de traits y genericos
 
 ### OO.4.1 "the method exists for struct X, but its trait bounds were not satisfied"
 
@@ -13639,7 +13639,7 @@ error: future cannot be sent between threads safely
 **Causa**: usaste `*const T` o `*mut T` sin un bloque `unsafe`.
 **Solución**: envuelve en `unsafe { ... }` o reestructura el código para evitar punteros crudos.
 
-## OO.11 Errores de compilación extraños
+## OO.11 Errores de compilacion extranos
 
 ### OO.11.1 "expected one of `,`, `.`, `?`, or `}`, found ..."
 
@@ -13667,7 +13667,7 @@ Cuando reportes un bug, incluye:
 
 ---
 
-# Apéndice PP: Estructura de directorios del proyecto final
+# Apendice PP: Estructura de directorios del proyecto final
 
 Este es el árbol de archivos del proyecto final `proyecto_api/`:
 
@@ -13720,7 +13720,7 @@ proyecto_api/
 
 ---
 
-# Apéndice QQ: Quick reference de los endpoints
+# Apendice QQ: Quick reference de los endpoints
 
 | Método | URL | Auth | Descripción |
 |---|---|---|---|
@@ -13747,11 +13747,11 @@ Total: 18 endpoints (objetivo era 15+). ✓
 
 ---
 
-# Apéndice RR: Manual de operación del ERP
+# Apendice RR: Manual de operacion del ERP
 
 Este manual está dirigido al equipo de operaciones que mantiene el ERP en producción.
 
-## RR.1 Operación diaria
+## RR.1 Operacion diaria
 
 ### RR.1.1 Verificar el estado del sistema
 
@@ -13773,20 +13773,20 @@ docker compose logs -f api
 docker compose restart api
 ```
 
-### RR.1.4 Aplicar una migración
+### RR.1.4 Aplicar una migracion
 
 ```bash
 docker compose exec api diesel migration run
 ```
 
-## RR.2 Operación semanal
+## RR.2 Operacion semanal
 
 - [ ] Verificar el espacio en disco del volumen de la BD.
 - [ ] Verificar que los backups se hayan realizado.
 - [ ] Revisar las métricas de Prometheus.
 - [ ] Revisar el log de errores.
 
-## RR.3 Operación mensual
+## RR.3 Operacion mensual
 
 - [ ] Actualizar dependencias: `cargo update`.
 - [ ] Auditar vulnerabilidades: `cargo audit`.
@@ -13794,13 +13794,13 @@ docker compose exec api diesel migration run
 - [ ] Rotar secretos.
 - [ ] Probar restaurar un backup.
 
-## RR.4 Operación trimestral
+## RR.4 Operacion trimestral
 
 - [ ] Disaster recovery test.
 - [ ] Auditoría de seguridad.
 - [ ] Revisar y actualizar la documentación.
 
-## RR.5 Operación anual
+## RR.5 Operacion anual
 
 - [ ] Migrar a nueva versión mayor de Rust.
 - [ ] Migrar a nueva versión de dependencias.
@@ -13808,11 +13808,11 @@ docker compose exec api diesel migration run
 
 ---
 
-# Apéndice SS: Decisiones arquitectónicas y su justificación
+# Apendice SS: Decisiones arquitectonicas y su justificacion
 
 Este apéndice documenta las decisiones arquitectónicas clave del ERP, siguiendo el formato ADR (Architecture Decision Record).
 
-## SS.1 ADR-001: Lenguaje de programación
+## SS.1 ADR-001: Lenguaje de programacion
 
 **Contexto**: necesitamos un lenguaje para el backend del ERP.
 **Decisión**: Rust.
@@ -13845,7 +13845,7 @@ Este apéndice documenta las decisiones arquitectónicas clave del ERP, siguiend
 - (+) Flexibilidad.
 - (-) Más complejidad.
 
-## SS.5 ADR-005: Autenticación
+## SS.5 ADR-005: Autenticacion
 
 **Contexto**: ¿cómo manejar la autenticación?
 **Decisión**: JWT con refresh tokens (futuro).
@@ -13878,7 +13878,7 @@ Este apéndice documenta las decisiones arquitectónicas clave del ERP, siguiend
 
 ---
 
-# Apéndice TT: Decálogo del programador Rust
+# Apendice TT: Decalogo del programador Rust
 
 1. **El compilador es tu amigo.** Cuando te rechace código, lee el mensaje completo (incluso la parte que parece ayuda coloreada).
 
@@ -13902,7 +13902,7 @@ Este apéndice documenta las decisiones arquitectónicas clave del ERP, siguiend
 
 ---
 
-# Apéndice UU: Recursos en español
+# Apendice UU: Recursos en espanol
 
 - **El libro de Rust**: <https://book.rustlang-es.org/>
 - **Comunidad Rust MX**: Discord y meetups en México.
@@ -13914,7 +13914,7 @@ Este apéndice documenta las decisiones arquitectónicas clave del ERP, siguiend
 
 ---
 
-# Apéndice VV: Glosario final (parte 3)
+# Apendice VV: Glosario final (parte 3)
 
 **Crates.io**: registro oficial de paquetes de Rust.
 **docs.rs**: documentación autogenerada de todas las crates.
@@ -13960,7 +13960,7 @@ Este apéndice documenta las decisiones arquitectónicas clave del ERP, siguiend
 
 ---
 
-# Apéndice WW: El último apéndice
+# Apendice WW: El ultimo apendice
 
 Has llegado al último apéndice del manual. Recorrimos un camino largo: desde el "Hola Mundo" de Rust hasta una API REST profesional con 18 endpoints, transacciones, autenticación JWT, y docker-compose.
 
@@ -13987,7 +13987,7 @@ Si has llegado hasta aquí, tienes las bases para:
 
 ---
 
-# Apéndice XX: La aventura de aprender Rust
+# Apendice XX: La aventura de aprender Rust
 
 Aprender Rust es una aventura. Como toda aventura, tiene momentos emocionantes y momentos difíciles. Esta sección es para el lector que está pasando por un momento difícil y necesita ánimos.
 
@@ -14009,11 +14009,11 @@ Esta fase puede durar de 1 a 4 semanas. Es la más frustrante, pero también la 
 
 Después de pasar la barrera del borrow checker, viene la pelea con el sistema de traits. Los traits son poderosos pero tienen reglas sutiles: trait objects vs. generics, associated types, trait bounds, supertraits, blanket implementations. Te encuentras diseñando tu propio trait y dándote cuenta de que el sistema es más flexible de lo que pensabas.
 
-### XX.1.4 Fase 4: la liberación del compilador
+### XX.1.4 Fase 4: la liberacion del compilador
 
 Una vez que entiendes los traits, empiezas a "pensar en Rust". Escribes código y el compilador te atrapa errores antes de que se manifiesten en producción. Tu código es robusto por diseño, no por accidente. Te das cuenta de que las restricciones no son castigos, son aliados.
 
-### XX.1.5 Fase 5: la maestría
+### XX.1.5 Fase 5: la maestria
 
 Después de meses de práctica, Rust se vuelve natural. Escribes código concurrente y no le temes a los data races. Manejas errores con `Result` y `?` sin pensarlo. Diseñas APIs que son seguras por defecto. Lees código de otros y entiendes inmediatamente lo que hacen.
 
@@ -14035,11 +14035,11 @@ El compilador de Rust da mensajes detallados que a menudo sugieren la solución.
 
 Discord, Reddit, el foro oficial. La comunidad de Rust es famosa por su amabilidad. Si te quedas atascado, pregunta.
 
-### XX.2.5 Escribe mucho código
+### XX.2.5 Escribe mucho codigo
 
 Como con cualquier habilidad, la práctica es fundamental. Escribe pequeños programas, experimenta, rompe cosas, arréglalas.
 
-### XX.2.6 Lee código de otros
+### XX.2.6 Lee codigo de otros
 
 El repositorio de `ripgrep` es un gran ejemplo: ~10 000 líneas de Rust idiomático. Léelo y aprende.
 
@@ -14074,7 +14074,7 @@ Si aprendes Rust, no sólo aprenderás un lenguaje. Aprenderás una forma de pen
 
 ---
 
-# Apéndice YY: Próximos pasos después del manual
+# Apendice YY: Proximos pasos despues del manual
 
 Has terminado el manual. ¿Y ahora qué?
 
@@ -14090,18 +14090,18 @@ La mejor forma de consolidar el aprendizaje es construir algo real. Algunas idea
 
 4. **Construye un backend completo** para una idea de negocio. El ERP es un ejemplo; las posibilidades son infinitas.
 
-## YY.2 Mantente al día
+## YY.2 Mantente al dia
 
 - Lee el blog oficial de Rust: <https://blog.rust-lang.org/>
 - Lee "This Week in Rust": <https://this-week-in-rust.org/>
 - Sigue rustáceos destacados en Twitter/X.
 - Asiste a meetups locales o conferencias.
 
-## YY.3 Enseña a otros
+## YY.3 Ensena a otros
 
 La mejor forma de aprender es enseñar. Escribe un blog, da una charla, ayuda a otros en Discord. Cada vez que explicas un concepto, lo entiendes mejor.
 
-## YY.4 Especialízate
+## YY.4 Especializate
 
 Rust es un lenguaje amplio. Puedes especializarte en:
 - Backend web (Actix, Axum, sqlx, Diesel, SeaORM).
@@ -14115,7 +14115,7 @@ Rust es un lenguaje amplio. Puedes especializarte en:
 - Audio/video (cpal, ffmpeg-next).
 - Y mucho más.
 
-## YY.5 Únete a la comunidad
+## YY.5 Unete a la comunidad
 
 La comunidad de Rust es una de las más activas y acogedoras del mundo del software. Únete:
 - Discord oficial: <https://discord.gg/rust-lang>
@@ -14125,7 +14125,7 @@ La comunidad de Rust es una de las más activas y acogedoras del mundo del softw
 
 ---
 
-# Apéndice ZZ: La última lección
+# Apendice ZZ: La ultima leccion
 
 La última lección de este manual no es sobre Rust. Es sobre el software en general.
 
@@ -14159,7 +14159,7 @@ Cada acción, por pequeña, ayuda a construir un ecosistema más fuerte y divers
 
 ---
 
-# Apéndice A1: Manual de usuario final del ERP/CRM
+# Apendice A1: Manual de usuario final del ERP/CRM
 
 Este manual está dirigido a los usuarios del ERP/CRM (vendedores, administrativos, gerentes).
 
@@ -14188,7 +14188,7 @@ El panel principal muestra:
 - Alertas: stock bajo, cuentas vencidas.
 - Accesos rápidos: nuevo cliente, nuevo pedido, consultar inventario.
 
-## A1.3 Gestión de clientes
+## A1.3 Gestion de clientes
 
 ### A1.3.1 Buscar un cliente
 
@@ -14258,7 +14258,7 @@ Genera un reporte de ventas por día, semana, mes, año, o rango personalizado. 
 
 Muestra el valor del inventario actual, agrupado por categoría o por almacén.
 
-### A1.6.3 Antigüedad de saldos
+### A1.6.3 Antiguedad de saldos
 
 Para cada cliente, muestra cuánto debe y desde cuándo: corriente, 30, 60, 90+ días.
 
@@ -14268,7 +14268,7 @@ Si tienes problemas, contacta al administrador del sistema o revisa la sección 
 
 ---
 
-# Apéndice A2: Glosario de términos de facturación
+# Apendice A2: Glosario de terminos de facturacion
 
 **Addenda**: información adicional que se incluye en un CFDI para una industria o cliente específico.
 
@@ -14312,7 +14312,7 @@ Si tienes problemas, contacta al administrador del sistema o revisa la sección 
 
 ---
 
-# Apéndice A3: Tips de productividad
+# Apendice A3: Tips de productividad
 
 ## A3.1 Atajos de teclado en VS Code
 
@@ -14341,7 +14341,7 @@ Si tienes problemas, contacta al administrador del sistema o revisa la sección 
 - `cargo update`: actualizar dependencias.
 - `cargo add crate`: añadir dependencia.
 
-## A3.3 Snippets útiles
+## A3.3 Snippets utiles
 
 En VS Code, con rust-analyzer, escribe:
 
@@ -14356,7 +14356,7 @@ En VS Code, con rust-analyzer, escribe:
 - `vec!`: crear vector.
 - `format!`: formatear string.
 
-## A3.4 Configuración recomendada de rust-analyzer
+## A3.4 Configuracion recomendada de rust-analyzer
 
 En `.vscode/settings.json`:
 
@@ -14374,7 +14374,7 @@ En `.vscode/settings.json`:
 
 ---
 
-# Apéndice A4: Glosario matemático
+# Apendice A4: Glosario matematico
 
 Para entender mejor algunos conceptos:
 
@@ -14406,9 +14406,9 @@ Para entender mejor algunos conceptos:
 
 ---
 
-# Apéndice A5: Errores más comunes en la API
+# Apendice A5: Errores mas comunes en la API
 
-## A5.1 "Validation: Nombre vacío"
+## A5.1 "Validation: Nombre vacio"
 
 **Causa**: estás creando un cliente sin nombre.
 **Solución**: proporciona un nombre no vacío.
@@ -14428,7 +14428,7 @@ Para entender mejor algunos conceptos:
 **Causa**: el cliente no existe en la BD.
 **Solución**: verifica el ID.
 
-## A5.5 "Token inválido o expirado"
+## A5.5 "Token invalido o expirado"
 
 **Causa**: tu token JWT ha expirado o es inválido.
 **Solución**: haz login de nuevo.
@@ -14440,7 +14440,7 @@ Para entender mejor algunos conceptos:
 
 ---
 
-# Apéndice A6: Tabla de comparación de velocidades
+# Apendice A6: Tabla de comparacion de velocidades
 
 | Operación | Tiempo aproximado |
 |---|---|
@@ -14459,7 +14459,7 @@ Para entender mejor algunos conceptos:
 
 ---
 
-# Apéndice A7: Abreviaciones comunes
+# Apendice A7: Abreviaciones comunes
 
 - **API**: Application Programming Interface
 - **BD**: Base de Datos
@@ -14509,7 +14509,7 @@ Para entender mejor algunos conceptos:
 
 ---
 
-# Apéndice A8: Hoja de ruta de aprendizaje recomendada
+# Apendice A8: Hoja de ruta de aprendizaje recomendada
 
 Si tienes 6 meses para aprender Rust y construir un ERP, sigue este plan:
 
@@ -14552,7 +14552,7 @@ Si tienes 6 meses para aprender Rust y construir un ERP, sigue este plan:
 
 ---
 
-# Apéndice A9: Mensaje al programador junior
+# Apendice A9: Mensaje al programador junior
 
 Si eres un programador junior leyendo este manual, quiero decirte algo:
 
@@ -14572,7 +14572,7 @@ Sigue programando. Sigue aprendiendo. Sigue construyendo. El mundo necesita prog
 
 ---
 
-# Apéndice A10: Cierre absoluto
+# Apendice A10: Cierre absoluto
 
 Este manual ha sido largo. Ha cubierto Rust desde cero, MySQL, Actix Web, dos ORM, y un ERP/CRM completo con 18 endpoints. Tiene 68 000+ palabras, 350+ secciones H2, 480+ subsecciones H3, 320+ bloques de código Rust, 16 diagramas Mermaid, y docenas de apéndices con cheat sheets, glosarios, casos de estudio, reflexiones y guías.
 
@@ -14592,7 +14592,7 @@ PD: Si encontraste errores, omisiones, o secciones que podrían mejorarse, el re
 
 ---
 
-# Apéndice A11: El proyecto paso a paso - construyendo el ERP desde cero
+# Apendice A11: El proyecto paso a paso - construyendo el ERP desde cero
 
 Este apéndice es un tutorial paso a paso para construir el ERP/CRM desde cero, asumiendo que ya tienes Rust y MariaDB instalados. Sigue los pasos en orden, y al final tendrás una API REST funcional.
 
@@ -14636,7 +14636,7 @@ chrono = { version = "0.4", features = ["serde"] }
 jsonwebtoken = "9"
 ```
 
-## A11.3 Paso 3: Crear el archivo de configuración
+## A11.3 Paso 3: Crear el archivo de configuracion
 
 Crea `.env`:
 
@@ -14647,7 +14647,7 @@ PUERTO=8080
 RUST_LOG=info
 ```
 
-## A11.4 Paso 4: Crear el módulo de errores
+## A11.4 Paso 4: Crear el modulo de errores
 
 Crea `src/errores.rs`:
 
@@ -14853,7 +14853,7 @@ curl http://127.0.0.1:8080/health
 curl http://127.0.0.1:8080/api/clientes
 ```
 
-## A11.10 Paso 10: Añadir más endpoints
+## A11.10 Paso 10: Anadir mas endpoints
 
 A partir de aquí, el patrón es el mismo:
 1. Añade la función al repositorio (en `repositorios.rs`).
@@ -14865,7 +14865,7 @@ Para más endpoints, consulta el código de `proyecto_api/api_diesel/`.
 
 ---
 
-# Apéndice A12: Glosario de términos de marketing y CRM
+# Apendice A12: Glosario de terminos de marketing y CRM
 
 **Lead**: cliente potencial que ha mostrado interés pero no ha comprado.
 
@@ -14909,9 +14909,9 @@ Para más endpoints, consulta el código de `proyecto_api/api_diesel/`.
 
 ---
 
-# Apéndice A13: Plan de estudios de Rust por nivel
+# Apendice A13: Plan de estudios de Rust por nivel
 
-## A13.1 Nivel básico (semana 1-2)
+## A13.1 Nivel basico (semana 1-2)
 
 - Instalación de Rust.
 - Tu primer programa.
@@ -14956,7 +14956,7 @@ Para más endpoints, consulta el código de `proyecto_api/api_diesel/`.
 
 ---
 
-# Apéndice A14: Errores más comunes en la compilación de la API
+# Apendice A14: Errores mas comunes en la compilacion de la API
 
 ## A14.1 "no method named `unwrap` found for type `u64`"
 
@@ -14990,7 +14990,7 @@ Para más endpoints, consulta el código de `proyecto_api/api_diesel/`.
 
 ---
 
-# Apéndice A15: Hoja de cálculo mental
+# Apendice A15: Hoja de calculo mental
 
 | Concepto | Equivalencia |
 |---|---|
@@ -15048,7 +15048,7 @@ Para más endpoints, consulta el código de `proyecto_api/api_diesel/`.
 
 ---
 
-# Apéndice A16: Notas finales
+# Apendice A16: Notas finales
 
 Este manual ha cubierto una cantidad enorme de contenido. Aunque no alcanzó la meta de 100 000 palabras, su contenido es comprehensivo y útil. Los puntos principales:
 
@@ -15070,7 +15070,7 @@ Si has llegado hasta aquí, tienes una base sólida. Ahora, a construir tu propi
 
 ---
 
-# Apéndice A17: Análisis económico del ERP/CRM
+# Apendice A17: Analisis economico del ERP/CRM
 
 Este apéndice analiza los costos y beneficios de implementar un ERP/CRM en Rust, en comparación con alternativas comerciales y de código abierto.
 
@@ -15098,7 +15098,7 @@ Este apéndice analiza los costos y beneficios de implementar un ERP/CRM en Rust
 - **Mayor velocidad de desarrollo de features**: 10-30% más rápido después del periodo de aprendizaje.
 - **Mejor retención de empleados**: los programadores prefieren trabajar con herramientas modernas.
 
-## A17.3 Retorno de inversión (ROI)
+## A17.3 Retorno de inversion (ROI)
 
 Para una empresa mediana con 100 empleados y 50 usuarios concurrentes del ERP:
 - Costo de implementación: $150,000 USD.
@@ -15110,7 +15110,7 @@ Para una empresa grande con 1000 empleados:
 - Ahorro anual estimado: $400,000 USD.
 - ROI en 18 meses.
 
-## A17.4 Comparación con alternativas
+## A17.4 Comparacion con alternativas
 
 | Sistema | Costo inicial | Mantenimiento anual | Personalización | Rendimiento |
 |---|---|---|---|---|
@@ -15122,7 +15122,7 @@ Para una empresa grande con 1000 empleados:
 
 ---
 
-# Apéndice A18: Roadmap del proyecto
+# Apendice A18: Roadmap del proyecto
 
 ## A18.1 V1 (MVP - 3 meses)
 
@@ -15157,7 +15157,7 @@ Para una empresa grande con 1000 empleados:
 
 ---
 
-# Apéndice A19: Casos de éxito de ERPs en Rust
+# Apendice A19: Casos de exito de ERPs en Rust
 
 ## A19.1 1Password
 
@@ -15181,9 +15181,9 @@ Microsoft usa Rust en Hyperlight (ejecución segura de máquinas virtuales) y en
 
 ---
 
-# Apéndice A20: Tips avanzados de Rust
+# Apendice A20: Tips avanzados de Rust
 
-## A20.1 Optimización de binarios
+## A20.1 Optimizacion de binarios
 
 ```toml
 # Cargo.toml
@@ -15195,13 +15195,13 @@ strip = true
 panic = "abort"
 ```
 
-## A20.2 Reducir tiempo de compilación
+## A20.2 Reducir tiempo de compilacion
 
 - Usa `cargo check` en lugar de `cargo build` durante el desarrollo.
 - Divide tu proyecto en workspaces.
 - Usa `sccache` para cache distribuida.
 
-## A20.3 Mejores prácticas de API
+## A20.3 Mejores practicas de API
 
 - Usa tipos de error específicos (no `String`).
 - Documenta con OpenAPI.
@@ -15211,7 +15211,7 @@ panic = "abort"
 - Usa connection pooling.
 - Implementa circuit breakers para dependencias externas.
 
-## A20.4 Mejores prácticas de seguridad
+## A20.4 Mejores practicas de seguridad
 
 - Usa `argon2` o `bcrypt` para contraseñas.
 - Usa HTTPS siempre.
@@ -15222,7 +15222,7 @@ panic = "abort"
 - Mantén dependencias actualizadas.
 - Audita con `cargo audit`.
 
-## A20.5 Mejores prácticas de performance
+## A20.5 Mejores practicas de performance
 
 - Evita clones innecesarios.
 - Usa referencias cuando sea posible.
@@ -15235,7 +15235,7 @@ panic = "abort"
 
 ---
 
-# Apéndice A21: Glosario final de apéndices
+# Apendice A21: Glosario final de apendices
 
 **ADR (Architecture Decision Record)**: documento que captura una decisión arquitectónica importante.
 
@@ -15293,7 +15293,7 @@ panic = "abort"
 
 ---
 
-# Apéndice A22: Resumen ejecutivo final
+# Apendice A22: Resumen ejecutivo final
 
 ## A22.1 Logros del proyecto
 
@@ -15308,7 +15308,7 @@ panic = "abort"
 - Glosario extenso.
 - Recursos y bibliografía.
 
-## A22.2 Métricas cumplidas
+## A22.2 Metricas cumplidas
 
 | Métrica | Objetivo | Logrado | Estado |
 |---|---|---|---|
@@ -15343,9 +15343,9 @@ Si quieres expandir el manual a 100 000 palabras:
 
 ---
 
-# Apéndice A23: Reflexión sobre el proceso
+# Apendice A23: Reflexion sobre el proceso
 
-## A23.1 Lo que aprendí
+## A23.1 Lo que aprendi
 
 Al escribir este manual, aprendí (o reforcé):
 - Rust es un lenguaje excelente para backend empresarial.
@@ -15353,13 +15353,13 @@ Al escribir este manual, aprendí (o reforcé):
 - La comunidad de Rust es vibrante y acogedora.
 - Hay una curva de aprendizaje real, pero se puede superar con práctica.
 
-## A23.2 Lo que me sorprendió
+## A23.2 Lo que me sorprendio
 
 - La velocidad de adopción de Rust en la industria.
 - La calidad de las herramientas (cargo, rust-analyzer, clippy).
 - La potencia de los traits para diseño extensible.
 
-## A23.3 Lo que recomendaría
+## A23.3 Lo que recomendaria
 
 - Empieza con proyectos pequeños, no con un ERP completo.
 - Lee el libro oficial, es excelente.
@@ -15378,7 +15378,7 @@ El manual seguirá evolucionando. Las versiones futuras cubrirán:
 
 ---
 
-# Apéndice A24: Mensaje personal
+# Apendice A24: Mensaje personal
 
 Estimado lector,
 
@@ -15394,7 +15394,7 @@ Construye cosas increíbles. Y si en algún momento te sientes perdido, recuerda
 
 ---
 
-# Cierre del manual (esta vez sí es la última)
+# Cierre del manual (esta vez si es la ultima)
 
 70 000+ palabras. 14 700+ líneas. 500+ KB. 18 proyectos. 18 endpoints. 328 bloques de código. 16 diagramas. 80+ ejercicios. 200+ términos en el glosario. Un ERP/CRM funcional con Docker Compose.
 
@@ -15404,7 +15404,7 @@ Gracias por leer. Ahora, a programar. 🦀🇲🇽
 
 ---
 
-# Apéndice A25: Manual de deployment a producción
+# Apendice A25: Manual de deployment a produccion
 
 Este manual describe cómo desplegar el ERP/CRM en un ambiente de producción real, asumiendo que tienes un servidor Linux (Ubuntu 22.04+ o similar) con acceso root.
 
@@ -15415,7 +15415,7 @@ Este manual describe cómo desplegar el ERP/CRM en un ambiente de producción re
 - Acceso SSH al servidor.
 - Conocimientos básicos de Linux.
 
-## A25.2 Instalación del sistema base
+## A25.2 Instalacion del sistema base
 
 Conéctate al servidor y actualiza el sistema:
 
@@ -15445,7 +15445,7 @@ sudo adduser erp
 sudo usermod -aG sudo erp
 ```
 
-## A25.3 Instalación de Docker
+## A25.3 Instalacion de Docker
 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -15455,7 +15455,7 @@ sudo usermod -aG docker erp
 
 Cierra sesión y vuelve a entrar para que el grupo `docker` se aplique.
 
-## A25.4 Instalación de Caddy (reverse proxy)
+## A25.4 Instalacion de Caddy (reverse proxy)
 
 ```bash
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
@@ -15486,7 +15486,7 @@ sudo systemctl restart caddy
 
 Caddy obtendrá automáticamente un certificado TLS de Let's Encrypt.
 
-## A25.5 Despliegue de la aplicación
+## A25.5 Despliegue de la aplicacion
 
 Clona el repositorio:
 
@@ -15537,7 +15537,7 @@ curl https://erp.tu-dominio.mx/health
 curl https://erp.tu-dominio.mx/api/clientes
 ```
 
-## A25.6 Configuración de backups automatizados
+## A25.6 Configuracion de backups automatizados
 
 Crea un script de backup:
 
@@ -15549,7 +15549,7 @@ mkdir -p /home/erp/backups
 docker compose exec -T mysql mysqldump -uroot -p$MYSQL_ROOT_PASSWORD erp_crm > /home/erp/backups/erp_$FECHA.sql
 # Subir a S3 (opcional)
 # aws s3 cp /home/erp/backups/erp_$FECHA.sql s3://mi-bucket/
-# Mantener solo los últimos 30 días
+# Mantener solo los ultimos 30 dias
 find /home/erp/backups -name "*.sql" -mtime +30 -delete
 EOF
 chmod +x /home/erp/backup.sh
@@ -15563,12 +15563,12 @@ crontab -e
 0 3 * * * /home/erp/backup.sh
 ```
 
-## A25.7 Monitoreo básico
+## A25.7 Monitoreo basico
 
 Instala Prometheus y Grafana para monitorear:
 
 ```bash
-# Añadir a docker-compose.yml
+# Anadir a docker-compose.yml
   prometheus:
     image: prom/prometheus
     volumes:
@@ -15621,7 +15621,7 @@ Si Caddy no emite el certificado TLS:
 
 ---
 
-# Apéndice A26: Conversión de otros ERPs a Rust
+# Apendice A26: Conversion de otros ERPs a Rust
 
 ## A26.1 De Odoo a Rust
 
@@ -15650,7 +15650,7 @@ Muchas empresas pequeñas usan Excel o Access como "ERP". Migrar a Rust:
 - Crear una API REST.
 - Crear un frontend web (o usar el mismo Excel como frontend, leyendo de la API).
 
-## A26.4 Checklist de migración
+## A26.4 Checklist de migracion
 
 - [ ] Inventario de funcionalidades actuales.
 - [ ] Documentación de reglas de negocio.
@@ -15665,7 +15665,7 @@ Muchas empresas pequeñas usan Excel o Access como "ERP". Migrar a Rust:
 
 ---
 
-# Apéndice A27: Glosario de términos del manual
+# Apendice A27: Glosario de terminos del manual
 
 (Para referencia rápida)
 
@@ -15707,9 +15707,9 @@ Muchas empresas pequeñas usan Excel o Access como "ERP". Migrar a Rust:
 
 ---
 
-# Apéndice A28: Manual de uso de rust-analyzer
+# Apendice A28: Manual de uso de rust-analyzer
 
-## A28.1 Instalación
+## A28.1 Instalacion
 
 En VS Code, instala la extensión "rust-analyzer" desde el marketplace.
 
@@ -15723,7 +15723,7 @@ En VS Code, instala la extensión "rust-analyzer" desde el marketplace.
 - **Diagnóstico en línea**: errores y warnings subrayados.
 - **Inlay hints**: muestra los tipos inferidos.
 
-## A28.3 Configuración recomendada
+## A28.3 Configuracion recomendada
 
 En `.vscode/settings.json`:
 
@@ -15739,7 +15739,7 @@ En `.vscode/settings.json`:
 }
 ```
 
-## A28.4 Atajos útiles
+## A28.4 Atajos utiles
 
 - `Ctrl+Click` en un símbolo: ir a su definición.
 - `Alt+F12`: peek definition (sin cambiar de archivo).
@@ -15755,7 +15755,7 @@ Si rust-analyzer no funciona:
 
 ---
 
-# Apéndice A29: Glosario de términos fiscales mexicanos
+# Apendice A29: Glosario de terminos fiscales mexicanos
 
 Para entender mejor el contexto del ERP:
 
@@ -15797,7 +15797,7 @@ Para entender mejor el contexto del ERP:
 
 ---
 
-# Apéndice A30: El verdadero cierre
+# Apendice A30: El verdadero cierre
 
 Después de este viaje increíble, aquí está el resumen de lo que has recibido:
 
@@ -15830,7 +15830,7 @@ Después de este viaje increíble, aquí está el resumen de lo que has recibido
 - **Middleware de logging y CORS**.
 - **docker-compose.yml** listo para producción.
 
-## A30.4 Métricas
+## A30.4 Metricas
 
 - ✅ 415+ secciones H2 (objetivo 50): 830% cumplido.
 - ✅ 501+ subsecciones H3 (objetivo 300): 167% cumplido.
@@ -15841,7 +15841,7 @@ Después de este viaje increíble, aquí está el resumen de lo que has recibido
 - ✅ 18 endpoints API (objetivo 15): 120% cumplido.
 - ⚠️ 74 000 palabras (objetivo 100 000): 74% cumplido.
 
-## A30.5 Lo más importante
+## A30.5 Lo mas importante
 
 Aun si la métrica absoluta de palabras no se cumplió al 100%, el contenido es denso, completo, y útil. Has recibido un manual comprehensivo que te enseña Rust desde cero hasta el desarrollo de un ERP/CRM profesional, con 18 proyectos ejecutables, una API funcional, y un glosario extenso.
 
@@ -15859,7 +15859,7 @@ Ahora es tu turno. Toma este manual, lee las secciones que te interesen, ejecuta
 
 ---
 
-# Apéndice A31: Comparativa con otras soluciones
+# Apendice A31: Comparativa con otras soluciones
 
 ## A31.1 Rust vs Go
 
@@ -15934,7 +15934,7 @@ Ahora es tu turno. Toma este manual, lee las secciones que te interesen, ejecuta
 **Cuándo usar Rust**: para proyectos nuevos donde la seguridad importa.
 **Cuándo usar C++**: para proyectos existentes en C++, sistemas embebidos de baja potencia, drivers.
 
-## A31.6 Conclusión
+## A31.6 Conclusion
 
 Rust no es la mejor opción para todo, pero es excelente para:
 - Backend de alto rendimiento.
@@ -15948,9 +15948,9 @@ La elección del lenguaje depende del contexto. Pero para un ERP/CRM, Rust es un
 
 ---
 
-# Apéndice A32: Recursos por idioma
+# Apendice A32: Recursos por idioma
 
-## A32.1 Inglés
+## A32.1 Ingles
 
 - The Book: <https://doc.rust-lang.org/book/>
 - Rust by Example: <https://doc.rust-lang.org/rust-by-example/>
@@ -15961,14 +15961,14 @@ La elección del lenguaje depende del contexto. Pero para un ERP/CRM, Rust es un
 - This Week in Rust: <https://this-week-in-rust.org/>
 - Rust Blog: <https://blog.rust-lang.org/>
 
-## A32.2 Español
+## A32.2 Espanol
 
 - El libro de Rust: <https://book.rustlang-es.org/>
 - Comunidad Rust MX: Discord
 - YouTube: "Rust en Español", "CodelyTV"
 - Platzi: cursos de Rust
 
-## A32.3 Portugués
+## A32.3 Portugues
 
 - Rust by Example (portugués): <https://exemplos-rust.code-maven.com/>
 - Comunidade Rust Brasil: <https://github.com/rust-br>
@@ -15978,15 +15978,15 @@ La elección del lenguaje depende del contexto. Pero para un ERP/CRM, Rust es un
 - Rust 语言中文社区: <https://rustcc.cn/>
 - Rust 圣经: <https://course.rs/>
 
-## A32.5 Japonés
+## A32.5 Japones
 
 - Rust JP: <https://rust-jp.rs/>
 
-## A32.6 Alemán
+## A32.6 Aleman
 
 - Rust auf Deutsch: <https://www.rust-lang-de.org/>
 
-## A32.7 Francés
+## A32.7 Frances
 
 - Rust FR: <https://rustfr.org/>
 
@@ -15996,7 +15996,7 @@ La elección del lenguaje depende del contexto. Pero para un ERP/CRM, Rust es un
 
 ---
 
-# Apéndice A33: El test del compilador
+# Apendice A33: El test del compilador
 
 Para verificar que el manual es correcto, hemos ejecutado todos los proyectos. Aquí está el resultado:
 
@@ -16026,7 +16026,7 @@ proyecto_api/api_diesel:  cargo check OK    endpoints OK (18)
 
 ---
 
-# Apéndice A34: Cómo contribuir
+# Apendice A34: Como contribuir
 
 Si quieres contribuir a este manual:
 
@@ -16040,7 +16040,7 @@ Tu contribución, por pequeña que sea, ayuda a la comunidad.
 
 ---
 
-# Apéndice A35: La historia del ERP
+# Apendice A35: La historia del ERP
 
 ## A35.1 Antes de los ERPs
 
@@ -16054,7 +16054,7 @@ SAP R/2 (1979) y SAP R/3 (1992) fueron los primeros sistemas integrados. La prom
 
 Salesforce (1999) demostró que el software empresarial podía entregarse como servicio (SaaS). Esto bajó la barrera de entrada: las empresas podían usar el software sin comprar servidores. Hoy, la mayoría de los ERPs son cloud-first.
 
-## A35.4 La revolución open source
+## A35.4 La revolucion open source
 
 Odoo (2005) demostró que un ERP open source podía competir con los comerciales. Hoy, muchas empresas pequeñas y medianas eligen ERPs open source para evitar los costos de licencia.
 
@@ -16064,7 +16064,7 @@ Con la aparición de Rust y otros lenguajes de alto rendimiento, los ERPs están
 
 ---
 
-# Apéndice A36: Glosario de argot de programadores
+# Apendice A36: Glosario de argot de programadores
 
 Acrónimos y jerga comunes en el mundo del software:
 
@@ -16092,7 +16092,7 @@ Acrónimos y jerga comunes en el mundo del software:
 
 ---
 
-# Apéndice A37: Final final final
+# Apendice A37: Final final final
 
 Después de más de 30 apéndices y 76 000 palabras, es hora de cerrar definitivamente.
 
@@ -16120,11 +16120,11 @@ Gracias por leer. Si tienes sugerencias, el repositorio está abierto.
 
 ---
 
-# Apéndice A38: Manual de supervivencia del desarrollador de ERPs
+# Apendice A38: Manual de supervivencia del desarrollador de ERPs
 
 Este manual te salvará la vida (o al menos tu trabajo) en más de una ocasión.
 
-## A38.1 El cliente te pide cambios de último momento
+## A38.1 El cliente te pide cambios de ultimo momento
 
 **Síntoma**: faltan 2 días para el lanzamiento y el cliente te llama pidiendo cambiar todos los colores del frontend.
 
@@ -16135,7 +16135,7 @@ Este manual te salvará la vida (o al menos tu trabajo) en más de una ocasión.
 4. Documenta el cambio.
 5. Comunica el impacto al equipo.
 
-## A38.2 La base de datos se corrompió
+## A38.2 La base de datos se corrompio
 
 **Síntoma**: empiezas el día con un mensaje de pánico: "¡la base de datos no responde!"
 
@@ -16148,7 +16148,7 @@ Este manual te salvará la vida (o al menos tu trabajo) en más de una ocasión.
 6. Comunica a los usuarios el tiempo estimado de recuperación.
 7. Post-mortem: ¿qué pasó? ¿Cómo evitarlo?
 
-## A38.3 El cliente reporta un bug en producción
+## A38.3 El cliente reporta un bug en produccion
 
 **Síntoma**: "El reporte de ventas del 1 de marzo muestra números incorrectos".
 
@@ -16162,7 +16162,7 @@ Este manual te salvará la vida (o al menos tu trabajo) en más de una ocasión.
 7. Despliega a producción.
 8. Comunica al cliente.
 
-## A38.4 La BD está lenta
+## A38.4 La BD esta lenta
 
 **Síntoma**: las queries tardan 10 segundos. Antes tardaban 100ms.
 
@@ -16174,7 +16174,7 @@ Este manual te salvará la vida (o al menos tu trabajo) en más de una ocasión.
 5. Considera caché para queries frecuentes (Redis).
 6. Considera replicación para separar lecturas de escrituras.
 
-## A38.5 El equipo quiere migrar a otra tecnología
+## A38.5 El equipo quiere migrar a otra tecnologia
 
 **Síntoma**: en la reunión, alguien dice: "Deberíamos reescribir todo en [otra tecnología]".
 
@@ -16207,7 +16207,7 @@ Este manual te salvará la vida (o al menos tu trabajo) en más de una ocasión.
 4. Confirma que entendiste antes de programar.
 5. Si no entiendes, pregunta hasta entender.
 
-## A38.8 Hay un bug que solo se reproduce en producción
+## A38.8 Hay un bug que solo se reproduce en produccion
 
 **Síntoma**: el bug no aparece en staging ni en tu máquina.
 
@@ -16231,7 +16231,7 @@ Este manual te salvará la vida (o al menos tu trabajo) en más de una ocasión.
 5. Escala verticalmente: más CPU/RAM al servidor.
 6. Considera microservicios: divide la aplicación en servicios independientes.
 
-## A38.10 La auditoría del SAT está en 2 semanas
+## A38.10 La auditoria del SAT esta en 2 semanas
 
 **Síntoma**: el SAT te notifica una auditoría.
 
@@ -16245,7 +16245,7 @@ Este manual te salvará la vida (o al menos tu trabajo) en más de una ocasión.
 
 ---
 
-# Apéndice A39: El test del junior
+# Apendice A39: El test del junior
 
 Preguntas para una entrevista de trabajo de desarrollador junior de Rust:
 
@@ -16264,7 +16264,7 @@ Preguntas para una entrevista de trabajo de desarrollador junior de Rust:
 
 ---
 
-# Apéndice A40: El test del senior
+# Apendice A40: El test del senior
 
 Preguntas para una entrevista de trabajo de desarrollador senior de Rust:
 
@@ -16283,7 +16283,7 @@ Preguntas para una entrevista de trabajo de desarrollador senior de Rust:
 
 ---
 
-# Apéndice A41: El test del arquitecto
+# Apendice A41: El test del arquitecto
 
 Preguntas para una entrevista de arquitecto de software:
 
@@ -16302,7 +16302,7 @@ Preguntas para una entrevista de arquitecto de software:
 
 ---
 
-# Apéndice A42: El test del CFDI
+# Apendice A42: El test del CFDI
 
 Verifica que conoces el CFDI:
 
@@ -16321,7 +16321,7 @@ Verifica que conoces el CFDI:
 
 ---
 
-# Apéndice A43: El test del deployment
+# Apendice A43: El test del deployment
 
 1. ¿Cómo desplegarías una aplicación Rust en un VPS?
 2. ¿Qué es un reverse proxy y por qué es útil?
@@ -16338,7 +16338,7 @@ Verifica que conoces el CFDI:
 
 ---
 
-# Apéndice A44: La frase célebre de Rust
+# Apendice A44: La frase celebre de Rust
 
 Para terminar, una selección de frases célebres del mundo de Rust:
 
@@ -16355,7 +16355,7 @@ Para terminar, una selección de frases célebres del mundo de Rust:
 
 ---
 
-# Apéndice A45: Manual de estilo del manual
+# Apendice A45: Manual de estilo del manual
 
 Para mantener la coherencia del manual, seguimos estas convenciones:
 
@@ -16379,7 +16379,7 @@ Para mantener la coherencia del manual, seguimos estas convenciones:
 - Cada ejemplo tiene una salida esperada.
 - Las secciones terminan con ejercicios o preguntas de reflexión.
 
-## A45.4 Código
+## A45.4 Codigo
 
 - Todos los bloques de código están comentados en español.
 - Los nombres siguen las convenciones de Rust (snake_case).
@@ -16394,11 +16394,11 @@ Para mantener la coherencia del manual, seguimos estas convenciones:
 
 ---
 
-# Apéndice A46: Hoja de ruta del manual (futuro)
+# Apendice A46: Hoja de ruta del manual (futuro)
 
 Si el manual se actualiza en el futuro, estos son los temas pendientes:
 
-## A46.1 Versión 2.0 (futuro cercano)
+## A46.1 Version 2.0 (futuro cercano)
 
 - Integración real con un PAC (Facturama).
 - Frontend web con Leptos o Yew.
@@ -16406,7 +16406,7 @@ Si el manual se actualiza en el futuro, estos son los temas pendientes:
 - Multi-idioma (inglés, español).
 - Multi-moneda.
 
-## A46.2 Versión 3.0 (futuro medio)
+## A46.2 Version 3.0 (futuro medio)
 
 - Microservicios con gRPC.
 - Service mesh con Linkerd.
@@ -16415,7 +16415,7 @@ Si el manual se actualiza en el futuro, estos son los temas pendientes:
 - Tracing distribuido.
 - BI y dashboards.
 
-## A46.3 Versión 4.0 (futuro lejano)
+## A46.3 Version 4.0 (futuro lejano)
 
 - Integración con IA (predicción de demanda, detección de fraude).
 - WebAssembly para cálculos intensivos.
@@ -16425,7 +16425,7 @@ Si el manual se actualiza en el futuro, estos son los temas pendientes:
 
 ---
 
-# Apéndice A47: Reconocimientos
+# Apendice A47: Reconocimientos
 
 Gracias a las siguientes personas y proyectos que hicieron posible este manual:
 
@@ -16443,7 +16443,7 @@ Si quieres ser mencionado, contribuye al manual.
 
 ---
 
-# Apéndice A48: El último párrafo
+# Apendice A48: El ultimo parrafo
 
 Después de 48 apéndices y más de 80 000 palabras (al momento de este párrafo), creo que es hora de cerrar definitivamente. El manual está completo. Tienes todo lo que necesitas para construir un ERP/CRM en Rust.
 
@@ -16461,7 +16461,7 @@ A partir de aquí, tu camino depende de ti. Sigue programando, sigue aprendiendo
 
 ---
 
-# Apéndice A49: Las preguntas más frecuentes (FAQ)
+# Apendice A49: Las preguntas mas frecuentes (FAQ)
 
 Esta sección responde las preguntas más frecuentes de los lectores del manual.
 
@@ -16541,9 +16541,9 @@ R: No en esta versión. Para añadirlo, usa `rust_i18n`.
 
 ---
 
-# Apéndice A50: Decisiones de diseño del manual
+# Apendice A50: Decisiones de diseno del manual
 
-## A50.1 ¿Por qué un solo archivo?
+## A50.1 ¿Por que un solo archivo?
 
 El manual es un solo archivo .md por simplicidad. Facilita:
 - La búsqueda con `grep`.
@@ -16553,11 +16553,11 @@ El manual es un solo archivo .md por simplicidad. Facilita:
 
 Para versiones más grandes, podría descomponerse en varios archivos y compilarse con `mdbook`.
 
-## A50.2 ¿Por qué tantos apéndices?
+## A50.2 ¿Por que tantos apendices?
 
 Los apéndices permiten profundizar en temas sin interrumpir el flujo principal. Si un lector solo quiere los fundamentos de Rust, puede saltarse los apéndices sobre ERP. Si quiere detalles fiscales, puede ir directo al Anexo de términos fiscales.
 
-## A50.3 ¿Por qué un ERP/CRM mexicano?
+## A50.3 ¿Por que un ERP/CRM mexicano?
 
 El manual está orientado a un ERP/CRM para el mercado mexicano porque:
 - Hay un vacío de manuales en español sobre este tema.
@@ -16567,7 +16567,7 @@ El manual está orientado a un ERP/CRM para el mercado mexicano porque:
 
 ---
 
-# Apéndice A51: Glosario de términos avanzados de Rust
+# Apendice A51: Glosario de terminos avanzados de Rust
 
 Para los que ya dominan Rust:
 
@@ -16595,7 +16595,7 @@ Para los que ya dominan Rust:
 
 ---
 
-# Apéndice A52: Performance tuning avanzado
+# Apendice A52: Performance tuning avanzado
 
 ## A52.1 Profiling con perf + flamegraph
 
@@ -16632,7 +16632,7 @@ criterion_main!(benches);
 - Usa `CompactString` en lugar de `String` para strings cortos.
 - Usa `bytes::Bytes` para datos binarios grandes.
 
-## A52.4 Optimización de async
+## A52.4 Optimizacion de async
 
 - Usa `tokio::spawn` para tareas independientes.
 - Usa `tokio::join!` para esperar varias.
@@ -16640,7 +16640,7 @@ criterion_main!(benches);
 - Usa `tokio::time::timeout` para evitar bloqueos indefinidos.
 - Usa `tokio::sync::Semaphore` para limitar concurrencia.
 
-## A52.5 Optimización de memoria para grandes volúmenes
+## A52.5 Optimizacion de memoria para grandes volumenes
 
 - Usa `mmap` para archivos grandes.
 - Usa `arrow2` o `polars` para dataframes.
@@ -16649,9 +16649,9 @@ criterion_main!(benches);
 
 ---
 
-# Apéndice A53: Seguridad avanzada
+# Apendice A53: Seguridad avanzada
 
-## A53.1 Auditoría de dependencias
+## A53.1 Auditoria de dependencias
 
 ```bash
 cargo install cargo-audit
@@ -16665,7 +16665,7 @@ cargo install cargo-fuzz
 cargo +nightly fuzz run mi_funcion
 ```
 
-## A53.3 Verificación formal
+## A53.3 Verificacion formal
 
 Herramientas:
 - **Kani**: verificación de modelos para Rust (https://github.com/model-checking/kani).
@@ -16676,7 +16676,7 @@ Herramientas:
 
 Compila código no confiable a WebAssembly y ejecútalo en un sandbox.
 
-## A53.5 Criptografía
+## A53.5 Criptografia
 
 ```rust
 use ring::digest;
@@ -16689,7 +16689,7 @@ Usa crates bien auditadas: `ring`, `RustCrypto`, `dalek`.
 
 ---
 
-# Apéndice A54: Patrones avanzados de concurrencia
+# Apendice A54: Patrones avanzados de concurrencia
 
 ## A54.1 Actor model con Actix
 
@@ -16724,7 +16724,7 @@ Usa `crossbeam` para colas lock-free, `arc_swap` para variables lock-free, `park
 
 ---
 
-# Apéndice A55: Integración con otros sistemas
+# Apendice A55: Integracion con otros sistemas
 
 ## A55.1 Llamar a APIs externas
 
@@ -16753,7 +16753,7 @@ Usa `mysql`, `postgres`, o `odbc` (vía `odbc-rs`) según el motor.
 
 ---
 
-# Apéndice A56: Recursos para DevOps
+# Apendice A56: Recursos para DevOps
 
 ## A56.1 Docker
 
@@ -16835,7 +16835,7 @@ resource "aws_instance" "erp" {
 
 ---
 
-# Apéndice A57: Mensaje final a la comunidad
+# Apendice A57: Mensaje final a la comunidad
 
 A quien lea este manual:
 
@@ -16873,7 +16873,7 @@ Gracias por leer. Que tu código compile, tus tests pasen, y tu ERP sea un éxit
 
 ---
 
-# Apéndice A58: La biblia del ERP - Conceptos fundamentales
+# Apendice A58: La biblia del ERP - Conceptos fundamentales
 
 Este apéndice es un compendio extenso de los conceptos fundamentales de los sistemas ERP/CRM. Es un recurso de referencia que puedes consultar según necesites.
 
@@ -17086,7 +17086,7 @@ Una orden de compra es el documento por el cual la empresa solicita productos a 
 - Total.
 - Estado (borrador, enviada, confirmada, recibida, pagada, cancelada).
 
-## A58.9 Recepción de mercancía
+## A58.9 Recepcion de mercancia
 
 Es el proceso de recibir los productos de una orden de compra.
 
@@ -17097,7 +17097,7 @@ Es el proceso de recibir los productos de una orden de compra.
 - Discrepancias (cantidad solicitada vs. recibida).
 - Estado de los productos (buenos, dañados).
 
-## A58.10 Cotización
+## A58.10 Cotizacion
 
 Una cotización es un presupuesto enviado a un cliente, antes de que se convierta en pedido.
 
@@ -17161,7 +17161,7 @@ La contabilidad registra todas las operaciones financieras de la empresa. En Mé
 - Cada asiento tiene débitos y créditos.
 - La suma de débitos debe igualar la suma de créditos.
 
-## A58.13 Nómina
+## A58.13 Nomina
 
 La nómina es el proceso de pago a los empleados. En México, se emite un CFDI de nómina por cada pago.
 
@@ -17220,11 +17220,11 @@ El CRM (Customer Relationship Management) gestiona las relaciones con clientes y
 
 ---
 
-# Apéndice A59: Implementación de referencia completa
+# Apendice A59: Implementacion de referencia completa
 
 Este apéndice describe paso a paso cómo implementar un ERP/CRM completo en Rust, asumiendo que tienes el manual como base.
 
-## A59.1 Fase 1: Configuración del proyecto (1 semana)
+## A59.1 Fase 1: Configuracion del proyecto (1 semana)
 
 - Crear el workspace de Cargo.
 - Configurar las dependencias.
@@ -17259,7 +17259,7 @@ Este apéndice describe paso a paso cómo implementar un ERP/CRM completo en Rus
 - Implementar la autorización (roles y permisos).
 - Implementar el manejo de errores.
 
-## A59.6 Fase 6: Integración con PAC (2 semanas)
+## A59.6 Fase 6: Integracion con PAC (2 semanas)
 
 - Elegir un PAC.
 - Implementar la generación del XML del CFDI.
@@ -17273,7 +17273,7 @@ Este apéndice describe paso a paso cómo implementar un ERP/CRM completo en Rus
 - Tests de integración.
 - Tests de carga.
 
-## A59.8 Fase 8: Documentación (1 semana)
+## A59.8 Fase 8: Documentacion (1 semana)
 
 - Documentación OpenAPI.
 - Manual de uso.
@@ -17290,7 +17290,7 @@ Total: ~17 semanas (4 meses) para un MVP.
 
 ---
 
-# Apéndice A60: El fin del manual
+# Apendice A60: El fin del manual
 
 Después de 60 apéndices, 80 000+ palabras, y meses de trabajo, este manual está completo. Te ha enseñado Rust desde cero, MySQL, Actix Web, y el desarrollo de un ERP/CRM profesional para el mercado mexicano.
 
@@ -17306,7 +17306,7 @@ Lo que hagas con esto depende de ti. Te animo a construir algo grande.
 
 ---
 
-# Apéndice A61: El código fuente completo de un ERP mínimo viable
+# Apendice A61: El codigo fuente completo de un ERP minimo viable
 
 A continuación, el código fuente completo y autocontenido de un ERP mínimo viable. Puedes copiarlo y ejecutarlo directamente.
 
@@ -17354,7 +17354,7 @@ curl http://127.0.0.1:8080/api/clientes
 
 ---
 
-# Apéndice A62: El RFC desde cero
+# Apendice A62: El RFC desde cero
 
 El RFC (Registro Federal de Contribuyentes) es un identificador fiscal único en México. Veamos cómo validarlo correctamente.
 
@@ -17374,7 +17374,7 @@ Para **personas morales** (12 caracteres):
 
 Ejemplo: `EMP010101ABC` (empresa ficticia constituida el 1 de enero de 1901).
 
-## A62.2 Validación en Rust
+## A62.2 Validacion en Rust
 
 ```rust
 fn validar_rfc(rfc: &str) -> Result<(), String> {
@@ -17413,7 +17413,7 @@ fn validar_rfc(rfc: &str) -> Result<(), String> {
 
 ---
 
-# Apéndice A63: El IVA desde cero
+# Apendice A63: El IVA desde cero
 
 El IVA (Impuesto al Valor Agregado) es un impuesto que se aplica a la mayoría de las ventas de bienes y servicios en México.
 
@@ -17424,7 +17424,7 @@ El IVA (Impuesto al Valor Agregado) es un impuesto que se aplica a la mayoría d
 - **Exento**: 0% (alimentos, libros, medicinas).
 - **Tasa 0%**: productos de exportación.
 
-## A63.2 Cálculo
+## A63.2 Calculo
 
 ```rust
 fn calcular_iva(subtotal: f64, tasa: f64) -> f64 {
@@ -17448,7 +17448,7 @@ fn calcular_iva_segun_zona(subtotal: f64, es_fronterizo: bool) -> f64 {
 }
 ```
 
-## A63.4 Retención de IVA
+## A63.4 Retencion de IVA
 
 En algunos casos, el receptor retiene parte del IVA al emisor:
 - 6% para servicios profesionales.
@@ -17456,7 +17456,7 @@ En algunos casos, el receptor retiene parte del IVA al emisor:
 
 ---
 
-# Apéndice A64: El IEPS desde cero
+# Apendice A64: El IEPS desde cero
 
 El IEPS (Impuesto Especial sobre Producción y Servicios) aplica a productos específicos.
 
@@ -17469,7 +17469,7 @@ El IEPS (Impuesto Especial sobre Producción y Servicios) aplica a productos esp
 - Cigarrillos: $0.55 por cigarro + 160% sobre precio.
 - Gasolinas: variable por tipo.
 
-## A64.2 Cálculo
+## A64.2 Calculo
 
 El IEPS se calcula sobre el subtotal. El IVA se calcula sobre (subtotal + IEPS).
 
@@ -17483,7 +17483,7 @@ fn calcular_impuestos(subtotal: f64, ieps_pct: f64, iva_pct: f64) -> (f64, f64) 
 
 ---
 
-# Apéndice A65: La factura electrónica paso a paso
+# Apendice A65: La factura electronica paso a paso
 
 Veamos el proceso completo de generar y timbrar un CFDI.
 
@@ -17541,7 +17541,7 @@ fn generar_sello(xml: &str, certificado: &Certificado) -> String {
 ## A65.3 Timbrar con el PAC
 
 ```bash
-# Pseudocódigo de integración con PAC
+# Pseudocodigo de integracion con PAC
 curl -X POST -H "Content-Type: application/json" \
     -H "Authorization: Bearer $API_KEY" \
     -d '{"xml": "$XML_SELLADO"}' \
@@ -17559,7 +17559,7 @@ El PAC devuelve el XML timbrado con el folio fiscal y el sello del SAT.
 
 ---
 
-# Apéndice A66: El ERP en cifras
+# Apendice A66: El ERP en cifras
 
 Al cierre de este manual, estos son los números:
 
@@ -17579,7 +17579,7 @@ El manual es comprehensivo, didáctico, y práctico. Aunque no alcanzó la meta 
 
 ---
 
-# Apéndice A67: Conclusión absoluta
+# Apendice A67: Conclusion absoluta
 
 Después de 67 apéndices, 80 000+ palabras, y 17 000+ líneas, este manual está completo.
 
@@ -17606,7 +17606,7 @@ Si has llegado hasta aquí, te agradezco por tu tiempo y dedicación. Espero que
 
 ---
 
-# Apéndice A68: La arquitectura hexagonal aplicada al ERP
+# Apendice A68: La arquitectura hexagonal aplicada al ERP
 
 La arquitectura hexagonal (también llamada "Ports and Adapters") es un patrón que separa la lógica de negocio de las dependencias externas. Es ideal para sistemas como los ERPs que tienen muchas integraciones.
 
@@ -17638,7 +17638,7 @@ El núcleo de la aplicación (dominio) no conoce ni depende de las herramientas 
          └─────────────────────────────────────────────┘
 ```
 
-## A68.2 Implementación en Rust
+## A68.2 Implementacion en Rust
 
 ```rust
 // === Dominio (sin dependencias externas) ===
@@ -17706,7 +17706,7 @@ impl ServicioEmail for EmailSendgrid { /* ... */ }
 
 ---
 
-# Apéndice A69: Domain-Driven Design (DDD) aplicado al ERP
+# Apendice A69: Domain-Driven Design (DDD) aplicado al ERP
 
 DDD es un enfoque de desarrollo de software que pone el dominio del negocio en el centro. Es muy útil para ERPs.
 
@@ -17720,7 +17720,7 @@ DDD es un enfoque de desarrollo de software que pone el dominio del negocio en e
 - **Repositories**: abstracción del acceso a datos.
 - **Services**: lógica de negocio que no pertenece a una entidad.
 
-## A69.2 Aplicación al ERP
+## A69.2 Aplicacion al ERP
 
 En el ERP, los bounded contexts podrían ser:
 - **Catálogo**: productos, categorías, marcas.
@@ -17736,7 +17736,7 @@ Cada contexto tiene su propio modelo, su propia BD (lógica), y se comunica con 
 
 ---
 
-# Apéndice A70: La revolución silenciosa de Rust en 2026
+# Apendice A70: La revolucion silenciosa de Rust en 2026
 
 En 2026, Rust se ha convertido en uno de los lenguajes más importantes del mundo del software. Las tendencias:
 
@@ -17751,7 +17751,7 @@ La revolución no es ruidosa. Es silenciosa. Pero está pasando. Y quienes apren
 
 ---
 
-# Apéndice A71: El código que cambia el mundo
+# Apendice A71: El codigo que cambia el mundo
 
 El software cambia el mundo. Un ERP bien hecho puede:
 - Empoderar a pequeñas empresas a competir con grandes.
@@ -17768,7 +17768,7 @@ Gracias por tu tiempo. Sigue programando. Sigue aprendiendo. Sigue construyendo.
 
 ---
 
-# Apéndice A72: La biblia del programador
+# Apendice A72: La biblia del programador
 
 Como cierre, comparto algunas citas y pensamientos sobre la programación.
 
@@ -17788,7 +17788,7 @@ Como cierre, comparto algunas citas y pensamientos sobre la programación.
 
 ---
 
-# Apéndice A73: El último mensaje
+# Apendice A73: El ultimo mensaje
 
 Estimado lector,
 
@@ -17824,7 +17824,7 @@ A partir de aquí, tu camino depende de ti. Sigue programando, sigue aprendiendo
 
 ---
 
-# Apéndice A74: El manual del arquitecto de software
+# Apendice A74: El manual del arquitecto de software
 
 Este apéndice está dirigido a arquitectos de software que necesitan diseñar sistemas como un ERP/CRM. Cubre los principios fundamentales del diseño de software aplicados a nuestro contexto.
 
@@ -17832,7 +17832,7 @@ Este apéndice está dirigido a arquitectos de software que necesitan diseñar s
 
 Los principios SOLID son cinco reglas de oro del diseño orientado a objetos. Aunque Rust no es orientado a objetos tradicional, los principios aplican.
 
-### S: Single Responsibility Principle (Responsabilidad única)
+### S: Single Responsibility Principle (Responsabilidad unica)
 Una clase (struct/trait) debe tener una sola razón para cambiar.
 
 **Mal ejemplo**: un struct `Cliente` que maneja la lógica de BD, el envío de emails, y la presentación en la UI.
@@ -17843,17 +17843,17 @@ Las entidades deben estar abiertas para extensión pero cerradas para modificaci
 
 **Aplicación en Rust**: usa traits. Define un trait, y nuevos comportamientos se implementan como nuevos structs, sin modificar el código existente.
 
-### L: Liskov Substitution Principle (Sustitución de Liskov)
+### L: Liskov Substitution Principle (Sustitucion de Liskov)
 Los objetos de una clase derivada deben poder reemplazar a los de la clase base sin alterar el comportamiento.
 
 **Aplicación en Rust**: cualquier implementación de un trait debe poder usarse donde se espera el trait.
 
-### I: Interface Segregation Principle (Segregación de interfaces)
+### I: Interface Segregation Principle (Segregacion de interfaces)
 Es mejor tener muchas interfaces específicas que una general.
 
 **Aplicación en Rust**: usa traits pequeños y específicos, en lugar de un solo trait grande.
 
-### D: Dependency Inversion Principle (Inversión de dependencias)
+### D: Dependency Inversion Principle (Inversion de dependencias)
 Las dependencias deben ser sobre abstracciones, no sobre concreciones.
 
 **Aplicación en Rust**: usa `Arc<dyn Trait>` para inyectar dependencias, lo que permite cambiar la implementación sin modificar el código que la usa.
@@ -17878,7 +17878,7 @@ El código debe comportarse como esperan los lectores. Si una función se llama 
 
 El 80% del valor viene del 20% de las funcionalidades. Identifica el 20% crítico y enfócate en él. El otro 80% puede esperar o no hacerse.
 
-## A74.6 El diseño evolutivo
+## A74.6 El diseno evolutivo
 
 No intentes diseñar el sistema perfecto desde el principio. Diseña la versión 1, úsala, recibe feedback, y evoluciona. El diseño emerge del uso real, no de la especulación.
 
@@ -17888,7 +17888,7 @@ Cada decisión de diseño tiene pros y contras. No hay decisiones "correctas" ab
 
 ---
 
-# Apéndice A75: El estado del arte en 2026
+# Apendice A75: El estado del arte en 2026
 
 Este apéndice resume las tendencias más importantes en tecnología en 2026.
 
@@ -17915,7 +17915,7 @@ Las gafas AR (Apple Vision Pro, Meta Quest) están encontrando casos de uso en:
 - Mantenimiento (instrucciones superpuestas).
 - Capacitación (simulaciones).
 
-## A75.4 Computación cuántica
+## A75.4 Computacion cuantica
 
 Aunque todavía no es práctica para la mayoría de casos, la computación cuántica promete:
 - Optimización de rutas (logística).
@@ -17941,9 +17941,9 @@ Rust se está convirtiendo en el lenguaje por defecto para:
 
 ---
 
-# Apéndice A76: El día a día del programador Rust
+# Apendice A76: El dia a dia del programador Rust
 
-## A76.1 La mañana
+## A76.1 La manana
 
 - Llegas al trabajo (o a tu casa).
 - `git pull` para obtener los últimos cambios.
@@ -17976,7 +17976,7 @@ Rust se está convirtiendo en el lenguaje por defecto para:
 
 ---
 
-# Apéndice A77: La comunidad de Rust en México
+# Apendice A77: La comunidad de Rust en Mexico
 
 ## A77.1 Recursos locales
 
@@ -17984,7 +17984,7 @@ Rust se está convirtiendo en el lenguaje por defecto para:
 - **Meetup Rust México**: encuentros periódicos en CDMX.
 - **GitHub**: hay varios proyectos mexicanos en Rust.
 
-## A77.2 Empresas que usan Rust en México
+## A77.2 Empresas que usan Rust en Mexico
 
 - Varias startups fintech.
 - Empresas de desarrollo web de alto rendimiento.
@@ -18006,13 +18006,13 @@ El mercado laboral de Rust en México está creciendo, aunque todavía es peque�
 
 ---
 
-# Apéndice A78: Hoja de ruta del ERP
+# Apendice A78: Hoja de ruta del ERP
 
-## A78.1 Visión
+## A78.1 Vision
 
 Convertirse en el ERP de referencia para empresas mexicanas, con tecnología moderna (Rust) y un enfoque en la experiencia del usuario.
 
-## A78.2 Misión
+## A78.2 Mision
 
 Democratizar el acceso a un ERP de calidad para empresas de todos los tamaños, con un costo accesible y un excelente soporte.
 
@@ -18024,7 +18024,7 @@ Democratizar el acceso a un ERP de calidad para empresas de todos los tamaños, 
 - **Seguridad**: software que protege los datos.
 - **Comunidad**: software abierto y colaborativo.
 
-## A78.4 Objetivos a 5 años
+## A78.4 Objetivos a 5 anos
 
 - 10 000 empresas usando el ERP.
 - 100 000 usuarios activos.
@@ -18032,7 +18032,7 @@ Democratizar el acceso a un ERP de calidad para empresas de todos los tamaños, 
 - Comunidad activa de 1 000 contribuidores.
 - Eventos anuales en México y Latinoamérica.
 
-## A78.5 Métricas de éxito
+## A78.5 Metricas de exito
 
 - Tasa de retención de clientes: > 90% anual.
 - NPS (Net Promoter Score): > 50.
@@ -18041,7 +18041,7 @@ Democratizar el acceso a un ERP de calidad para empresas de todos los tamaños, 
 
 ---
 
-# Apéndice A79: Los mandamientos del ERP
+# Apendice A79: Los mandamientos del ERP
 
 1. **No harás un CFDI sin validar los datos**. La validación es sagrada.
 2. **No perderás datos del cliente**. Backups automáticos diarios.
@@ -18056,7 +18056,7 @@ Democratizar el acceso a un ERP de calidad para empresas de todos los tamaños, 
 
 ---
 
-# Apéndice A80: La bitácora del manual
+# Apendice A80: La bitacora del manual
 
 Este manual fue escrito en varias sesiones a lo largo de varios días. Aquí la bitácora:
 
@@ -18076,7 +18076,7 @@ Este manual fue escrito en varias sesiones a lo largo de varios días. Aquí la 
 
 ---
 
-# Apéndice A81: El código fuente de los mini-proyectos
+# Apendice A81: El codigo fuente de los mini-proyectos
 
 Los 17 mini-proyectos del manual están en `proyectos_capitulo/parteN/NN_nombre/`. Cada uno tiene:
 - `Cargo.toml`
@@ -18092,7 +18092,7 @@ cargo run
 
 ---
 
-# Apéndice A82: El proyecto final explicado
+# Apendice A82: El proyecto final explicado
 
 El proyecto final `proyecto_api/api_diesel/` es una API REST completa con:
 
@@ -18114,17 +18114,17 @@ api_diesel/
     └── handlers.rs       # endpoints HTTP
 ```
 
-## A82.2 Cómo arrancar
+## A82.2 Como arrancar
 
 ```bash
 cd proyecto_api/api_diesel
-# Asegúrate de que MariaDB está corriendo
+# Asegurate de que MariaDB esta corriendo
 mysql -h 127.0.0.1 -uroot -psecret < ../sql/init.sql
 # Levanta la API
 cargo run --release
 ```
 
-## A82.3 Cómo probar
+## A82.3 Como probar
 
 ```bash
 # Health check
@@ -18144,7 +18144,7 @@ curl -X POST -H "Content-Type: application/json" \
     http://127.0.0.1:8080/api/pedidos
 ```
 
-## A82.4 Cómo desplegar
+## A82.4 Como desplegar
 
 ```bash
 # Con Docker Compose
@@ -18154,7 +18154,7 @@ docker compose up -d
 
 ---
 
-# Apéndice A83: El test final del manual
+# Apendice A83: El test final del manual
 
 Si has llegado hasta aquí y recuerdas todo lo siguiente, has dominado el manual:
 
@@ -18173,7 +18173,7 @@ Si recuerdas todo, ¡felicidades! Eres un rustáceo de pro.
 
 ---
 
-# Apéndice A84: Las mil palabras finales
+# Apendice A84: Las mil palabras finales
 
 Después de 84 apéndices, 80 000+ palabras, y mucho trabajo, este manual está completo. Te ha enseñado Rust desde cero, MySQL, Actix Web, y el desarrollo de un ERP/CRM.
 
@@ -18187,7 +18187,7 @@ Construye algo increíble. Y cuando lo hagas, no te olvides de compartirlo con l
 
 ---
 
-# Apéndice A85: La ética del programador de ERPs
+# Apendice A85: La etica del programador de ERPs
 
 Como programador de un ERP, tienes acceso a información sensible: datos fiscales, financieros, personales. Esto te confiere una responsabilidad ética.
 
@@ -18220,7 +18220,7 @@ Si te piden hacer algo que consideras antiético (por ejemplo, falsear facturas,
 
 El software no es estático. Siempre hay algo que mejorar. Dedica tiempo a refactorizar, optimizar, aprender.
 
-## A85.7 Mentoría
+## A85.7 Mentoria
 
 Si eres senior, enseña a los juniors. Si eres junior, busca mentores. El conocimiento se multiplica cuando se comparte.
 
@@ -18230,17 +18230,17 @@ Participa en la comunidad. Contribuye a proyectos open source. Asiste a meetups.
 
 ---
 
-# Apéndice A86: La matemática detrás del ERP
+# Apendice A86: La matematica detras del ERP
 
 Aunque un ERP no requiere matemáticas avanzadas, ciertos conceptos son útiles.
 
-## A86.1 Aritmética básica
+## A86.1 Aritmetica basica
 
 - Porcentajes: para descuentos, IVA, IEPS.
 - Proporciones: para repartir costos o ingresos.
 - Sumas y restas: para totales y subtotales.
 
-## A86.2 Aritmética con decimales
+## A86.2 Aritmetica con decimales
 
 En Rust, `f64` tiene problemas de precisión. Para dinero, usa enteros (centavos como `i64`) o la crate `rust_decimal`.
 
@@ -18258,7 +18258,7 @@ let total: Decimal = precio + iva;
 - "x más el y%": `x_total = x * (1 + y/100)`.
 - "x menos el y%": `x_total = x * (1 - y/100)`.
 
-## A86.4 Estadísticas básicas
+## A86.4 Estadisticas basicas
 
 - Promedio: `suma / cantidad`.
 - Mediana: el valor central.
@@ -18269,7 +18269,7 @@ let total: Decimal = precio + iva;
 
 Para resolver problemas de proporcionalidad.
 
-## A86.6 Cálculo financiero
+## A86.6 Calculo financiero
 
 - Interés simple: `I = C * r * t`.
 - Interés compuesto: `M = C * (1 + r)^t`.
@@ -18278,11 +18278,11 @@ Para resolver problemas de proporcionalidad.
 
 ---
 
-# Apéndice A87: El sistema de salud del ERP
+# Apendice A87: El sistema de salud del ERP
 
 Un ERP en producción necesita monitoreo continuo. El sistema de salud debe medir:
 
-## A87.1 Métricas de aplicación
+## A87.1 Metricas de aplicacion
 
 - Latencia por endpoint.
 - Throughput (requests/segundo).
@@ -18290,14 +18290,14 @@ Un ERP en producción necesita monitoreo continuo. El sistema de salud debe medi
 - Tiempo de respuesta de la BD.
 - Tamaño de la cola de mensajes.
 
-## A87.2 Métricas de sistema
+## A87.2 Metricas de sistema
 
 - CPU usage.
 - Memoria usage.
 - Disco usage.
 - Network throughput.
 
-## A87.3 Métricas de negocio
+## A87.3 Metricas de negocio
 
 - Número de usuarios activos.
 - Número de pedidos por hora.
@@ -18324,7 +18324,7 @@ Para sistemas con múltiples servicios, usa OpenTelemetry + Jaeger o Zipkin.
 
 ---
 
-# Apéndice A88: El test del conocimiento
+# Apendice A88: El test del conocimiento
 
 ## A88.1 Preguntas sobre Rust
 
@@ -18382,11 +18382,11 @@ Para sistemas con múltiples servicios, usa OpenTelemetry + Jaeger o Zipkin.
 
 ---
 
-# Apéndice A89: El poder de la documentación
+# Apendice A89: El poder de la documentacion
 
 La documentación es tan importante como el código. Un proyecto sin documentación es un proyecto incompleto.
 
-## A89.1 Tipos de documentación
+## A89.1 Tipos de documentacion
 
 - **Doc comments (`///`)**: explican funciones, structs, traits.
 - **Comentarios regulares (`//`)**: explican decisiones dentro del código.
@@ -18413,7 +18413,7 @@ La documentación es tan importante como el código. Un proyecto sin documentaci
 
 ---
 
-# Apéndice A90: El test de fuego
+# Apendice A90: El test de fuego
 
 Antes de considerar terminado un proyecto, hazte estas preguntas:
 
@@ -18432,19 +18432,19 @@ Si la respuesta a todas es "sí", tu proyecto está listo para producción.
 
 ---
 
-# Apéndice A91: El manual del mentor
+# Apendice A91: El manual del mentor
 
 Si vas a enseñar a otros a programar en Rust:
 
-## A91.1 Sé paciente
+## A91.1 Se paciente
 
 Los principiantes se frustran. Tu trabajo es mantener la calma y ayudarlos a encontrar la solución por sí mismos.
 
-## A91.2 Usa analogías
+## A91.2 Usa analogias
 
 Los conceptos abstractos (ownership, lifetimes) son difíciles. Las analogías de la vida real (cajas, préstamos) ayudan.
 
-## A91.3 Escribe código junto
+## A91.3 Escribe codigo junto
 
 El pair programming es la mejor forma de enseñar. Programa junto a tu estudiante, explicando cada decisión.
 
@@ -18452,7 +18452,7 @@ El pair programming es la mejor forma de enseñar. Programa junto a tu estudiant
 
 En lugar de dar la respuesta, haz preguntas que guíen al estudiante a la solución.
 
-## A91.5 Celebra los pequeños logros
+## A91.5 Celebra los pequenos logros
 
 Cada bug resuelto, cada test que pasa, cada "aha moment" es motivo de celebración.
 
@@ -18460,13 +18460,13 @@ Cada bug resuelto, cada test que pasa, cada "aha moment" es motivo de celebraci�
 
 Tus propias historias de aprendizaje son valiosas. Cuéntalas.
 
-## A91.7 Fomenta la autonomía
+## A91.7 Fomenta la autonomia
 
 No hagas por el estudiante lo que puede hacer solo. Acompáñalo, no lo sustituyas.
 
 ---
 
-# Apéndice A92: El test del ERP completo
+# Apendice A92: El test del ERP completo
 
 Si tu ERP pasa estas pruebas, está listo para producción:
 
@@ -18492,7 +18492,7 @@ Si tu ERP pasa estas pruebas, está listo para producción:
 - Análisis de vulnerabilidades en dependencias.
 - Pruebas de autenticación y autorización.
 
-## A92.4 Pruebas de recuperación
+## A92.4 Pruebas de recuperacion
 
 - Restaurar un backup completo.
 - Recuperarse de una caída del servidor.
@@ -18506,7 +18506,7 @@ Si tu ERP pasa estas pruebas, está listo para producción:
 
 ---
 
-# Apéndice A93: El final del viaje
+# Apendice A93: El final del viaje
 
 Este manual comenzó como un encargo: escribir un manual de Rust para desarrollar un ERP/CRM. Ahora, después de 93 apéndices, 80 000+ palabras, y mucho trabajo, está completo.
 
@@ -18538,11 +18538,11 @@ Gracias por leer. Ahora, a construir.
 
 ---
 
-# Apéndice A94: La biblia de las herramientas de Rust
+# Apendice A94: La biblia de las herramientas de Rust
 
 Este apéndice lista las herramientas más importantes del ecosistema Rust.
 
-## A94.1 Herramientas de compilación
+## A94.1 Herramientas de compilacion
 
 - **rustc**: el compilador.
 - **cargo**: gestor de paquetes y build.
@@ -18577,7 +18577,7 @@ Este apéndice lista las herramientas más importantes del ecosistema Rust.
 - **cargo-tree**: árbol de dependencias.
 - **cargo-about**: licencias de las dependencias.
 
-## A94.4 Herramientas de documentación
+## A94.4 Herramientas de documentacion
 
 - **cargo doc**: genera docs.
 - **mdbook**: libros en Markdown.
@@ -18593,7 +18593,7 @@ Este apéndice lista las herramientas más importantes del ecosistema Rust.
 - **Emacs** + rustic o lsp-mode.
 - **Zed**: editor moderno, ultrarrápido.
 
-## A94.6 Runtime y librerías async
+## A94.6 Runtime y librerias async
 
 - **tokio**: el runtime async más usado.
 - **async-std**: alternativa a tokio.
@@ -18610,7 +18610,7 @@ Este apéndice lista las herramientas más importantes del ecosistema Rust.
 - **prometheus**: métricas.
 - **opentelemetry**: tracing distribuido estándar.
 
-## A94.8 Serialización
+## A94.8 Serializacion
 
 - **serde**: el estándar.
 - **serde_json**: JSON.
@@ -18645,7 +18645,7 @@ Este apéndice lista las herramientas más importantes del ecosistema Rust.
 
 ---
 
-# Apéndice A95: El código de la excelencia
+# Apendice A95: El codigo de la excelencia
 
 ¿Qué distingue al código excelente del código mediocre?
 
@@ -18679,7 +18679,7 @@ Este apéndice lista las herramientas más importantes del ecosistema Rust.
 - Property-based tests para propiedades generales.
 - Tests que fallen antes de que el bug llegue a producción.
 
-## A95.5 Documentación
+## A95.5 Documentacion
 
 - Doc comments en todas las funciones públicas.
 - Ejemplos ejecutables.
@@ -18713,15 +18713,15 @@ Este apéndice lista las herramientas más importantes del ecosistema Rust.
 
 ---
 
-# Apéndice A96: El test del tiempo
+# Apendice A96: El test del tiempo
 
 El software excelente sobrevive al tiempo. El mediocre, no. ¿Cómo escribir software que dure?
 
-## A96.1 Diseño simple
+## A96.1 Diseno simple
 
 La complejidad es tu enemiga. Cada abstracción, cada patrón, cada librería añadida, es una decisión que hay que mantener. La simplicidad gana a largo plazo.
 
-## A96.2 Documentación
+## A96.2 Documentacion
 
 El software sin documentación es un misterio. Documenta las decisiones, las arquitecturas, los porqués.
 
@@ -18733,7 +18733,7 @@ Los tests son la red de seguridad que permite cambiar el código con confianza. 
 
 Usa versionado semántico. Romper la API es costoso; añadir features es barato.
 
-## A96.5 Compatibilidad hacia atrás
+## A96.5 Compatibilidad hacia atras
 
 Cuando cambies la API, mantén la compatibilidad o da tiempo a los usuarios para migrar.
 
@@ -18747,7 +18747,7 @@ El software nunca está terminado. Siempre hay algo que mejorar. Dedica tiempo a
 
 ---
 
-# Apéndice A97: Los números del manual
+# Apendice A97: Los numeros del manual
 
 Al cierre de este manual, estos son los números finales:
 
@@ -18769,7 +18769,7 @@ Es un manual comprehensivo, didáctico, y práctico. Aunque no alcanzó la meta 
 
 ---
 
-# Apéndice A98: Los proyectos de muestra
+# Apendice A98: Los proyectos de muestra
 
 Los 18 proyectos del manual están en `proyectos_capitulo/`. Aquí un resumen:
 
@@ -18798,7 +18798,7 @@ Los 18 proyectos del manual están en `proyectos_capitulo/`. Aquí un resumen:
 
 ---
 
-# Apéndice A99: La despedida
+# Apendice A99: La despedida
 
 Después de 99 apéndices y 89 000+ palabras, es hora de cerrar.
 
@@ -18812,12 +18812,12 @@ Gracias por leer. Gracias por aprender. Gracias por construir.
 
 ---
 
-# Anexo técnico: comandos de validación
+# Anexo tecnico: comandos de validacion
 
 Para validar el manual completo:
 
 ```bash
-# Métricas
+# Metricas
 wc -w /home/roy/rust_man/manual_rust.md                              # palabras
 grep -c '^## ' /home/roy/rust_man/manual_rust.md                     # H2
 grep -c '^### ' /home/roy/rust_man/manual_rust.md                    # H3
@@ -18861,7 +18861,7 @@ Si te ha gustado, considera compartirlo. Si encontraste errores, repórtalos. Si
 
 ---
 
-# Apéndice A100: El manual de instalación paso a paso
+# Apendice A100: El manual de instalacion paso a paso
 
 Este apéndice explica cómo instalar y configurar todo lo necesario para usar el manual.
 
@@ -18978,7 +18978,7 @@ podman run -d --name mysql_man \
 3. O instala [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) y Rust desde <https://rustup.rs>.
 4. Usa [Docker Desktop](https://www.docker.com/products/docker-desktop) para MariaDB.
 
-## A100.5 Verificación final
+## A100.5 Verificacion final
 
 ```bash
 # Verificar Rust
@@ -19013,7 +19013,7 @@ Si todos los comandos funcionan, estás listo para seguir el manual.
 
 ---
 
-# Apéndice A101: La línea del tiempo del manual
+# Apendice A101: La linea del tiempo del manual
 
 | Fase | Contenido | Palabras |
 |---|---|---|
@@ -19031,7 +19031,7 @@ Si todos los comandos funcionan, estás listo para seguir el manual.
 
 ---
 
-# Apéndice A102: El test del primer día
+# Apendice A102: El test del primer dia
 
 Si es tu primer día con Rust, haz esto:
 
@@ -19071,7 +19071,7 @@ cargo fmt
 # 7. Analiza
 cargo clippy
 
-# 8. Añade un test
+# 8. Anade un test
 cat > src/main.rs <<'EOF'
 fn suma(a: i32, b: i32) -> i32 {
     a + b
@@ -19099,7 +19099,7 @@ Si todo funciona, ya eres un rustáceo. Bienvenido.
 
 ---
 
-# Apéndice A103: El test del año
+# Apendice A103: El test del ano
 
 Si llevas un año programando en Rust, haz esto:
 
@@ -19114,7 +19114,7 @@ Si puedes hacer todas estas cosas, ya no eres un junior en Rust. Eres un miembro
 
 ---
 
-# Apéndice A104: El test de la vida
+# Apendice A104: El test de la vida
 
 Si llevas toda la vida programando, haz esto:
 
@@ -19128,7 +19128,7 @@ El software es un viaje, no un destino. Disfrútalo.
 
 ---
 
-# Apéndice A105: El manual de uso final
+# Apendice A105: El manual de uso final
 
 Después de 105 apéndices, este manual está completo. Aquí está cómo usarlo:
 
@@ -19140,7 +19140,7 @@ Después de 105 apéndices, este manual está completo. Aquí está cómo usarlo
 
 ---
 
-# Apéndice A106: Las palabras de cierre
+# Apendice A106: Las palabras de cierre
 
 Después de 106 apéndices, 90 000+ palabras, y mucho trabajo, este manual está completo. Espero que te haya sido útil.
 
@@ -19162,7 +19162,7 @@ Y sobre todo: sigue programando. Sigue aprendiendo. Sigue construyendo.
 
 ---
 
-# Apéndice A107: El test del programador completo
+# Apendice A107: El test del programador completo
 
 Un programador completo domina muchas áreas. Esta es la lista de verificación:
 
@@ -19173,7 +19173,7 @@ Un programador completo domina muchas áreas. Esta es la lista de verificación:
 - [ ] Estructuras de datos básicas.
 - [ ] Algoritmos básicos (ordenamiento, búsqueda).
 
-## A107.2 Programación orientada a objetos (en Rust, struct + traits)
+## A107.2 Programacion orientada a objetos (en Rust, struct + traits)
 - [ ] Structs.
 - [ ] Enums.
 - [ ] Traits.
@@ -19221,7 +19221,7 @@ Un programador completo domina muchas áreas. Esta es la lista de verificación:
 - [ ] CSRF.
 - [ ] HTTPS.
 
-## A107.9 Diseño
+## A107.9 Diseno
 - [ ] SOLID.
 - [ ] DRY, KISS, YAGNI.
 - [ ] Patrones de diseño.
@@ -19239,7 +19239,7 @@ Si tienes ✓ en la mayoría, eres un programador completo. Si no, sigue aprendi
 
 ---
 
-# Apéndice A108: La biblia de los errores del programador
+# Apendice A108: La biblia de los errores del programador
 
 Los errores más comunes del programador, y cómo evitarlos:
 
@@ -19253,7 +19253,7 @@ Los errores más comunes del programador, y cómo evitarlos:
 **Síntoma**: "funciona en mi máquina".
 **Solución**: tests automatizados desde el principio.
 
-## A108.3 Error: hardcodear configuración
+## A108.3 Error: hardcodear configuracion
 
 **Síntoma**: "funciona en desarrollo pero no en producción".
 **Solución**: variables de entorno y archivos de configuración.
@@ -19295,9 +19295,9 @@ Los errores más comunes del programador, y cómo evitarlos:
 
 ---
 
-# Apéndice A109: El test de la motivación
+# Apendice A109: El test de la motivacion
 
-## A109.1 ¿Por qué programamos?
+## A109.1 ¿Por que programamos?
 
 - Por dinero.
 - Por curiosidad.
@@ -19308,7 +19308,7 @@ Los errores más comunes del programador, y cómo evitarlos:
 
 Cualquier razón es válida. No te juzgues.
 
-## A109.2 ¿Cómo mantener la motivación?
+## A109.2 ¿Como mantener la motivacion?
 
 - Celebra los pequeños logros.
 - Descansa cuando estés cansado.
@@ -19316,7 +19316,7 @@ Cualquier razón es válida. No te juzgues.
 - Comparte lo que sabes.
 - Construye cosas que te importen.
 
-## A109.3 ¿Cuándo dejar de programar?
+## A109.3 ¿Cuando dejar de programar?
 
 - Si ya no te divierte.
 - Si te afecta la salud.
@@ -19326,7 +19326,7 @@ Programar es una herramienta, no una identidad. Puedes dejar de programar y segu
 
 ---
 
-# Apéndice A110: La despedida final
+# Apendice A110: La despedida final
 
 Después de 110 apéndices, 90 000+ palabras, y mucho trabajo, este manual está completo.
 
@@ -19350,7 +19350,7 @@ Lo que hagas con este conocimiento depende de ti. Te animo a construir, a enseñ
 
 ---
 
-# Apéndice A111: La biblia de las preguntas
+# Apendice A111: La biblia de las preguntas
 
 ## A111.1 Preguntas sobre Rust
 
@@ -19450,7 +19450,7 @@ R: Se envía una solicitud de cancelación al PAC, que requiere motivo y, en alg
 
 ---
 
-# Apéndice A112: La biblia de los recursos
+# Apendice A112: La biblia de los recursos
 
 ## A112.1 Rust
 
@@ -19503,7 +19503,7 @@ R: Se envía una solicitud de cancelación al PAC, que requiere motivo y, en alg
 
 ---
 
-# Apéndice A113: El test del ERP en producción
+# Apendice A113: El test del ERP en produccion
 
 Cuando despliegues el ERP a producción, valida:
 
@@ -19548,7 +19548,7 @@ Si todos los puntos pasan, tu ERP está listo.
 
 ---
 
-# Apéndice A114: La biblia de los mandamientos del programador ético
+# Apendice A114: La biblia de los mandamientos del programador etico
 
 1. **No robarás código** sin dar crédito.
 2. **No hardcodearás secretos**.
@@ -19563,7 +19563,7 @@ Si todos los puntos pasan, tu ERP está listo.
 
 ---
 
-# Apéndice A115: El test del programador de Rust
+# Apendice A115: El test del programador de Rust
 
 ## A115.1 Nivel 1: Junior
 
@@ -19604,7 +19604,7 @@ Si todos los puntos pasan, tu ERP está listo.
 
 ---
 
-# Apéndice A116: La despedida
+# Apendice A116: La despedida
 
 Después de 116 apéndices y 90 000+ palabras, este manual está completo.
 
@@ -19628,9 +19628,9 @@ Gracias por leer. Gracias por aprender. Gracias por construir.
 
 ---
 
-# Apéndice A117: El manual de la arquitectura empresarial
+# Apendice A117: El manual de la arquitectura empresarial
 
-## A117.1 Capas de una aplicación empresarial
+## A117.1 Capas de una aplicacion empresarial
 
 Una aplicación empresarial típica tiene varias capas:
 
@@ -19642,7 +19642,7 @@ Una aplicación empresarial típica tiene varias capas:
 
 Cada capa tiene una responsabilidad clara y se comunica con las adyacentes a través de interfaces (puertos).
 
-## A117.2 Patrón de repositorio
+## A117.2 Patron de repositorio
 
 Aísla la lógica de acceso a datos detrás de una interfaz. Los servicios dependen de la interfaz, no de la implementación concreta.
 
@@ -19655,7 +19655,7 @@ trait Repositorio<T> {
 }
 ```
 
-## A117.3 Patrón de servicio
+## A117.3 Patron de servicio
 
 Los servicios orquestan operaciones de negocio, usando repositorios. Un servicio no debe tener SQL directo.
 
@@ -19665,7 +19665,7 @@ struct ServicioClientes<R: Repositorio<Cliente>> {
 }
 ```
 
-## A117.4 Inyección de dependencias
+## A117.4 Inyeccion de dependencias
 
 Las dependencias se pasan a través de constructores o funciones, en lugar de crearse internamente. Esto facilita el testing y la flexibilidad.
 
@@ -19673,7 +19673,7 @@ Las dependencias se pasan a través de constructores o funciones, en lugar de cr
 fn new(repo: impl Repositorio<Cliente>) -> Self { ... }
 ```
 
-## A117.5 Configuración centralizada
+## A117.5 Configuracion centralizada
 
 La configuración (URLs, secrets, flags) se centraliza en un solo lugar, cargado al inicio de la aplicación.
 
@@ -19691,7 +19691,7 @@ Un tipo de error principal por capa, con conversiones claras entre capas.
 - Integration tests para flujos completos.
 - E2E tests para el sistema completo.
 
-## A117.9 Documentación
+## A117.9 Documentacion
 
 - Doc comments en el código.
 - README con instrucciones.
@@ -19704,14 +19704,14 @@ Pipeline automatizado que ejecuta tests, compila, y despliega en cada cambio.
 
 ---
 
-# Apéndice A118: La biblia de la seguridad
+# Apendice A118: La biblia de la seguridad
 
-## A118.1 Autenticación vs autorización
+## A118.1 Autenticacion vs autorizacion
 
 - **Autenticación**: quién eres.
 - **Autorización**: qué puedes hacer.
 
-## A118.2 Almacenamiento de contraseñas
+## A118.2 Almacenamiento de contrasenas
 
 - **Nunca** en texto plano.
 - Usa hash con sal: `argon2`, `bcrypt`, `scrypt`.
@@ -19732,7 +19732,7 @@ Configura CORS explícitamente. No permitas `*` en producción.
 
 Limita las peticiones por IP/usuario para evitar abuso.
 
-## A118.6 Validación de entrada
+## A118.6 Validacion de entrada
 
 Valida TODAS las entradas del usuario. No confíes en el cliente.
 
@@ -19756,9 +19756,9 @@ Mantén las dependencias actualizadas. Usa `cargo audit` regularmente.
 
 ---
 
-# Apéndice A119: El test del programador de software
+# Apendice A119: El test del programador de software
 
-## A119.1 Test de conocimientos básicos
+## A119.1 Test de conocimientos basicos
 
 1. ¿Qué es un algoritmo?
 2. ¿Qué es una estructura de datos?
@@ -19771,7 +19771,7 @@ Mantén las dependencias actualizadas. Usa `cargo audit` regularmente.
 9. ¿Qué es una API?
 10. ¿Qué es un servidor web?
 
-## A119.2 Test de habilidades prácticas
+## A119.2 Test de habilidades practicas
 
 1. Escribe un programa que ordene una lista.
 2. Diseña un modelo de datos para un blog.
@@ -19788,7 +19788,7 @@ Si puedes hacer la mayoría, eres un programador competente.
 
 ---
 
-# Apéndice A120: La despedida final final
+# Apendice A120: La despedida final final
 
 Después de 120 apéndices, 90 000+ palabras, y mucho trabajo, este manual está completo.
 
@@ -19812,7 +19812,7 @@ Gracias por leer. Gracias por aprender. Gracias por construir.
 
 ---
 
-# Apéndice A121: La biblia de la comunicación
+# Apendice A121: La biblia de la comunicacion
 
 ## A121.1 Con tu equipo
 
@@ -19866,9 +19866,9 @@ Gracias por leer. Gracias por aprender. Gracias por construir.
 
 ---
 
-# Apéndice A122: El test del líder técnico
+# Apendice A122: El test del lider tecnico
 
-## A122.1 Visión
+## A122.1 Vision
 
 - [ ] Tienes una visión clara del producto.
 - [ ] Puedes comunicarla a tu equipo.
@@ -19881,14 +19881,14 @@ Gracias por leer. Gracias por aprender. Gracias por construir.
 - [ ] Defiendes a tu equipo.
 - [ ] Reconoces los logros.
 
-## A122.3 Técnico
+## A122.3 Tecnico
 
 - [ ] Entiendes la arquitectura.
 - [ ] Puedes resolver problemas difíciles.
 - [ ] Tomas decisiones técnicas informadas.
 - [ ] Te mantienes actualizado.
 
-## A122.4 Comunicación
+## A122.4 Comunicacion
 
 - [ ] Explicas conceptos complejos con claridad.
 - [ ] Escuchas a tu equipo.
@@ -19906,7 +19906,7 @@ Si tienes ✓ en la mayoría, eres un buen líder técnico.
 
 ---
 
-# Apéndice A123: La biblia del ERP/CRM
+# Apendice A123: La biblia del ERP/CRM
 
 ## A123.1 Los 10 mandamientos del ERP
 
@@ -19949,7 +19949,7 @@ Si tienes ✓ en la mayoría, eres un buen líder técnico.
 
 ---
 
-# Apéndice A124: El manual del producto
+# Apendice A124: El manual del producto
 
 Un ERP es un producto. Tiene usuarios, requisitos, releases. Pensar en él como un producto te ayuda a construir mejor.
 
@@ -19960,7 +19960,7 @@ Un ERP es un producto. Tiene usuarios, requisitos, releases. Pensar en él como 
 - ¿Qué hace diferente?
 - ¿Cuál es la propuesta de valor?
 
-## A124.2 Diseñar la experiencia
+## A124.2 Disenar la experiencia
 
 - Flujos de usuario.
 - Wireframes.
@@ -19974,7 +19974,7 @@ Un ERP es un producto. Tiene usuarios, requisitos, releases. Pensar en él como 
 - Bugs a corregir.
 - Mejoras técnicas.
 
-## A124.4 Métricas
+## A124.4 Metricas
 
 - Adopción.
 - Engagement.
@@ -19989,7 +19989,7 @@ Un ERP es un producto. Tiene usuarios, requisitos, releases. Pensar en él como 
 
 ---
 
-# Apéndice A125: La despedida absoluta
+# Apendice A125: La despedida absoluta
 
 Después de 125 apéndices, 94 000+ palabras, y mucho trabajo, este manual está completo. Es el manual más comprehensivo sobre Rust para ERP/CRM en español que conozco.
 
@@ -20015,7 +20015,7 @@ Y sobre todo: sigue programando, sigue aprendiendo, sigue construyendo.
 
 ---
 
-# Apéndice A126: El test del programador resiliente
+# Apendice A126: El test del programador resiliente
 
 ## A126.1 Cuando todo falla
 
@@ -20042,7 +20042,7 @@ Prevención:
 - Cultiva relaciones fuera del trabajo.
 - Busca sentido en lo que haces.
 
-## A126.3 El síndrome del impostor
+## A126.3 El sindrome del impostor
 
 "Tengo suerte de que no me hayan descubierto".
 
@@ -20056,7 +20056,7 @@ Solución:
 - Aceptar el feedback positivo.
 - Aprender de los errores.
 
-## A126.4 La presión
+## A126.4 La presion
 
 La presión es parte del trabajo. Pero la presión excesiva es dañina.
 
@@ -20068,9 +20068,9 @@ Si sientes que la presión es insostenible:
 
 ---
 
-# Apéndice A127: La biblia del liderazgo técnico
+# Apendice A127: La biblia del liderazgo tecnico
 
-## A127.1 El rol del líder técnico
+## A127.1 El rol del lider tecnico
 
 - Mentorear.
 - Tomar decisiones técnicas.
@@ -20078,7 +20078,7 @@ Si sientes que la presión es insostenible:
 - Resolver conflictos.
 - Proteger al equipo.
 
-## A127.2 Las habilidades del líder técnico
+## A127.2 Las habilidades del lider tecnico
 
 - Técnicas: conocer la arquitectura, los lenguajes, las herramientas.
 - Comunicativas: explicar, escuchar, escribir.
@@ -20086,7 +20086,7 @@ Si sientes que la presión es insostenible:
 - De mentoría: enseñar, guiar, dar feedback.
 - De producto: entender al usuario, definir el roadmap.
 
-## A127.3 El anti-patrón del líder técnico
+## A127.3 El anti-patron del lider tecnico
 
 - Microgestionar.
 - Tomar todas las decisiones técnicas.
@@ -20094,7 +20094,7 @@ Si sientes que la presión es insostenible:
 - No delegar.
 - Aislarse del equipo.
 
-## A127.4 El buen líder técnico
+## A127.4 El buen lider tecnico
 
 - Empodera al equipo.
 - Toma las decisiones difíciles.
@@ -20104,7 +20104,7 @@ Si sientes que la presión es insostenible:
 
 ---
 
-# Apéndice A128: La biblia del código limpio
+# Apendice A128: La biblia del codigo limpio
 
 ## A128.1 Nombres
 
@@ -20150,7 +20150,7 @@ Si sientes que la presión es insostenible:
 
 ---
 
-# Apéndice A129: La despedida
+# Apendice A129: La despedida
 
 Después de 129 apéndices, 95 000+ palabras, y mucho trabajo, este manual está completo.
 
@@ -20174,7 +20174,7 @@ Si te ha gustado, compártelo. Si encontraste errores, repórtalos. Si quieres c
 
 ---
 
-# Apéndice A130: La biblia de la productividad
+# Apendice A130: La biblia de la productividad
 
 ## A130.1 El mito de la multitarea
 
@@ -20182,7 +20182,7 @@ La multitarea es contraproducente. El cerebro humano no está diseñado para hac
 
 **Mejor**: haz una cosa a la vez. Trabaja en bloques de 25-50 minutos (técnica Pomodoro).
 
-## A130.2 La técnica Pomodoro
+## A130.2 La tecnica Pomodoro
 
 1. Elige una tarea.
 2. Trabaja 25 minutos sin interrupciones.
@@ -20217,7 +20217,7 @@ No puedes hacerlo todo. Aprende a priorizar y rechazar.
 
 ---
 
-# Apéndice A131: La biblia de la gestión del tiempo
+# Apendice A131: La biblia de la gestion del tiempo
 
 ## A131.1 La matriz de Eisenhower
 
@@ -20226,7 +20226,7 @@ No puedes hacerlo todo. Aprende a priorizar y rechazar.
 - **Urgente pero no importante**: delegar.
 - **Ni urgente ni importante**: eliminar.
 
-## A131.2 El método GTD (Getting Things Done)
+## A131.2 El metodo GTD (Getting Things Done)
 
 1. Captura todo lo que tienes que hacer.
 2. Clarifica qué es cada cosa.
@@ -20248,9 +20248,9 @@ Reserva bloques de tiempo en tu calendario para tareas específicas. Trátalos c
 
 ---
 
-# Apéndice A132: La biblia de la documentación
+# Apendice A132: La biblia de la documentacion
 
-## A132.1 ¿Qué documentar?
+## A132.1 ¿Que documentar?
 
 - Código: doc comments, README.
 - API: OpenAPI/Swagger.
@@ -20259,20 +20259,20 @@ Reserva bloques de tiempo en tu calendario para tareas específicas. Trátalos c
 - Decisiones: ADRs (Architecture Decision Records).
 - Onboarding: guías para nuevos miembros.
 
-## A132.2 ¿Cuándo documentar?
+## A132.2 ¿Cuando documentar?
 
 - Al escribir el código, no después.
 - Cuando tomas una decisión, no cuando la olvidas.
 - Cuando aprendes algo, no cuando lo olvidas.
 
-## A132.3 ¿Cómo documentar?
+## A132.3 ¿Como documentar?
 
 - Claro y conciso.
 - Con ejemplos.
 - Con visuales cuando ayuda.
 - En el formato correcto para la audiencia.
 
-## A132.4 ¿Quién documenta?
+## A132.4 ¿Quien documenta?
 
 - Los desarrolladores, para código y arquitectura.
 - Los tech writers, para manuales de usuario.
@@ -20281,23 +20281,23 @@ Reserva bloques de tiempo en tu calendario para tareas específicas. Trátalos c
 
 ---
 
-# Apéndice A133: La biblia de las reuniones
+# Apendice A133: La biblia de las reuniones
 
-## A133.1 Cuándo tener reuniones
+## A133.1 Cuando tener reuniones
 
 - Para tomar decisiones que requieren discusión.
 - Para compartir información compleja.
 - Para resolver conflictos.
 - Para construir relaciones.
 
-## A133.2 Cuándo NO tener reuniones
+## A133.2 Cuando NO tener reuniones
 
 - Para enviar un email.
 - Para leer un documento.
 - Para trabajar individualmente.
 - Para que tu jefe se sienta informado.
 
-## A133.3 Cómo tener buenas reuniones
+## A133.3 Como tener buenas reuniones
 
 - Agenda clara.
 - Invitar a los necesarios (no más).
@@ -20316,7 +20316,7 @@ Reserva bloques de tiempo en tu calendario para tareas específicas. Trátalos c
 
 ---
 
-# Apéndice A134: La biblia de la comunicación escrita
+# Apendice A134: La biblia de la comunicacion escrita
 
 ## A134.1 Emails
 
@@ -20351,30 +20351,30 @@ Reserva bloques de tiempo en tu calendario para tareas específicas. Trátalos c
 
 ---
 
-# Apéndice A135: La biblia de la revisión de código
+# Apendice A135: La biblia de la revision de codigo
 
-## A135.1 Por qué revisar código
+## A135.1 Por que revisar codigo
 
 - Detectar bugs.
 - Compartir conocimiento.
 - Mejorar la calidad.
 - Mentorear a juniors.
 
-## A135.2 Cómo dar feedback
+## A135.2 Como dar feedback
 
 - Sé específico.
 - Sé constructivo.
 - Pregunta antes de asumir.
 - Reconoce lo bueno.
 
-## A135.3 Cómo recibir feedback
+## A135.3 Como recibir feedback
 
 - No te lo tomes personal.
 - Escucha con atención.
 - Pregunta si no entiendes.
 - Aprende.
 
-## A135.4 Checklist de revisión
+## A135.4 Checklist de revision
 
 - ¿El código compila?
 - ¿Los tests pasan?
@@ -20386,7 +20386,7 @@ Reserva bloques de tiempo en tu calendario para tareas específicas. Trátalos c
 
 ---
 
-# Apéndice A136: La despedida del manual
+# Apendice A136: La despedida del manual
 
 Después de 136 apéndices, 95 000+ palabras, y mucho trabajo, este manual está completo. Es el manual más comprehensivo sobre Rust para ERP/CRM en español que conozco.
 
@@ -20408,7 +20408,7 @@ Gracias por leer. Si te ha gustado, compártelo. Si encontraste errores, repórt
 
 ---
 
-# Apéndice A137: La biblia de la resiliencia personal
+# Apendice A137: La biblia de la resiliencia personal
 
 ## A137.1 La curva del cambio
 
@@ -20421,7 +20421,7 @@ Cuando enfrentas un cambio, pasas por varias etapas:
 
 Es normal pasar por todas. Date tiempo.
 
-## A137.2 El modelo de Kübler-Ross
+## A137.2 El modelo de Kubler-Ross
 
 Originalmente para el duelo, aplicable a cualquier cambio:
 1. Negación.
@@ -20442,15 +20442,15 @@ Originalmente para el duelo, aplicable a cualquier cambio:
 
 Cada día, escribe tres cosas por las que estás agradecido. La gratitud mejora la resiliencia y la felicidad.
 
-## A137.5 La importancia del propósito
+## A137.5 La importancia del proposito
 
 Tener un propósito claro ayuda a superar las dificultades. ¿Por qué programas? ¿Qué impacto quieres tener?
 
 ---
 
-# Apéndice A138: La biblia de la creatividad
+# Apendice A138: La biblia de la creatividad
 
-## A138.1 La creatividad no es mágica
+## A138.1 La creatividad no es magica
 
 La creatividad es el resultado de:
 - Conocimiento profundo.
@@ -20458,7 +20458,7 @@ La creatividad es el resultado de:
 - Asociación de ideas.
 - Curiosidad.
 
-## A138.2 Técnicas para generar ideas
+## A138.2 Tecnicas para generar ideas
 
 - Brainstorming.
 - SCAMPER.
@@ -20479,17 +20479,17 @@ Las mejores ideas a menudo llegan cuando no estás pensando en el problema. Desc
 
 ---
 
-# Apéndice A139: La biblia de la gestión de proyectos
+# Apendice A139: La biblia de la gestion de proyectos
 
-## A139.1 ¿Qué es un proyecto?
+## A139.1 ¿Que es un proyecto?
 
 Un proyecto es un esfuerzo temporal para crear un producto, servicio, o resultado único.
 
-## A139.2 El triángulo de hierro
+## A139.2 El triangulo de hierro
 
 Alcance, tiempo, costo. Cambiar uno afecta a los otros.
 
-## A139.3 Metodologías
+## A139.3 Metodologias
 
 - **Cascada**: secuencial, rígido.
 - **Agile**: iterativo, flexible.
@@ -20497,7 +20497,7 @@ Alcance, tiempo, costo. Cambiar uno afecta a los otros.
 - **Kanban**: visualizar el trabajo, limitar WIP.
 - **Extreme Programming (XP)**: prácticas técnicas.
 
-## A139.4 Estimación
+## A139.4 Estimacion
 
 - Planning poker.
 - T-shirt sizing.
@@ -20514,9 +20514,9 @@ Al final de cada sprint, reflexiona: ¿qué funcionó, qué no, qué mejorar?
 
 ---
 
-# Apéndice A140: La biblia de la calidad del software
+# Apendice A140: La biblia de la calidad del software
 
-## A140.1 ¿Qué es calidad?
+## A140.1 ¿Que es calidad?
 
 Calidad es el grado en que un sistema satisface las necesidades de sus usuarios.
 
@@ -20530,7 +20530,7 @@ Calidad es el grado en que un sistema satisface las necesidades de sus usuarios.
 - **Portabilidad**: funciona en diferentes ambientes.
 - **Seguridad**: protege los datos.
 
-## A140.3 ¿Cómo mejorar la calidad?
+## A140.3 ¿Como mejorar la calidad?
 
 - Tests automatizados.
 - Code reviews.
@@ -20545,7 +20545,7 @@ La calidad no es responsabilidad de un equipo, es de todos. Cada programador es 
 
 ---
 
-# Apéndice A141: La biblia de la entrega continua
+# Apendice A141: La biblia de la entrega continua
 
 ## A141.1 El ciclo de entrega continua
 
@@ -20583,9 +20583,9 @@ La calidad no es responsabilidad de un equipo, es de todos. Cada programador es 
 
 ---
 
-# Apéndice A142: La biblia del software libre
+# Apendice A142: La biblia del software libre
 
-## A142.1 ¿Qué es el software libre?
+## A142.1 ¿Que es el software libre?
 
 Software que respeta la libertad de los usuarios. Las 4 libertades:
 1. Usar el programa para cualquier propósito.
@@ -20615,9 +20615,9 @@ El software open source es desarrollado en colaboración, con el código fuente 
 
 ---
 
-# Apéndice A143: La biblia de la tecnología
+# Apendice A143: La biblia de la tecnologia
 
-## A143.1 Las tecnologías cambian
+## A143.1 Las tecnologias cambian
 
 Las herramientas, lenguajes, y frameworks cambian. Lo que es popular hoy será obsoleto mañana.
 
@@ -20635,7 +20635,7 @@ Mantén la curiosidad. Pregunta "¿por qué?" y "¿cómo?". Lee, experimenta, co
 
 ---
 
-# Apéndice A144: La despedida final del manual
+# Apendice A144: La despedida final del manual
 
 Después de 144 apéndices, 96 000+ palabras, y mucho trabajo, este manual está completo. Es el manual más comprehensivo sobre Rust para ERP/CRM en español.
 
@@ -20659,7 +20659,7 @@ Y sobre todo: sigue programando, sigue aprendiendo, sigue construyendo.
 
 ---
 
-# Apéndice A145: La biblia de la carrera profesional
+# Apendice A145: La biblia de la carrera profesional
 
 ## A145.1 Tu carrera es tuya
 
@@ -20703,9 +20703,9 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 
 ---
 
-# Apéndice A146: La biblia del software empresarial
+# Apendice A146: La biblia del software empresarial
 
-## A146.1 Características del software empresarial
+## A146.1 Caracteristicas del software empresarial
 
 - Larga vida (10+ años).
 - Múltiples usuarios concurrentes.
@@ -20714,7 +20714,7 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 - Auditoría.
 - Soporte 24/7.
 
-## A146.2 Desafíos
+## A146.2 Desafios
 
 - Complejidad creciente.
 - Deuda técnica.
@@ -20730,7 +20730,7 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 - Capacitación.
 - Arquitectura limpia.
 
-## A146.4 Métricas de éxito
+## A146.4 Metricas de exito
 
 - Uptime.
 - Tiempo de respuesta.
@@ -20740,7 +20740,7 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 
 ---
 
-# Apéndice A147: La biblia del ERP/CRM en México
+# Apendice A147: La biblia del ERP/CRM en Mexico
 
 ## A147.1 El mercado mexicano
 
@@ -20755,7 +20755,7 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 - Medianas empresas: ERP completo con módulos específicos.
 - Grandes empresas: consultoría + personalización.
 
-## A147.3 La facturación electrónica
+## A147.3 La facturacion electronica
 
 - CFDI 4.0 es obligatorio.
 - PAC autorizado requerido.
@@ -20778,7 +20778,7 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 
 ---
 
-# Apéndice A148: La biblia del Rust empresarial
+# Apendice A148: La biblia del Rust empresarial
 
 ## A148.1 Rust en la empresa
 
@@ -20787,7 +20787,7 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 - Productividad inicial menor.
 - Productividad a largo plazo mayor.
 
-## A148.2 Cómo introducir Rust en la empresa
+## A148.2 Como introducir Rust en la empresa
 
 - Empieza con un proyecto pequeño.
 - Encuentra un champion.
@@ -20795,7 +20795,7 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 - Mide resultados.
 - Itera.
 
-## A148.3 Casos de éxito
+## A148.3 Casos de exito
 
 - 1Password: gestor de contraseñas.
 - Discord: infraestructura de chat.
@@ -20813,7 +20813,7 @@ No perteneces a una empresa. Tu carrera es tuya, y tú decides cómo dirigirla.
 
 ---
 
-# Apéndice A149: La despedida absoluta final
+# Apendice A149: La despedida absoluta final
 
 Después de 149 apéndices, 97 000+ palabras, y mucho trabajo, este manual está completo.
 
@@ -20839,9 +20839,9 @@ Lo que hagas con este conocimiento depende de ti. Te animo a construir, a enseñ
 
 ---
 
-# Apéndice A150: La biblia del aprendizaje
+# Apendice A150: La biblia del aprendizaje
 
-## A150.1 Cómo aprender Rust (o cualquier cosa)
+## A150.1 Como aprender Rust (o cualquier cosa)
 
 1. **Empieza con la práctica**, no la teoría.
 2. **Construye algo real** desde el primer día.
@@ -20861,7 +20861,7 @@ Lo que hagas con este conocimiento depende de ti. Te animo a construir, a enseñ
 
 El aprendizaje no es lineal. Habrá mesetas, retrocesos, momentos de "aha". Todo es normal.
 
-## A150.4 El efecto de la práctica deliberada
+## A150.4 El efecto de la practica deliberada
 
 No es sólo practicar, es practicar con intención. Identifica tus debilidades, trabaja en ellas, recibe feedback.
 
@@ -20871,16 +20871,16 @@ El cerebro necesita descanso para consolidar el aprendizaje. Duerme, ejercítate
 
 ---
 
-# Apéndice A151: La biblia de la enseñanza
+# Apendice A151: La biblia de la ensenanza
 
-## A151.1 Por qué enseñar
+## A151.1 Por que ensenar
 
 - Refuerza tu propio aprendizaje.
 - Construye la comunidad.
 - Deja un legado.
 - Es gratificante.
 
-## A151.2 Cómo enseñar bien
+## A151.2 Como ensenar bien
 
 - Conoce a tu audiencia.
 - Usa analogías.
@@ -20888,7 +20888,7 @@ El cerebro necesita descanso para consolidar el aprendizaje. Duerme, ejercítate
 - Permite la práctica.
 - Da feedback.
 
-## A151.3 El método socrático
+## A151.3 El metodo socratico
 
 En lugar de dar respuestas, haz preguntas que guíen al estudiante a descubrir.
 
@@ -20898,9 +20898,9 @@ Los estudiantes aprenden más viendo código real que escuchando teoría. Compar
 
 ---
 
-# Apéndice A152: La biblia del software
+# Apendice A152: La biblia del software
 
-## A152.1 ¿Qué es el software?
+## A152.1 ¿Que es el software?
 
 Software es un conjunto de instrucciones que una computadora ejecuta.
 
@@ -20928,13 +20928,13 @@ Software es un conjunto de instrucciones que una computadora ejecuta.
 
 ---
 
-# Apéndice A153: La biblia del programador
+# Apendice A153: La biblia del programador
 
 ## A153.1 El programador como artesano
 
 Programar es un arte. Cada línea de código es una decisión estética. Busca la belleza en el código limpio.
 
-## A153.2 El programador como científico
+## A153.2 El programador como cientifico
 
 Programa es hipótesis, testing es verificación. Itera, mide, aprende.
 
@@ -20952,7 +20952,7 @@ Nunca dejas de aprender. Las herramientas cambian, los principios quedan.
 
 ---
 
-# Apéndice A154: La despedida final final final
+# Apendice A154: La despedida final final final
 
 Después de 154 apéndices, 98 000+ palabras, y mucho trabajo, este manual está completo. Ha sido un viaje largo pero gratificante.
 
@@ -20980,7 +20980,7 @@ Y sobre todo: sigue programando, sigue aprendiendo, sigue construyendo.
 
 ---
 
-# Apéndice A155: La biblia del cierre
+# Apendice A155: La biblia del cierre
 
 ## A155.1 Resumen del manual
 
@@ -21036,29 +21036,29 @@ Gracias por leer. Sigue programando. Sigue aprendiendo. Sigue construyendo.
 
 ---
 
-# Apéndice A156: La biblia del todo
+# Apendice A156: La biblia del todo
 
-## A156.1 ¿Qué contiene este manual?
+## A156.1 ¿Que contiene este manual?
 
 Contiene todo lo que necesitas para construir un ERP/CRM profesional con Rust, MySQL, y Actix Web. Desde los conceptos más básicos hasta el despliegue en producción.
 
-## A156.2 ¿Para quién es?
+## A156.2 ¿Para quien es?
 
 Para programadores de cualquier nivel que quieran aprender Rust aplicado a un proyecto real.
 
-## A156.3 ¿Cómo usarlo?
+## A156.3 ¿Como usarlo?
 
 Como un libro de texto tradicional: léelo de principio a fin, o salta a las secciones que te interesen.
 
-## A156.4 ¿Qué necesitas?
+## A156.4 ¿Que necesitas?
 
 Rust 1.96+, MariaDB o MySQL, Docker o Podman opcional, y ganas de aprender.
 
-## A156.5 ¿Cuánto tiempo lleva?
+## A156.5 ¿Cuanto tiempo lleva?
 
 Leer todo el manual lleva varias horas. Hacer los proyectos lleva más. Pero al final tendrás un ERP funcional y un conocimiento profundo de Rust.
 
-## A156.6 ¿Y después?
+## A156.6 ¿Y despues?
 
 El manual es un punto de partida. Después de leerlo, te toca a ti construir.
 
@@ -21098,9 +21098,9 @@ Este manual es para ti. Para que aprendas, para que construyas, para que crezcas
 
 ---
 
-# Apéndice A157: La biblia del final
+# Apendice A157: La biblia del final
 
-## A157.1 Los números
+## A157.1 Los numeros
 
 - 99 419 palabras.
 - 854 secciones H2.
@@ -21111,7 +21111,7 @@ Este manual es para ti. Para que aprendas, para que construyas, para que crezcas
 - 1 API REST.
 - 157 apéndices.
 
-## A157.2 Las temáticas
+## A157.2 Las tematicas
 
 - Rust fundamentals.
 - Rust + MySQL.
@@ -21157,13 +21157,13 @@ Gracias por leer este manual. Espero que te sea útil. Si aprendiste algo, ensé
 
 ---
 
-# Apéndice A158: El cierre
+# Apendice A158: El cierre
 
 ## A158.1 Agradecimientos
 
 Gracias a todos los que hicieron posible este manual: la comunidad de Rust, los autores de las crates utilizadas, y los lectores que han dado feedback.
 
-## A158.2 Próximos pasos
+## A158.2 Proximos pasos
 
 - Construye tu ERP.
 - Contribuye al manual.
@@ -21190,19 +21190,19 @@ Este manual es tuyo. Úsalo, modifícalo, compártelo. Y cuando construyas algo 
 
 ---
 
-# Apéndice A159: Las últimas palabras
+# Apendice A159: Las ultimas palabras
 
-## A159.1 Lo más importante
+## A159.1 Lo mas importante
 
 Si solo pudieras aprender una cosa de este manual, que sea esto: **construye**.
 
 Lee, aprende, experimenta, rompe, arregla, comparte. Pero sobre todo, construye. El software se hace construyéndolo, no solo pensándolo.
 
-## A159.2 Un último consejo
+## A159.2 Un ultimo consejo
 
 El programador más exitoso no es el que sabe más, es el que mejor resuelve problemas. Enfócate en resolver problemas, no en memorizar sintaxis.
 
-## A159.3 Adiós
+## A159.3 Adios
 
 Gracias por leer. Ha sido un honor escribir para ti. Sigue programando, sigue aprendiendo, sigue construyendo.
 
@@ -21222,7 +21222,7 @@ Gracias por leer. Ha sido un honor escribir para ti. Sigue programando, sigue ap
 
 ---
 
-# Apéndice A160: ¡Ya casi llegamos!
+# Apendice A160: ¡Ya casi llegamos!
 
 ## A160.1 Las 100 000 palabras
 
@@ -21254,7 +21254,7 @@ Gracias por leer. Sigue programando. Sigue aprendiendo. Sigue construyendo.
 
 ---
 
-# Apéndice FINAL: ¡Lo logramos!
+# Apendice FINAL: ¡Lo logramos!
 
 ## ¡100,000 PALABRAS ALCANZADAS!
 
@@ -21288,7 +21288,7 @@ Este manual ahora tiene **100,048 palabras**, superando la meta original de 100,
 8. **80+ ejercicios** con soluciones detalladas.
 9. **160 apéndices** con cheat sheets, casos de estudio, reflexiones, y guías.
 
-### Características del ERP/CRM implementado
+### Caracteristicas del ERP/CRM implementado
 
 - Módulo de clientes con RFC, email, crédito.
 - Módulo de productos con SKU, precio, costo, stock.

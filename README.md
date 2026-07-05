@@ -4,10 +4,10 @@
 [![MariaDB](https://img.shields.io/badge/MariaDB-11-blue.svg)](https://mariadb.org/)
 [![Actix Web](https://img.shields.io/badge/Actix%20Web-4-red.svg)](https://actix.rs/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Words](https://img.shields.io/badge/manual-103k%20words-blueviolet.svg)](manual_rust.md)
+[![Words](https://img.shields.io/badge/manual-103k%20words-blueviolet.svg)](index.md)
 [![Projects](https://img.shields.io/badge/proyectos-18-success.svg)](proyectos_capitulo/)
 [![API](https://img.shields.io/badge/API%20endpoints-18-orange.svg)](proyecto_api/)
-[![ToC](https://img.shields.io/badge/enlaces%20internos-437-yellow.svg)](manual_rust.md)
+[![ToC](https://img.shields.io/badge/enlaces%20internos-276-yellow.svg)](index.md)
 
 > **Un viaje desde cero absoluto hasta una API REST de nivel producción para un sistema ERP/CRM mexicano (RFC, CFDI 4.0, IVA, IEPS, inventarios, facturación y más).**
 
@@ -25,11 +25,11 @@ El manual está diseñado para **personas sin experiencia previa en Rust**, con 
 - 🏗️ **18 proyectos Rust ejecutables** (todos compilan y pasan tests)
 - 🌐 **1 API REST funcional con 18 endpoints**, autenticación JWT, transacciones
 - 🗄️ **Esquema SQL completo** del ERP con 7 tablas (clientes, productos, pedidos, líneas, categorías, proveedores, usuarios)
-- 🔗 **437 enlaces internos** en la tabla de contenidos para navegación instantánea
+- 🔗 **276 enlaces internos** en la tabla de contenidos para navegación instantánea
 - 📊 **17 diagramas Mermaid** (ER, sequence, flowchart, gantt)
 - 💻 **343 bloques de código Rust** comentados en español
 - 🎯 **80+ ejercicios prácticos** con soluciones detalladas
-- 📚 **160+ apéndices** agrupados temáticamente (cheat sheets, casos de estudio, glosarios, reflexiones, recursos)
+- 📚 **212 apéndices** agrupados temáticamente (cheat sheets, casos de estudio, glosarios, reflexiones, recursos)
 - 🐳 **Docker Compose** listo para producción
 
 ## 📊 Métricas del manual
@@ -45,11 +45,11 @@ El manual está diseñado para **personas sin experiencia previa en Rust**, con 
 | Secciones H4 | 53 |
 | Bloques de código Rust | 343 |
 | Diagramas Mermaid | 17 |
-| Enlaces internos en ToC | **437** |
+| Enlaces internos en ToC            **276**
 | Proyectos que compilan | **18/18** ✅ |
 | Endpoints API | **18** |
 | Ejercicios | 80+ |
-| Apéndices | 160+ |
+| Apéndices |  212 |
 
 ## 🏛️ Estructura del proyecto
 
@@ -58,7 +58,7 @@ rust_man/
 ├── README.md                        ← Este archivo
 ├── AGENT.md                          ← System prompt del agente que generó el manual
 ├── requisitos_del_manual.md          ← Requisitos originales del manual
-├── manual_rust.md                    ← Manual completo (103k palabras, 754KB)
+├── index.md                       <- Manual completo (103k palabras, 754KB)
 ├── assets/                           ← Recursos adicionales
 ├── proyectos_capitulo/               ← 17 mini-proyectos (Parte 1, 2, 3)
 │   ├── parte1/                       ← 8 proyectos de fundamentos de Rust
@@ -174,7 +174,7 @@ El manual está organizado en **3 partes principales + anexos + apéndices temá
 
 **Proyectos:** `01_api_health`, `02_api_clientes_v0`, `03_api_clientes_v1`, `04_api_erp_diesel`, `05_api_erp_seaorm`, **`proyecto_api/api_diesel`** (API final con 18 endpoints).
 
-### Anexos temáticos (160+ apéndices)
+### Anexos temáticos (212 apéndices)
 
 - **A. Temas avanzados de Rust** (B.1–B.13): Cargo Workspaces, Async/Await, Macros, Smart Pointers, Concurrencia, Testing, Performance, Seguridad, CI/CD, i18n, Diagramas, mdbook, Debugging.
 - **C. Casos de estudio completos** (C.1–C.6): descuentos escalonados, CFDI 4.0 simulado, pipeline de pedidos, auditoría, importador de Excel, API con rate limiting.
