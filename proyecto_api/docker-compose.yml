@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mariadb:11
+    container_name: erp_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: erp_crm
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-psecret"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api_diesel:
+    build: ./api_diesel
+    container_name: erp_api_diesel
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql://root:secret@mysql:3306/erp_crm
+      JWT_SECRET: erp-crm-super-secreto-cambiar-en-produccion
+      PUERTO: "8080"
+      RUST_LOG: info
+    ports:
+      - "8080:8080"
+
+  api_seaorm:
+    build: ./api_seaorm
+    container_name: erp_api_seaorm
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql://root:secret@mysql:3306/erp_crm
+      JWT_SECRET: erp-crm-super-secreto-cambiar-en-produccion
+      PUERTO: "8081"
+      RUST_LOG: info
+    ports:
+      - "8081:8081"
+
+volumes:
+  mysql_data:

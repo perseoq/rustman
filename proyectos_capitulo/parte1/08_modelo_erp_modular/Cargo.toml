@@ -1,0 +1,6 @@
+[package]
+name = "modelo_erp_modular"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
