@@ -97,9 +97,14 @@
 5. `05_api_erp_seaorm` — API estilo SeaORM con inventario
 6. `proyecto_api/api_diesel` — **API final con 18 endpoints, JWT, transacciones y docker-compose**
 
-### Anexos, apéndices y glosarios
+### Manuales adicionales y archivos complementarios
 
-El manual incluye archivos separados para contenido complementario:
+El repositorio incluye manuales independientes con otros frameworks y arquitecturas:
+- [`manual_axum.md`](manual_axum.md) — **Axum + Hexagonal**: sistema de inventarios multibodega con Axum, sqlx y arquitectura hexagonal (puertos y adaptadores)
+- [`manual_rocket.md`](manual_rocket.md) — **Rocket + Granular**: sistema de tickets de soporte con Rocket, Diesel y arquitectura granular (módulos autocontenidos)
+- [`manual_devops.md`](manual_devops.md) — **DevOps**: despliegue, contenedores, balanceo de carga, Kubernetes, Ansible, Terraform y CI/CD para los proyectos del repositorio
+
+Archivos complementarios del manual principal:
 - [`anexos.md`](anexos.md) — Apéndices temáticos (A.2 Soluciones, A.3 Recursos, A.4 Índice, más 160 apéndices numerados y 26 alfabéticos)
 - [`glosario.md`](glosario.md) — Todos los glosarios: términos de Rust y ERP/CRM, facturación, inglés-español, argot, términos fiscales, y más
 
