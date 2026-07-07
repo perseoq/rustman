@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard ERP</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; background: #f5f5f5; }
+    h1 { color: #333; }
+    button { padding: 10px 20px; background: #4CAF50; color: white; border: none; cursor: pointer; font-size: 16px; }
+    button:hover { background: #45a049; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #4CAF50; color: white; }
+    tr:hover { background: #f1f1f1; }
+    .error { color: red; padding: 10px; background: #ffe6e6; border-radius: 4px; }
+    .cargando { color: #666; font-style: italic; }
+    #mensaje { margin: 15px 0; padding: 10px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Dashboard del ERP</h1>
+  <button id="btn-cargar" onclick="cargarClientes()">Cargar Clientes</button>
+  <div id="mensaje" class="cargando">Presiona el boton para cargar clientes...</div>
+  <table id="tabla-clientes">
+    <thead><tr><th>ID</th><th>Nombre</th><th>RFC</th><th>Credito</th></tr></thead>
+    <tbody id="tbody-clientes"></tbody>
+  </table>
+
+  <script>
+    const API_URL = 'http://localhost:8080/api';
+    async function cargarClientes() {
+      const m = document.getElementById('mensaje');
+      const tbody = document.getElementById('tbody-clientes');
+      m.textContent = 'Cargando...';
+      m.className = 'cargando';
+      tbody.innerHTML = '';
+      try {
+        const login = await fetch(API_URL + '/auth/login', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: 'admin', password: 'admin123' })
+        });
+        const { token } = await login.json();
+        const res = await fetch(API_URL + '/clientes', {
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+        const clientes = await res.json();
+        clientes.forEach(c => {
+          const f = tbody.insertRow();
+          f.insertCell().textContent = c.id;
+          f.insertCell().textContent = c.nombre;
+          f.insertCell().textContent = c.rfc;
+          f.insertCell().textContent = '$' + (c.credito || 0).toFixed(2);
+        });
+        m.textContent = clientes.length + ' clientes cargados';
+        m.className = '';
+      } catch (e) {
+        m.textContent = 'Error: ' + e.message;
+        m.className = 'error';
+      }
+    }
+  </script>
+</body>
+</html>

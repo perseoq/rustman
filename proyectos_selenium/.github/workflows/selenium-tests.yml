@@ -1,0 +1,41 @@
+name: Selenium Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  selenium:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mariadb:11
+        env:
+          MYSQL_ROOT_PASSWORD: secret
+          MYSQL_DATABASE: erp_crm
+        ports: ["3306:3306"]
+        options: >-
+          --health-cmd "mysqladmin ping -h localhost"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Instalar dependencias
+        run: npm ci
+        working-directory: proyectos_selenium
+      - name: Iniciar API
+        run: |
+          cd proyecto_api/api_diesel
+          cargo run &
+          sleep 15
+      - name: Ejecutar tests
+        run: npm test
+        working-directory: proyectos_selenium
+        env:
+          HEADLESS: true

@@ -1,0 +1,22 @@
+{
+  "name": "proyectos_selenium",
+  "version": "1.0.0",
+  "description": "Tests Selenium para las APIs del repositorio Rust",
+  "scripts": {
+    "test": "mocha --timeout 30000 'tests/**/*.test.js'",
+    "test:erp": "mocha --timeout 30000 'tests/erp/**/*.test.js'",
+    "test:axum": "mocha --timeout 30000 'tests/axum/**/*.test.js'",
+    "test:dashboard": "mocha --timeout 30000 'tests/dashboard/**/*.test.js'",
+    "test:chrome": "BROWSER=chrome mocha --timeout 30000 'tests/**/*.test.js'",
+    "test:firefox": "BROWSER=firefox mocha --timeout 30000 'tests/**/*.test.js'",
+    "test:headless": "HEADLESS=true mocha --timeout 30000 'tests/**/*.test.js'",
+    "start:dashboard": "npx http-server dashboard -p 3000"
+  },
+  "devDependencies": {
+    "chai": "^5.0.0",
+    "chromedriver": "^latest",
+    "geckodriver": "^latest",
+    "mocha": "^10.0.0",
+    "selenium-webdriver": "^4.0.0"
+  }
+}

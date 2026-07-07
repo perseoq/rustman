@@ -103,6 +103,10 @@ El repositorio incluye manuales independientes con otros frameworks y arquitectu
 - [`manual_axum.md`](manual_axum.md) — **Axum + Hexagonal**: sistema de inventarios multibodega con Axum, sqlx y arquitectura hexagonal (puertos y adaptadores)
 - [`manual_rocket.md`](manual_rocket.md) — **Rocket + Granular**: sistema de tickets de soporte con Rocket, Diesel y arquitectura granular (módulos autocontenidos)
 - [`manual_devops.md`](manual_devops.md) — **DevOps**: despliegue, contenedores, balanceo de carga, Kubernetes, Ansible, Terraform y CI/CD para los proyectos del repositorio
+- [`manual_selenium.md`](manual_selenium.md) — **Selenium + JavaScript**: testing automatizado end-to-end con Selenium WebDriver, Mocha, Chai y dashboard HTML para las APIs del repositorio
+- [`manual_testing_apis.md`](manual_testing_apis.md) — **Testing de APIs Rust**: tests de integración, carga y contrato con reqwest sobre las APIs del repositorio
+- [`manual_testing_rust.md`](manual_testing_rust.md) — **Testing unitario y avanzado en Rust**: property-based testing con proptest, mocking con mockall, fuzzing y cobertura
+- [`manual_tauri_yew.md`](manual_tauri_yew.md) — **Tauri + Yew**: aplicaciones de escritorio nativas con Rust, Yew (WASM) y Tauri para los sistemas del repositorio
 
 Archivos complementarios del manual principal:
 - [`anexos.md`](anexos.md) — Apéndices temáticos (A.2 Soluciones, A.3 Recursos, A.4 Índice, más 160 apéndices numerados y 26 alfabéticos)

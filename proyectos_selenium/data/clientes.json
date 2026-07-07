@@ -1,0 +1,5 @@
+[
+  { "nombre": "Cliente A", "rfc": "AAA010101AAA", "email": "a@test.com", "credito": 10000, "esperado": 201 },
+  { "nombre": "Cliente B", "rfc": "BBB010101BBB", "email": "b@test.com", "credito": 50000, "esperado": 201 },
+  { "nombre": "", "rfc": "INV123", "email": "", "credito": -100, "esperado": 400 }
+]
